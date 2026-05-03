@@ -129,7 +129,7 @@
     - [4.6.2. Web Applications Wireflow Diagrams](#461-web-applications-wireflow-diagrams)
     - [4.6.3. Web Applications Mock-ups](#463-web-applications-mockups)
     - [4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
-- [4.7. Web Applications Prototyping](#47 web-applications-prototyping)
+- [4.7. Web Applications Prototyping](#47-web-applications-prototyping)
 - [4.8. Domain-Driven Software Architecture](#48-domain-driven-software-architecture)
     - [4.8.1. Software Architecture Context Diagram](#481-software-architecture-context-diagram)
     - [4.8.2. Software Architecture Container Diagrams](#482-software-architecture-container-diagrams)
