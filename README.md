@@ -482,7 +482,116 @@ Filial de la multinacional **CSI Leasing**, con presencia en más de 30 países.
 
 ### 2.1.1. Análisis competitivo
 
+El objetivo del presente análisis competitivo es responder a la pregunta:
 
+**¿Cómo se posiciona Smart Leasing frente a sus principales competidores en términos de funcionalidades, estrategia de mercado y propuesta de valor?**
+
+Para ello, se utiliza el modelo de análisis **Competitive Analysis Landscape**, estructurado en categorías y subcategorías.
+
+<div align="center">
+
+<table>
+  <tr>
+    <th colspan="6">Competitive Analysis Landscape</th>
+  </tr>
+  <tr>
+    <td><b>¿Por qué llevar a cabo este análisis?</b></td>
+    <td colspan="5">
+      Identificar fortalezas, debilidades y oportunidades frente a competidores clave en el sector de leasing tecnológico en el Perú. <br>
+      Comparar funcionalidades, posicionamiento y estrategia de Smart Leasing con otras plataformas similares en el mercado local e internacional.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td><b>Smart Leasing</b></td>
+    <td><b>HardRental Perú</b></td>
+    <td><b>Thuntech</b></td>
+    <td><b>CSI Leasing Perú</b></td>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Perfil</b></td>
+    <td>Overview</td>
+    <td>Startup peruana enfocada en el leasing tecnológico inteligente, que combina arrendamiento de equipos de TI con soporte, mantenimiento y gestión de ciclo de vida.</td>
+    <td>Empresa local de renting informático especializada en alquiler de laptops y PCs con soporte incluido.</td>
+    <td>Proveedor nacional que ofrece leasing operativo de tecnología con contratos de 24 a 60 meses.</td>
+    <td>Filial peruana de la multinacional CSI Leasing, con experiencia en más de 30 países.</td>
+  </tr>
+  <tr>
+    <td>Ventaja competitiva / Valor al cliente</td>
+    <td>Flexibilidad en contratos, soporte integral y enfoque estratégico en reducción de costos de TI. Valor: equipos actualizados, menor inversión inicial y gestión centralizada de garantías.</td>
+    <td>Rapidez en la entrega y planes flexibles. Valor: acceso inmediato sin compromisos ni inversión inicial.</td>
+    <td>Estabilidad contractual y escalabilidad. Valor: acceso a tecnología con planes de leasing a largo plazo.</td>
+    <td>Respaldo financiero internacional y plataforma MyCSI. Valor: control de ciclo de vida, seguridad y soporte global.</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Perfil de Marketing</b></td>
+    <td>Mercado objetivo</td>
+    <td>Pymes e instituciones educativas en Perú y Latinoamérica.</td>
+    <td>Empresas locales (principalmente en Lima) que requieren equipos temporales o ágiles.</td>
+    <td>Empresas medianas y grandes con foco en estabilidad financiera.</td>
+    <td>Grandes corporaciones, bancos y multinacionales en Perú.</td>
+  </tr>
+  <tr>
+    <td>Estrategias de marketing</td>
+    <td>Marketing digital (LinkedIn, Google Ads, redes sociales), alianzas con proveedores, networking.</td>
+    <td>SEO local, catálogo web, captación rápida de clientes.</td>
+    <td>Relaciones B2B, convenios corporativos, publicidad en entornos empresariales.</td>
+    <td>Marketing corporativo global, relaciones con CIOs y CFOs.</td>
+  </tr>
+  <tr>
+    <td rowspan="3"><b>Perfil de Producto</b></td>
+    <td>Productos & Servicios</td>
+    <td>Leasing de laptops, PCs, servidores, upgrades, soporte, mantenimiento y gestión de garantías.</td>
+    <td>Alquiler de laptops, PCs y periféricos con soporte básico.</td>
+    <td>Leasing operativo de laptops y equipos de oficina, upgrades opcionales.</td>
+    <td>Leasing tecnológico con Asset Management, borrado seguro de datos, contratos internacionales.</td>
+  </tr>
+  <tr>
+    <td>Precios & Costos</td>
+    <td>Contratos mensuales flexibles tipo SaaS/Leasing, con servicios premium opcionales.</td>
+    <td>Pago por equipo alquilado según tiempo de uso.</td>
+    <td>Cuotas fijas mensuales de arrendamiento.</td>
+    <td>Contratos internacionales con costos altos, orientados a corporativos.</td>
+  </tr>
+  <tr>
+    <td>Canales de distribución (Web/Móvil)</td>
+    <td>Plataforma web con panel de clientes y módulo administrativo interno.</td>
+    <td>Página web y atención directa a empresas.</td>
+    <td>Página web y acuerdos directos con empresas.</td>
+    <td>Plataforma MyCSI (web) y acuerdos globales.</td>
+  </tr>
+  <tr>
+    <td rowspan="4"><b>Análisis SWOT</b></td>
+    <td>Fortalezas</td>
+    <td>Flexibilidad, servicio integral, foco en educación y pymes.</td>
+    <td>Rapidez de atención y flexibilidad de corto plazo.</td>
+    <td>Contratos estables y experiencia en leasing corporativo.</td>
+    <td>Respaldo global, gestión avanzada de activos, seguridad de datos.</td>
+  </tr>
+  <tr>
+    <td>Debilidades</td>
+    <td>Nueva en el mercado, poco reconocimiento de marca.</td>
+    <td>Oferta limitada al simple alquiler de hardware.</td>
+    <td>Poca flexibilidad y personalización en los contratos.</td>
+    <td>Costos elevados, poco atractivo para pymes locales.</td>
+  </tr>
+  <tr>
+    <td>Oportunidades</td>
+    <td>Digitalización creciente en Perú, modernización tecnológica en educación y pymes.</td>
+    <td>Ampliar servicios hacia educación y startups.</td>
+    <td>Creciente digitalización del mercado peruano.</td>
+    <td>Adaptar modelos más flexibles para pymes en Perú.</td>
+  </tr>
+  <tr>
+    <td>Amenazas</td>
+    <td>Competencia internacional consolidada, resistencia cultural al leasing.</td>
+    <td>Competidores con propuestas más completas.</td>
+    <td>Startups ágiles que ofrezcan leasing más flexible.</td>
+    <td>Regulaciones locales y percepción de costos excesivos.</td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
