@@ -95,7 +95,7 @@
 - [2.4. Ubiquitous Language](#24-ubiquitous-language)
 
 #### [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification-1)
-- [3.1. To-Be Scenario](#31-to-be-scenario)
+- [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
 - [3.2. User Stories](#32-user-stories)
 - [3.3. Product Backlog](#33-product-backlog)
 - [3.4. Impact Mapping](#34-impact-mapping)
@@ -342,27 +342,333 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 
 ---
 
-## 3.1. To-Be Scenario
+## 3.1. To-Be Scenario Mapping
 
+El escenario To-Be describe el flujo esperado una vez implementada la solución Smart Leasing, desde el primer contacto del usuario hasta la contratación y gestión del servicio.
 
+| Actor | Objetivo | Interacción esperada | Resultado esperado |
+| --- | --- | --- | --- |
+| Usuario visitante | Conocer la propuesta de valor | Revisa la landing page, los servicios, planes, casos de éxito y canales de contacto. | Comprende los beneficios del servicio y decide registrarse o solicitar información. |
+| Usuario registrado | Acceder a servicios personalizados | Inicia sesión, revisa catálogo de equipos, compara alternativas y consulta disponibilidad. | Selecciona equipos o planes alineados a sus necesidades. |
+| Cliente | Contratar y gestionar el servicio | Confirma un plan de leasing, descarga comprobantes y administra renovaciones, modificaciones o cancelaciones. | Mantiene control de sus servicios contratados desde la plataforma. |
+| Soporte especializado | Atender dudas o incidencias | Recibe formularios, mensajes o reportes técnicos desde los canales de atención. | Brinda respuesta y seguimiento oportuno al cliente. |
 
 ---
 
 ## 3.2. User Stories
 
+<h2>Epics</h2>
+<table border="1" cellspacing="0" cellpadding="5">
 
+<tr><th>ID de Epic</th><th>Título</th><th>Descripción</th></tr>
+<tr><td>EP01</td><td>Gestión de cuenta</td><td>Como usuario deseo contar con una cuenta personal con la cual registrarme, iniciar y cerrar sesión en la plataforma.</td></tr>
+<tr><td>EP02</td><td>Información del servicio</td><td>Como usuario deseo contar con un apartado en el cual conocer el funcionamiento, antecedentes y costo del servicio.</td></tr>
+<tr><td>EP03</td><td>Atención y comunicación</td><td>Como usuario deseo contar con mecanismos de contacto, mensajería y servicio al cliente para resolver mis dudas o inconvenientes.</td></tr>
+<tr><td>EP04</td><td>Auditoría y catálogo de equipos</td><td>Como usuario deseo conocer la disponibilidad, características y auditorías de los equipos, para validar si satisfacen mis necesidades.</td></tr>
+<tr><td>EP05</td><td>Contratación y gestión del servicio</td><td>Como usuario deseo contar con un apartado para realizar la contratación del servicio y gestionar mis suscripciones.</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU01</td><th>ID de Epic</th><td>EP01</td></tr>
+<tr><th>Título</th><td>Registro de cuenta</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> registrarme en la plataforma indicando mis datos <b>para</b> interactuar con los servicios de Smart Leasing.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Registro de usuario<br><br>
+<b>Dado que</b> no poseo cuenta<br>
+<b>Cuando</b> seleccione “Registrarme” e ingrese mis datos<br>
+<b>Entonces</b> la aplicación creará mi cuenta de forma segura.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU02</td><th>ID de Epic</th><td>EP01</td></tr>
+<tr><th>Título</th><td>Inicio de sesión</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> iniciar sesión con mis credenciales <b>para</b> acceder a mi perfil de forma segura.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Inicio de sesión<br><br>
+<b>Dado que</b> poseo una cuenta<br>
+<b>Cuando</b> ingrese usuario y contraseña válidos<br>
+<b>Entonces</b> accederé a mi panel personal.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU03</td><th>ID de Epic</th><td>EP01</td></tr>
+<tr><th>Título</th><td>Cierre de sesión</td><th>Prioridad en el negocio</th><td>Media</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> cerrar sesión <b>para</b> garantizar la privacidad de mi información.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Cierre de sesión<br><br>
+<b>Dado que</b> estoy logueado<br>
+<b>Cuando</b> seleccione “Cerrar sesión”<br>
+<b>Entonces</b> la aplicación finalizará la sesión y volverá al estado “Invitado”.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU04</td><th>ID de Epic</th><td>EP02</td></tr>
+<tr><th>Título</th><td>Descripción del servicio</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> acceder a la descripción general de Smart Leasing <b>para</b> comprender sus beneficios.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Consulta de información<br><br>
+<b>Dado que</b> accedo a la sección “Servicio”<br>
+<b>Cuando</b> abra el apartado de información<br>
+<b>Entonces</b> visualizaré la descripción general.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU05</td><th>ID de Epic</th><td>EP02</td></tr>
+<tr><th>Título</th><td>Consulta de planes y costos</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> consultar los planes de arrendamiento y costos <b>para</b> elegir la opción que mejor se adapte a mis necesidades.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Visualizar planes<br><br>
+<b>Dado que</b> accedo a la sección de “Planes”<br>
+<b>Cuando</b> revise las opciones<br>
+<b>Entonces</b> podré ver precios, características y condiciones.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU06</td><th>ID de Epic</th><td>EP02</td></tr>
+<tr><th>Título</th><td>Casos de éxito</td><th>Prioridad en el negocio</th><td>Media</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> conocer testimonios y casos de éxito <b>para</b> confiar en la experiencia de ECAT Leasing.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Revisión de testimonios<br><br>
+<b>Dado que</b> estoy evaluando la empresa<br>
+<b>Cuando</b> consulte la sección “Clientes”<br>
+<b>Entonces</b> visualizaré testimonios y referencias.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU07</td><th>ID de Epic</th><td>EP03</td></tr>
+<tr><th>Título</th><td>Formulario de contacto</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> enviar consultas mediante un formulario <b>para</b> comunicarme con el soporte técnico.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Envío de consulta<br><br>
+<b>Dado que</b> tengo una duda<br>
+<b>Cuando</b> complete y envíe el formulario<br>
+<b>Entonces</b> el sistema registrará mi solicitud y enviaré confirmación.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU08</td><th>ID de Epic</th><td>EP03</td></tr>
+<tr><th>Título</th><td>Chat de mensajería rápida</td><th>Prioridad en el negocio</th><td>Media</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> disponer de un chat de mensajería rápida <b>para</b> resolver dudas de manera ágil.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Uso de chat<br><br>
+<b>Dado que</b> necesito asistencia inmediata<br>
+<b>Cuando</b> abra la sección de chat<br>
+<b>Entonces</b> podré enviar y recibir mensajes.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU09</td><th>ID de Epic</th><td>EP03</td></tr>
+<tr><th>Título</th><td>Soporte especializado</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> acceder a soporte especializado en incidencias técnicas <b>para</b> garantizar continuidad en mis operaciones.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Reporte de incidencia<br><br>
+<b>Dado que</b> tengo un problema técnico<br>
+<b>Cuando</b> reporte la incidencia en el sistema<br>
+<b>Entonces</b> recibiré atención especializada en un tiempo razonable.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU10</td><th>ID de Epic</th><td>EP04</td></tr>
+<tr><th>Título</th><td>Catálogo de equipos</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> visualizar un catálogo de equipos <b>para</b> elegir el que mejor se ajuste a mi empresa.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Consulta de catálogo<br><br>
+<b>Dado que</b> accedo a la sección de equipos<br>
+<b>Cuando</b> revise el listado<br>
+<b>Entonces</b> visualizaré fotos, fichas técnicas y disponibilidad.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU11</td><th>ID de Epic</th><td>EP04</td></tr>
+<tr><th>Título</th><td>Comparación de equipos</td><th>Prioridad en el negocio</th><td>Media</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> filtrar y comparar equipos según criterios <b>para</b> tomar una decisión informada.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Comparación<br><br>
+<b>Dado que</b> consulto el catálogo<br>
+<b>Cuando</b> seleccione dos o más equipos<br>
+<b>Entonces</b> la aplicación mostrará una tabla comparativa.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU12</td><th>ID de Epic</th><td>EP04</td></tr>
+<tr><th>Título</th><td>Historial de auditorías</td><th>Prioridad en el negocio</th><td>Media</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> consultar el historial de auditorías y mantenimientos <b>para</b> asegurar la confiabilidad del equipo.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Consulta de historial<br><br>
+<b>Dado que</b> selecciono un equipo<br>
+<b>Cuando</b> abra la ficha técnica<br>
+<b>Entonces</b> visualizaré fechas de auditoría y resultados.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU13</td><th>ID de Epic</th><td>EP05</td></tr>
+<tr><th>Título</th><td>Contratación de plan</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> contratar un plan de leasing en línea <b>para</b> evitar procesos manuales.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Contratación<br><br>
+<b>Dado que</b> poseo una cuenta<br>
+<b>Cuando</b> seleccione un plan<br>
+<b>Entonces</b> podré confirmar la contratación con comprobante generado.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU14</td><th>ID de Epic</th><td>EP05</td></tr>
+<tr><th>Título</th><td>Gestión de servicios contratados</td><th>Prioridad en el negocio</th><td>Alta</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> renovar, modificar o cancelar mis servicios <b>para</b> tener control sobre mis suscripciones.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Gestión de plan<br><br>
+<b>Dado que</b> tengo servicios activos<br>
+<b>Cuando</b> acceda a la sección de gestión<br>
+<b>Entonces</b> podré realizar cambios o cancelaciones.
+</td></tr>
+</table><br>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>ID de HU</th><td>HU15</td><th>ID de Epic</th><td>EP05</td></tr>
+<tr><th>Título</th><td>Descarga de comprobantes</td><th>Prioridad en el negocio</th><td>Media</td></tr>
+<tr><th>Descripción</th><td colspan="3"><b>Como</b> usuario <b>quiero</b> descargar comprobantes y contratos <b>para</b> llevar un registro formal de mis operaciones.</td></tr>
+<tr><th>Criterios de Aceptación</th><td colspan="3">
+<b>Escenario:</b> Descarga de documento<br><br>
+<b>Dado que</b> contraté un servicio<br>
+<b>Cuando</b> acceda a mis comprobantes<br>
+<b>Entonces</b> podré descargar archivos en PDF.
+</td></tr>
+</table><br>
 
 ---
 
 ## 3.3. Product Backlog
 
-
+<table>
+  <thead>
+    <tr>
+      <th># Orden</th>
+      <th>ID de HU</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Story Points (1 / 2 / 3 / 5 / 8) </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>HU01</td>
+      <td>Registro de cuenta</td>
+      <td><b>Como</b> usuario <b>quiero</b>  registrarme en la plataforma indicando mis datos <b>para</b> interactuar con las funciones de la misma.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>HU02</td>
+      <td>Inicio y cierre de sesión</td>
+      <td><b>Como</b> usuario <b>quiero</b> ser capaz ingresar y salir de mi cuenta <b>para</b> mantener la privacidad de los datos de la misma.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>HU03</td>
+      <td>Descripción de la empresa</td>
+      <td><b>Como</b> usuario <b>quiero</b> conocer más a detalle la misión y visión de la empresa <b>para</b> saber si satisface mi necesidad.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>HU04</td>
+      <td>Modalidad de cobro</td>
+      <td><b>Como</b> usuario <b>quiero</b> ser capaz de informarme del cómo se calcula el monto a pagar <b>para</b> corroborarlo con mi presupuesto.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>HU05</td>
+      <td>Antecedentes de servicio</td>
+      <td><b>Como</b> usuario <b>quiero</b> conocer el trabajo ya realizado por la empresa <b>para</b> que mi nivel de confianza en ella incremente.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>HU06</td>
+      <td>Ubicación y número telefónico</td>
+      <td><b>Como</b> usuario <b>quiero</b> conocer dónde se ubican las oficinas y cómo puedo contactar con ellas <b>para</b> contactar al personal.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>HU07</td>
+      <td>Chatbot asesor</td>
+      <td><b>Como</b> usuario <b>quiero</b> poder acceder a una chat de respuesta rápida <b>para</b> aclarar mis dudas.</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>HU08</td>
+      <td>Formulario de quejas</td>
+      <td><b>Como</b> usuario <b>quiero</b> poder presentar una queja <b>para</b> hacer llegar mi malestar a la empresa.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>HU09</td>
+      <td>Servicio al cliente</td>
+      <td><b>Como</b> usuario <b>quiero</b> contar con un medio por el cual tener contacto con el personal <b>para</b> recibir ayuda.</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>HU10</td>
+      <td>Información de equipos</td>
+      <td><b>Como</b> usuario <b>quiero</b> poder conocer la función de los equipos <b>para</b> conocer cómo satisfacer mis necesidades.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>HU11</td>
+      <td>Disponibilidad de equipos</td>
+      <td><b>Como</b> usuario <b>quiero</b> poder conocer la disponibilidad de un equipo <b>para</b> consultar por el mismo u otro.</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>HU12</td>
+      <td>Acuerdo de auditorías</td>
+      <td><b>Como</b> usuario <b>quiero</b> poder recibir una auditoría personalizada en el área correspondiente <b>para</b> recibir ayuda de acuerdo a mis necesidades y presupuesto.</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>HU13</td>
+      <td>Modalidades de pago</td>
+      <td><b>Como</b> usuario <b>quiero</b> conocer las modalidades de pago disponibles <b>para</b> decidir cuál es la de mi conveniencia.</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>HU14</td>
+      <td>Apartado de pago desde la plataforma</td>
+      <td><b>Como</b> usuario <b>quiero</b> contar con un apartado de pagos desde la misma plataforma <b>para</b> una mayor comodidad.</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 3.4. Impact Mapping
 
-
+![impact_mapping.png](./assets/chapter3/impact_mapping.png)
 
 ---
 
@@ -378,105 +684,286 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 
 ### 4.1.1. General Style Guidelines
 
+**Tipografía**
 
+| Uso                  | Fuente                 | Ejemplo visual            |
+| -------------------- | ---------------------- | ------------------------- |
+| Encabezados (H1, H2) | **Anton**              | TÍTULO PRINCIPAL          |
+| Subtítulos / Botones | **Antonio**            | Subtítulo / Acción        |
+| Texto general        | Sans Serif del sistema | Texto de párrafo estándar |
+
+**Paleta de Colores**
+
+| Color            | Hex                   | Uso                                             |
+| ---------------- | --------------------- | ----------------------------------------------- |
+| Azul principal   | `#1A3458`             | Headers, barra de navegación, botones primarios |
+| Azul base claro  | `#F2F6FF`             | Fondos generales, secciones amplias, cards      |
+| Negro            | `#000000`             | Texto sobre fondos claros                       |
+| Blanco           | `#FFFFFF`             | Texto sobre fondos oscuros, íconos              |
+| Escala de grises | `#333333` ‒ `#DDDDDD` | Wireframes, bordes, placeholders                |
+
+**Espaciado y consistencia**
+
+- Márgenes y paddings en múltiplos de 8 px.
+- Bordes redondeados de 8 px para botones y tarjetas.
+- Sombras suaves (“box-shadow” ligero) para elementos elevados como cards o modales.
 
 ---
 
 ### 4.1.2. Web Style Guidelines
 
+**Componentes principales**
 
+| Componente          | Estilo visual                                                       |
+| ------------------- | ------------------------------------------------------------------- |
+| Botón primario      | Fondo `#1A3458`, texto `#FFFFFF`, borde redondeado 8 px             |
+| Botón secundario    | Fondo `#F2F6FF`, texto `#1A3458`                                    |
+| Enlace              | Texto `#1A3458`, subrayado al pasar el cursor                       |
+| Tarjeta (Card)      | Fondo `#F2F6FF`, título en Anton, contenido en negro, sombra ligera |
+| Barra de navegación | Fondo `#1A3458`, texto y logo en blanco                             |
+| Footer              | Fondo gris oscuro (`#333333`), texto en blanco                      |
+
+**Accesibilidad**
+
+- Contraste de al menos **4.5:1** entre texto y fondo.
+- Tipografía legible, tamaño mínimo 16px para textos largos.
+- Asegurar buen contraste también en estados hover/focus.
 
 ---
 
-### 4.1.3. Mobile Style Guidelines.
+### 4.1.3. Mobile Style Guidelines
 
-#### 4.1.3.1 iOS Mobile Style Guidelines.
+Las interfaces móviles deben conservar la identidad visual definida para la web, adaptando la navegación, el espaciado y los componentes a pantallas pequeñas. Se prioriza una lectura clara, acciones visibles y flujos breves para registro, consulta, comparación y contratación.
 
-#### 4.1.3.2 Android Mobile Style Guidelines.
+- Botones y elementos interactivos con tamaño suficiente para interacción táctil.
+- Navegación principal mediante menú compacto o barra inferior según la prioridad de las acciones.
+- Formularios con campos simples, mensajes de validación claros y teclado adecuado al tipo de dato.
+- Cards y listados con jerarquía visual clara para facilitar la comparación de equipos y planes.
+- Estados de carga, error y confirmación visibles en operaciones de cuenta, contacto y contratación.
+
+#### 4.1.3.1. iOS Mobile Style Guidelines
+
+- Respetar safe areas, especialmente en pantallas con notch o Dynamic Island.
+- Usar controles de navegación consistentes con patrones iOS, como barras superiores claras y acciones principales visibles.
+- Mantener objetivos táctiles cercanos a 44 px como referencia mínima.
+
+#### 4.1.3.2. Android Mobile Style Guidelines
+
+- Respetar gestos de navegación del sistema y evitar controles ubicados en zonas difíciles de alcanzar.
+- Usar patrones compatibles con Material Design para inputs, botones, estados y listas.
+- Mantener objetivos táctiles cercanos a 48 dp como referencia mínima.
 
 ---
 
 ## 4.2. Information Architecture
 
-
-
----
-
 ### 4.2.1. Organization Systems
 
+En esta sección se definen los sistemas de organización que permitirán estructurar y etiquetar el contenido de manera que resulte comprensible y fácil de encontrar para los usuarios. La organización de la información en _PcPedia_ busca adaptarse a las necesidades tanto de estudiantes de ingeniería, técnicos de soporte como de usuarios entusiastas de hardware.
 
+**Jerarquía de contenido:**
+Se aplica una jerarquía visual que da prioridad a los componentes principales que los usuarios buscan con mayor frecuencia. Las secciones destacadas en la interfaz incluyen categorías como Procesadores, Tarjetas Gráficas, Memorias RAM, Almacenamiento, Placas Base y Periféricos. Cada categoría cuenta con subcategorías; por ejemplo, dentro de Procesadores, se diferencian líneas como Intel Core i3, i5, i7 e i9, así como AMD Ryzen 5, 7 y 9. Esta jerarquía ayuda al usuario a identificar rápidamente dónde debe dirigirse según su necesidad.
+
+**Organización secuencial:**
+El flujo de interacción acompaña al usuario en pasos lógicos: buscar un componente, revisar sus especificaciones técnicas, compararlo con otro producto y finalmente visualizar recomendaciones relacionadas. Este proceso está diseñado para ser intuitivo, de manera que los usuarios puedan tomar decisiones rápidas sin perderse entre pantallas o exceso de información.
+
+**Organización matricial:**
+Se complementa con un menú y estructura de navegación que permiten combinar distintas dimensiones de filtrado. Por ejemplo, un usuario puede entrar a la categoría “Laptops”, aplicar un filtro por marca “ASUS” y luego ajustar por rango de precio. De esta forma, un mismo producto puede encontrarse a través de múltiples caminos, garantizando accesibilidad para diferentes perfiles de usuario.
 
 ---
 
 ### 4.2.2. Labeling Systems
 
+En _PcPedia_, los sistemas de etiquetado son fundamentales para asegurar claridad y consistencia en la experiencia de navegación. Todas las secciones utilizan labels simples y familiares para la audiencia: “Procesadores”, “Tarjetas Gráficas”, “Almacenamiento” y “Comparador” se ubican en el menú superior, evitando términos técnicos confusos o redundantes.
 
+Cada ficha de producto incluye etiquetas técnicas claras como “Frecuencia (GHz)”, “Número de núcleos”, “VRAM” o “Tipo de memoria”. Estas etiquetas permiten que tanto un usuario novato como un experto comprendan la información sin ambigüedades. Asimismo, los botones de acción presentan mensajes directos como “Comparar”, “Ver más” o “Agregar a favoritos”, reforzando la orientación en cada paso.
+
+Gracias a este sistema, el usuario puede navegar de manera fluida y sin necesidad de decodificar terminología compleja.
 
 ---
 
 ### 4.2.3. SEO Tags and Meta Tags
 
+La plataforma _PcPedia_ incorpora metaetiquetas que mejoran su posicionamiento en motores de búsqueda y aseguran que la información se interprete correctamente en navegadores.
 
+- **Title:** cada página cuenta con un título descriptivo, por ejemplo: _“PcPedia – Comparador de Procesadores y Hardware de PC”_.
+- **Codificación de caracteres:** se utiliza UTF-8 para mostrar adecuadamente caracteres especiales y símbolos técnicos.
+- **Description:** cada página integra un resumen breve y atractivo, como _“Encuentra y compara procesadores Intel y AMD con especificaciones actualizadas y comparaciones en tiempo real”_.
+- **Keywords:** se incluyen términos clave como “procesadores”, “tarjetas gráficas”, “comparador de hardware” para mejorar la indexación.
+- **Author y Copyright:** detallan el equipo desarrollador y derechos reservados.
+
+Estas prácticas garantizan que _PcPedia_ sea visible en búsquedas relevantes y transmita confianza a sus usuarios desde el primer contacto.
 
 ---
 
 ### 4.2.4. Searching Systems
 
+Uno de los aspectos más relevantes de _PcPedia_ es la capacidad de localizar rápidamente componentes específicos dentro de un catálogo amplio. Para ello, se ha diseñado un sistema de búsqueda con varias funcionalidades:
 
+- **Barra de búsqueda global:** permite ingresar directamente el nombre del componente (ej. “Ryzen 7 5800X”).
+- **Autocompletado con sugerencias:** mientras el usuario escribe, se despliegan coincidencias relevantes como modelos y marcas.
+- **Filtros dinámicos:** posibilitan refinar los resultados por precio, fabricante, fecha de lanzamiento o nivel de rendimiento.
+- **Historial de búsqueda:** los usuarios registrados pueden guardar búsquedas previas y repetirlas con un solo clic.
+- **Comparación directa:** desde la búsqueda, los resultados pueden enviarse al comparador sin necesidad de pasos adicionales.
+
+Este sistema asegura que los usuarios no pierdan tiempo navegando por múltiples menús y puedan acceder a la información que necesitan de forma inmediata.
 
 ---
 
 ### 4.2.5. Navigation Systems
 
+La navegación en _PcPedia_ está diseñada para ser clara, responsiva y adaptada a distintos dispositivos. El menú principal superior incluye accesos a las secciones más relevantes: Inicio, Categorías, Comparador, Noticias y Ayuda. Esta estructura permite un acceso rápido a las funciones esenciales sin saturar al usuario.
 
+En categorías extensas, se incluyen **submenús desplegables** y **breadcrumbs (migas de pan)** que indican la ruta actual del usuario (ej. Inicio > Tarjetas Gráficas > NVIDIA). Esto ayuda a que siempre sepan dónde se encuentran dentro de la jerarquía.
+
+Para dispositivos móviles se implementa un **menú hamburguesa**, donde las opciones aparecen en un panel lateral optimizado para pantallas pequeñas. En el footer se añaden accesos a contacto, políticas de privacidad, redes sociales y mapa del sitio, lo que refuerza la usabilidad.
+
+Finalmente, los botones de acción (ej. “Comparar ahora”, “Agregar a favoritos”) se distribuyen en posiciones estratégicas para que la navegación no solo sea informativa, sino también orientada a la interacción constante del usuario.
 
 ---
 
 ## 4.3. Landing Page UI Design
 
-
-
----
-
 ### 4.3.1. Landing Page Wireframe
 
+Los wireframes son representaciones de baja fidelidad que muestran la estructura y disposición de los elementos principales de la aplicación web.
 
+A continuación, presentaremos los wireframe de nuestra Landing Page como guía del diseño que haremos en los siguientes paso:
 
----
+- Captura 1
 
-### 4.3.2. Landing Page Mock-up
+![Wireframe1.png](./assets/chapter4/Wireframe-1.png)
 
+- Captura 2
 
+![Wireframe2.png](./assets/chapter4/Wireframe-2.png)
+
+- Captura 3
+
+![Wireframe3.png](./assets/chapter4/Wireframe-3.png)
+
+- Captura 4
+
+![Wireframe4.png](./assets/chapter4/Wireframe-4.png)
+
+- Captura 5
+
+![Wireframe5.png](./assets/chapter4/Wireframe-5.png)
+
+Para más detalle, revisar el anexo 1.
+
+### 4.3.2. Landing Page Mock-up.
+
+El Mock-up de la Landing Page es una representación de alta fidelidad de la página de inicio, donde se aplican colores, tipografía, iconografía y estilos que transmiten la identidad visual corporativa. Este mock-up permite visualizar cómo se verán realmente los componentes descritos en el wireframe.
+
+Este mock-up refleja la versión estilizada que un usuario final verá al ingresar, integrando la experiencia visual con la navegación lateral.
+
+- Captura 1
+
+![MockUp1.png](./assets/chapter4/Mock-up1.png)
+
+- Captura 2
+
+![MockUp2.png](./assets/chapter4/Mock-up2.png)
+
+- Captura 3
+
+![MockUp3.png](./assets/chapter4/Mock-up3.png)
+
+- Captura 4
+
+![MockUp4.png](./assets/chapter4/Mock-up4.png)
+
+Para más detalle, revisar el anexo 1.
 
 ---
 
 ## 4.4. Mobile Applications UX/UI Design
 
-
-
----
-
 ### 4.4.1. Mobile Applications Wireframes
 
+Anteriormente se mostraron los wireframes de la Landing Page del proyecto, ahora mostraremos el diseño de bajo nivel de fidelidad de la aplicación móvil de nuestro proyecto.
 
+En primer lugar, mostraremos los elementos que se podran encontrar en nuestra aplicación móvil.
 
----
+- Login, Usuario, Contraseña y Botón de acceso
+- Pantalla de inicio de sesión con campos básicos de autenticación.
+- Inicio Bienvenida Historia Servicios
+- Landing de bienvenida con mensaje principal, historia y servicios.
+- Dashboard Gráfico por modelo Gráfico por marca Exportar
+- Panel de control con métricas de activos y opción de exportar.
+- Contratos Tarjetas Estados
+- Vista de contratos listados como tarjetas.
+- Perfil Avatar Datos Configuración
+- Página de perfil con información y opciones de configuración.
+- Partners Novedades
+- Sección de socios y novedades corporativas.
+
+**Vista 1**
+
+![WireframeWeb1.png](./assets/chapter4/WireframeWeb1.png)
+
+**Vista 2**
+
+![WireframeWeb2.png](./assets/chapter4/WireframeWeb2.png)
+
+**Vista 3**
+
+![WireframeWeb3.png](./assets/chapter4/WireframeWeb3.png)
+
+**Vista 4**
+
+![WireframeWeb4.png](./assets/chapter4/WireframeWeb4.png)
+
+**Vista 5**
+
+![WireframeWeb5.png](./assets/chapter4/WireframeWeb5.png)
+
+**Vista 6**
+
+![WireframeWeb6.png](./assets/chapter4/WireframeWeb6.png)
+
+Para más detalle, revisar el anexo 1.
 
 ### 4.4.2. Mobile Applications Wireflow Diagrams
 
-
-
----
+![WireframeWeb.png](./assets/chapter4/WireframeWeb.png)
 
 ### 4.4.3. Mobile Applications Mock-ups
 
+Finalmente, presentamos el modelo de alta fidelidad de nuestra aplicación móvil:
 
+**Vista 1**
 
----
+![Mock-upWeb1.png](./assets/chapter4/Mock-upWeb1.png)
+
+**Vista 2**
+
+![Mock-upWeb2.png](./assets/chapter4/Mock-upWeb2.png)
+
+**Vista 3**
+
+![Mock-upWeb3.png](./assets/chapter4/Mock-upWeb3.png)
+
+**Vista 4**
+
+![Mock-upWeb4.png](./assets/chapter4/Mock-upWeb4.png)
+
+**Vista 5**
+
+![Mock-upWeb5.png](./assets/chapter4/Mock-upWeb5.png)
+
+**Vista 6**
+
+![Mock-upWeb6.png](./assets/chapter4/Mock-upWeb6.png)
+
+**Vista 7**
+
+![Mock-upWeb7.png](./assets/chapter4/Mock-upWeb7.png)
 
 ### 4.4.4. Mobile Applications User Flow Diagrams
 
-
+![Mock-upWeb.png](./assets/chapter4/Mock-upWeb.png)
 
 ---
 
