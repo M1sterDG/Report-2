@@ -824,6 +824,17 @@ En empresas grandes: satisfacción alta, aunque esperan mayor integración tecno
 Conclusión del Needfinding:
 Existe una necesidad transversal de digitalización integral y centralización de procesos, acompañada de funcionalidades que reduzcan burocracia, optimicen la comunicación con proveedores y brinden control financiero. La solución ideal debe adaptarse tanto a microempresas (simplicidad y facilidad de adopción) como a instituciones educativas y empresas grandes (integración avanzada y escalabilidad).
 
+---
+
+### 2.3.1 User Personas
+
+**Segmento objetivo 1:** Empresas (pequeñas, medianas y grandes)
+
+![user persona 1.png](docs/assets/img/chapter2/user_persona_1.png)
+
+**Segmento objetivo 2:** Instituciones Educativas (universidades, colegios, escuelas, institutos)
+
+![user persona 2.png](docs/assets/img/chapter2/user_persona_2.png)
 
 ---
 
