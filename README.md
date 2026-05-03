@@ -482,105 +482,191 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 
 ## 4.5. Mobile Applications Prototyping
 
-
+El prototipo móvil representa la navegación principal de la aplicación para validar la experiencia en pantallas pequeñas antes de pasar a implementación. Este prototipo permite revisar el registro, inicio de sesión, consulta de servicios, comparación de equipos, contacto con soporte y gestión de contratación desde dispositivos móviles.
 
 ---
 
 ### 4.5.1. Android Mobile Applications Prototyping
 
-
+Para Android, el prototipo considera patrones de interacción familiares para usuarios del sistema operativo: navegación inferior o menú compacto, formularios adaptados al teclado móvil, cards para información de equipos y botones táctiles con estados claros. El objetivo es validar que los flujos principales puedan completarse con pocas acciones y sin pérdida de contexto.
 
 ---
 
 ### 4.5.2. iOS Mobile Applications Prototyping
 
-
+Para iOS, el prototipo contempla el uso de áreas seguras, navegación superior clara y controles táctiles consistentes con las guías de Apple. La experiencia prioriza legibilidad, jerarquía visual y continuidad entre pantallas para que los usuarios puedan explorar, comparar y contratar servicios de manera fluida.
 
 ---
 
 ## 4.6. Web Applications UX/UI Design
 
-### 4.6.1. Web Applications Wireframes.
+### 4.6.1. Web Applications Wireframes
 
+Anteriormente se mostraron los wireframes de la Landing Page del proyecto, ahora mostraremos el diseño de bajo nivel de fidelidad de la web de nuestro proyecto.
 
+En primer lugar, mostraremos los elementos que se podran encontrar en nuestra web.
 
----
+- Login, Usuario, Contraseña y Botón de acceso
+- Pantalla de inicio de sesión con campos básicos de autenticación.
+- Inicio Bienvenida Historia Servicios
+- Landing de bienvenida con mensaje principal, historia y servicios.
+- Dashboard Gráfico por modelo Gráfico por marca Exportar
+- Panel de control con métricas de activos y opción de exportar.
+- Contratos Tarjetas Estados
+- Vista de contratos listados como tarjetas.
+- Perfil Avatar Datos Configuración
+- Página de perfil con información y opciones de configuración.
+- Partners Novedades
+- Sección de socios y novedades corporativas.
+
+**Vista 1**
+
+![WireframeWeb1.png](./assets/chapter4/WireframeWeb1.png)
+
+**Vista 2**
+
+![WireframeWeb2.png](./assets/chapter4/WireframeWeb2.png)
+
+**Vista 3**
+
+![WireframeWeb3.png](./assets/chapter4/WireframeWeb3.png)
+
+**Vista 4**
+
+![WireframeWeb4.png](./assets/chapter4/WireframeWeb4.png)
+
+**Vista 5**
+
+![WireframeWeb5.png](./assets/chapter4/WireframeWeb5.png)
+
+**Vista 6**
+
+![WireframeWeb6.png](./assets/chapter4/WireframeWeb6.png)
+
+Para más detalle, revisar el anexo 1.
 
 ### 4.6.2. Web Applications Wireflow Diagrams
 
-
-
----
+![WireframeWeb.png](./assets/chapter4/WireframeWeb.png)
 
 ### 4.6.3. Web Applications Mock-ups
 
+Finalmente, presentamos el modelo de alta fidelidad de nuestra pagina web:
 
+**Vista 1**
 
----
+![Mock-upWeb1.png](./assets/chapter4/Mock-upWeb1.png)
+
+**Vista 2**
+
+![Mock-upWeb2.png](./assets/chapter4/Mock-upWeb2.png)
+
+**Vista 3**
+
+![Mock-upWeb3.png](./assets/chapter4/Mock-upWeb3.png)
+
+**Vista 4**
+
+![Mock-upWeb4.png](./assets/chapter4/Mock-upWeb4.png)
+
+**Vista 5**
+
+![Mock-upWeb5.png](./assets/chapter4/Mock-upWeb5.png)
+
+**Vista 6**
+
+![Mock-upWeb6.png](./assets/chapter4/Mock-upWeb6.png)
+
+**Vista 7**
+
+![Mock-upWeb7.png](./assets/chapter4/Mock-upWeb7.png)
 
 ### 4.6.4. Web Applications User Flow Diagrams
 
-
+![Mock-upWeb.png](./assets/chapter4/Mock-upWeb.png)
 
 ---
 
-## 4.7. Web Applications Prototyping.
+## 4.7. Web Applications Prototyping
 
+El prototipo de la aplicación web adjunta la representación visual anteriomente mostrada y la vuelve interactiva, pero sin tener código real detrás.
 
+Para este proyecto, usamos figma para hacer el prototipo de la aplicación web. Véase el anexo 2 para mayor información.
 
 ---
 
 ## 4.8. Domain-Driven Software Architecture
 
-
+La arquitectura del producto se plantea desde una perspectiva Domain-Driven Design, separando responsabilidades y límites funcionales para organizar los módulos principales del sistema. Los siguientes diagramas muestran la relación del sistema con usuarios externos, contenedores y componentes internos.
 
 ---
 
 ### 4.8.1. Software Architecture Context Diagram
 
+El diagrama de contexto es uno que trata en alto nivel, o sea de manera superficial el negocio. Por ejemplo, en nuestro caso, podemos ver las personas que interactuaran con nuestro sistema, el sistema y los sistemas externos que nos ayudaran a conseguir los objetivos del negocio.
 
+![Diagram_C1.png](./assets/chapter4/Diagram_C1.png)
 
 ---
 
 ### 4.8.2. Software Architecture Container Diagrams
 
+El diagrama de contenedores es similar al de contexto, pero descomponiendo nuestro sistema en los servicios que lo compondran. En este caso, nuestro sistema estara compuesto por 2 páginas web: Customer y Staff, separamos a los clientes de la web en la que se trabajará en el negocio.
 
+![Diagram_C2.png](./assets/chapter4/Diagram_C2.png)
 
 ---
 
 ### 4.8.3. Software Architecture Components Diagrams
 
+Finalmente, el diagrama de componentes nos ayuda a describir a los componentes internos, siendo el que decidimos elegir como el más importante el API.
 
+Dentro podemos ver modulos o, interpretandolo con el DDD, bounded context donde se seguiria la misma logica mostrada en el Event Storming.
+
+![Diagram_C3.png](./assets/chapter4/Diagram_C3.png)
 
 ---
 
 ## 4.9 Software Object-Oriented Design
 
-
+El diseño orientado a objetos permite representar las entidades principales del dominio, sus atributos, responsabilidades y relaciones. Esta vista complementa la arquitectura de software al aterrizar los elementos de negocio en clases que pueden guiar la implementación.
 
 ---
 
 ### 4.9.1. Class Diagrams
 
+Aquí se visualiza el diagrama de clases de ECAT Leasing. Este diagrama es una representación gráfica estática que muestra la estructura de un sistema de software, detallando las clases, sus atributos, operaciones y las relaciones existentes entre ellas.
 
+![ClassDiagram.png](./assets/chapter4/Class_Diagram.png)
 
 ---
 
 ### 4.9.2. Class Dictionary
 
-
+| Clase | Responsabilidad | Atributos principales |
+| --- | --- | --- |
+| Usuario | Representa a la persona que accede a la plataforma y utiliza los servicios disponibles. | id, nombre, correo, contraseña, rol, estado |
+| Cliente | Representa al usuario que contrata o administra servicios de leasing. | idCliente, razonSocial, ruc, telefono, direccion |
+| Equipo | Representa los activos tecnológicos disponibles para alquiler, compra o auditoría. | idEquipo, nombre, categoria, especificaciones, estado, disponibilidad |
+| Contrato | Registra las condiciones de contratación del servicio. | idContrato, fechaInicio, fechaFin, monto, estado, tipoServicio |
+| Incidente | Registra problemas técnicos o solicitudes de soporte del cliente. | idIncidente, descripcion, prioridad, estado, fechaRegistro |
+| Mantenimiento | Representa acciones preventivas o correctivas sobre equipos tecnológicos. | idMantenimiento, tipo, fechaProgramada, resultado, estado |
+| OrdenCompra | Registra operaciones de compra o contratación realizadas desde la plataforma. | idOrden, fecha, total, metodoPago, estado |
+| Inventario | Gestiona la disponibilidad y ubicación de los equipos. | idInventario, ubicacion, stock, fechaActualizacion |
 
 ---
 
 ## 4.10 Database Design
 
-
+El diseño de base de datos organiza la persistencia de la información necesaria para usuarios, equipos, contratos, incidencias, mantenimiento y operaciones comerciales. Esta estructura permite mantener trazabilidad sobre los servicios contratados y la disponibilidad de activos tecnológicos.
 
 ---
 
 ### 4.10.1. Relational/Non-Relational Database Diagram
 
+Aquí se visualiza el diagrama de base de datos de ECAT Leasing. Este diagrama es una representación visual que muestra la estructura, las tablas, columnas y las relaciones entre ellos dentro de un sistema de base de datos, también se le conoce como esquema de base de datos.
 
+![DataBaseDiagram.png](./assets/chapter4/Database_Diagram.png)
 
 ---
 
