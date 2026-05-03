@@ -949,18 +949,38 @@ Existe una necesidad transversal de digitalización integral y centralización d
 
 ### 2.3.5. As-is Scenario Mapping
 
+Segmento 1: Empresas
 
+<div align="center"> <table> <tr> <th>Phases</th> <th>Búsqueda de soluciones TI</th> <th>Evaluación de proveedores</th> <th>Comunicación con proveedor</th> <th>Implementación del servicio</th> </tr> <tr> <td><b>Doing</b></td> <td align="center">Investiga opciones de adquisición o leasing de equipos.<br>Consulta páginas web, referencias y contactos.<br>Evalúa costos y beneficios.</td> <td align="center">Revisa características, disponibilidad y precios.<br>Compara propuestas.<br>Analiza condiciones de contrato.</td> <td align="center">Se comunica por correo, llamadas o reuniones.<br>Consulta dudas técnicas y comerciales.<br>Solicita cotizaciones.</td> <td align="center">Coordina entrega e instalación.<br>Gestiona contratos.<br>Solicita soporte o mantenimiento.</td> </tr> <tr> <td><b>Thinking</b></td> <td align="center">“Necesito optimizar costos sin afectar la operación.”<br>“Quiero una solución confiable.”</td> <td align="center">“¿Cuál opción se adapta mejor?”<br>“¿Este proveedor es confiable?”</td> <td align="center">“Espero respuestas rápidas.”<br>“Necesito claridad.”</td> <td align="center">“Debe funcionar sin problemas.”<br>“Quiero continuidad.”</td> </tr> <tr> <td><b>Feeling</b></td> <td align="center">Preocupado por costos.<br>Inseguro por opciones.<br>Presionado.</td> <td align="center">Confundido.<br>Expectante.</td> <td align="center">Frustrado si es lento.<br>Confiado con buena atención.</td> <td align="center">Satisfecho si funciona.<br>Estresado si falla.</td> </tr> </table> </div>
+
+---
+
+Segmento 2: Instituciones educativas
+
+<div align="center"> <table> <tr> <th>Phases</th> <th>Identificación de necesidades</th> <th>Evaluación de recursos tecnológicos</th> <th>Comunicación con proveedores</th> <th>Uso y gestión de equipos</th> </tr> <tr> <td><b>Doing</b></td> <td align="center">Identifica necesidades académicas y administrativas.<br>Evalúa infraestructura.<br>Define requerimientos.</td> <td align="center">Revisa opciones tecnológicas.<br>Analiza presupuesto.<br>Compara proveedores.</td> <td align="center">Contacta proveedores.<br>Solicita cotizaciones.<br>Realiza consultas.</td> <td align="center">Implementa equipos.<br>Da seguimiento.<br>Reporta incidencias.</td> </tr> <tr> <td><b>Thinking</b></td> <td align="center">“Necesitamos modernizarnos.”<br>“Debe ayudar a estudiantes.”</td> <td align="center">“¿Se ajusta al presupuesto?”<br>“¿Será útil?”</td> <td align="center">“Necesito asesoría clara.”</td> <td align="center">“Debe funcionar en clases.”</td> </tr> <tr> <td><b>Feeling</b></td> <td align="center">Preocupado por presupuesto.<br>Motivado.</td> <td align="center">Duda.<br>Interés.</td> <td align="center">Confundido o tranquilo según atención.</td> <td align="center">Satisfecho o frustrado según resultados.</td> </tr> </table> </div>
 
 ---
 
 ## 2.4. Ubiquitous Language
 
 - Cliente: persona, empresa o institución que requiere de equipamiento TI.
+
+
 - Contrato: documento digital que establece condiciones de arrendamiento o de compra.
+
+
 - Equipo: objeto técnologico (computadora, servidor, IoT, etc.) que forma parte de nuestro inventario y que el cliente requiere
+
+
 - Inventario: ubicación física donde los equipos son guardados hasta el proceso de venta o arrendamiento.
+
+
 - Incidencia: problema o requerimiento técnico que tiene el cliente.
+
+
 - Mantenimiento: acciones preventivas realizadas por el equipo de soporte y solicitada por el cliente.
+
+
 - Equipo de negocio: grupo encargado de la gestión de negocio, desde administración de usuarios, equipo de ventas, equipo de logística y soporte al cliente.
 
 ---
