@@ -223,7 +223,21 @@ Además, comprendemos que cada empresa tiene necesidades y presupuestos distinto
 
 ### 1.2.1. Antecedentes y problemática
 
+Para realizar los antecedentes y problemáticas, se realizó con anticipación la técnica 5 ‘W’s & 2 ‘H’s:
 
+**What:** El problema de la rápida obsolescencia tecnológica que enfrentan empresas y organizaciones, obligadas a invertir constantemente en nuevos equipos y a gestionar activos de TI de manera compleja y costosa.
+
+**When:** Actualmente, en un contexto donde los ciclos de actualización tecnológica se reducen a 1–2 años y las aplicaciones requieren hardware cada vez más potente.
+
+**Where:** En empresas de distintos tamaños (pequeñas, medianas y grandes) y en instituciones educativas, especialmente en el Perú y con proyección a Latinoamérica.
+
+**Who:** Los principales afectados son las organizaciones que no cuentan con presupuestos flexibles ni con áreas de TI especializadas para gestionar correctamente la elección, uso y renovación de sus equipos.
+
+**Why:** Porque la constante necesidad de actualización genera altos costos, dificulta la gestión de activos y provoca que muchas empresas gasten de más en equipos que no aprovechan, o compren dispositivos insuficientes para sus necesidades reales.
+
+**How:** Las empresas suelen comprar equipos sin una evaluación estratégica, gestionando por sí mismas la garantía, el mantenimiento y la reposición, lo que aumenta el tiempo y los recursos dedicados a la administración de TI.
+
+**How much:** El impacto se traduce en gastos significativos de capital (CapEx), sobrecostos en soporte y mantenimiento, pérdida de productividad y baja eficiencia en el aprovechamiento de la inversión tecnológica.
 
 ---
 
