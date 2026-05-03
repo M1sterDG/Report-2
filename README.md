@@ -955,7 +955,13 @@ Existe una necesidad transversal de digitalización integral y centralización d
 
 ## 2.4. Ubiquitous Language
 
-
+- Cliente: persona, empresa o institución que requiere de equipamiento TI.
+- Contrato: documento digital que establece condiciones de arrendamiento o de compra.
+- Equipo: objeto técnologico (computadora, servidor, IoT, etc.) que forma parte de nuestro inventario y que el cliente requiere
+- Inventario: ubicación física donde los equipos son guardados hasta el proceso de venta o arrendamiento.
+- Incidencia: problema o requerimiento técnico que tiene el cliente.
+- Mantenimiento: acciones preventivas realizadas por el equipo de soporte y solicitada por el cliente.
+- Equipo de negocio: grupo encargado de la gestión de negocio, desde administración de usuarios, equipo de ventas, equipo de logística y soporte al cliente.
 
 ---
 
