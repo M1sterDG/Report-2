@@ -597,7 +597,38 @@ Para ello, se utiliza el modelo de análisis **Competitive Analysis Landscape**,
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
+Para competir de manera efectiva en el mercado de leasing tecnológico en el Perú, Smart Leasing implementará una serie de **estrategias** y **tácticas** orientadas a consolidar su posicionamiento, maximizar su alcance y diferenciarse de sus principales competidores (**HardRental Perú, Thuntech y CSI Leasing Perú**).
 
+### **Estrategias**
+
+1. **Enfoque en Pymes y Educación**  
+   Smart Leasing priorizará pequeñas y medianas empresas (Pymes) e instituciones educativas, sectores con alta necesidad de modernización tecnológica pero sin presupuestos robustos.
+
+
+2. **Modelo Integral de Smart Leasing**  
+   Leasing + soporte + mantenimiento + gestión de garantías + upgrades bajo demanda.
+
+
+3. **Flexibilidad Contractual**  
+   Contratos cortos y adaptables (desde 12 meses), frente a los plazos rígidos de otros competidores.
+
+
+4. **Educación y Confianza en el Leasing**  
+   Campañas educativas, webinars y casos de éxito para superar la resistencia cultural al modelo.
+
+
+5. **Alianzas Estratégicas con Proveedores Locales**  
+   Convenios con distribuidores de hardware, software y servicios TI para competir con el alcance internacional de CSI Leasing.
+
+### **Tácticas**
+
+- Pilotos gratuitos o con descuento para empresas interesadas.
+- Contratos escalables (ej. empezar con 10 equipos y crecer).
+- Panel digital con **dashboard financiero** para mostrar ahorros en tiempo real.
+- Soporte técnico diferenciado **24/7**.
+- Campañas digitales segmentadas en LinkedIn, Google Ads y redes sociales.
+- Casos de éxito documentados en empresas y colegios peruanos.
+- Garantía de **renovación tecnológica cada 18–24 meses**.
 
 ---
 
