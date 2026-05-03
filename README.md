@@ -1361,7 +1361,23 @@ Se recomienda, para etapas posteriores, ampliar la cobertura de pruebas automát
 
 ## Anexos
 
+<section id="anexos">
+  <h3> Organización y Repositorios en GitHub</h3>
+  <p>El proyecto PcPedia se encuentra alojado bajo la organización de GitHub PCPedia2026 A continuación se detallan los repositorios principales utilizados:</p>
+  <ul>
+    <li><strong>Repositorio de la Organización:</strong> 
+      <a href="https://github.com/PCPedia2026" target="_blank">
+        https://github.com/PCPedia2026
+      </a>
+    </li>
+    <li><strong>Repositorio del Informe:</strong> 
+      <a href="https://github.com/PCPedia2026/Report" target="_blank">
+        https://github.com/PCPedia2026/Report
+      </a>
+    </li>
+  </ul>
 
+</section>
 
 ---
 
