@@ -594,108 +594,458 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 
 ## 5.1. Software Configuration Management
 
+En esta sección se describen las herramientas y configuraciones utilizadas para gestionar el desarrollo del software, incluyendo el entorno de desarrollo, el control de versiones, las convenciones de estilo de código y la configuración del despliegue.
+
+
 ### 5.1.1. Software Development Environment Configuration
 
+En esta sección, se incluirá los productos de software que se usaron en el proyecto. Los enlaces a cada una de las herramientas se encuentran disponibles en los anexos.
 
+#### Product UX/UI Design:
 
----
+- Figma: Herramienta de diseño colaborativo para crear prototipos, wireframes y diseños de interfaces de usuario.
+- Canva: Plataforma de diseño colaborativo de funcion múltiple.
+- Visual Paradigm: Herramienta de modelado UML y diseño de software.
+- PlantText: Herramienta de modela UML.
+
+#### Software Development:
+
+- WebStorm: IDE para desarrollo web, soporta HTML, CSS, JavaScript y frameworks modernos.
+- GitHub: Plataforma de alojamiento de código fuente y control de versiones utilizando Git.
+- Visual Studio Code: Editor utilizado únicamente para la exportación del reporte de formato markdown a PDF.
+
+#### Software Deployment:
+
+- GitHub Pages: Servicio de alojamiento web estático proporcionado por GitHub, ideal para desplegar sitios web y documentación.
 
 ### 5.1.2. Source Code Management
 
+Para la gestion del código fuente se utilizó GitHub, una plataforma de alojamiento de código fuente y control de versiones utilizando Git. Se creó un repositorio en la organización de GitHub, donde se almacenó todo el código fuente del proyecto.
 
+El repositorio se estructuró de la siguiente manera:
 
----
+- Organización en Github: https://github.com/PCPedia2026
+- Repositorio del informe final: https://github.com/PCPedia2026/Report
+
+#### Conventional Commits
+
+- `feat`: Para nuevas características o funcionalidades.
+- `fix`: Para correcciones de errores.
+- `docs`: Para cambios en la documentación.
+- `refactor`: Para cambios en el código que no agregan ni corrigen funcionalidades.
+- `add`: Para la adición de archivos, recursos o contenido nuevo (ej. imágenes, configs, assets).
+- `update`: Para modificaciones o mejoras sobre algo ya existente (ej. actualizar imágenes, texto, librerías, dependencias).
+- `chore`: Estructuración de contenido
+
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
+Se optó por seguir las siguientes guías y convenciones de estilo de código para asegurar la calidad y consistencia del código fuente, priorizando el uso del **inglés** cómo una buena práctica.
 
+#### HTML:
 
----
+- Archivos HTML deben tener la extensión `.html`.
+- Se incluye `alt` en todas las imágenes.
+- Usar comillas dobles para atributos.
+- Usar etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<footer>`, etc.).
+- Indentación de 2 espacios.
+
+#### CSS:
+
+- Archivos CSS deben tener la extensión `.css`.
+- Usar guiones para nombres de clases y IDs (e.g., `.main-header`).
+- Se agrupan estilos relacionados y se separan con comentarios.
+
+#### JavaScript y TypeScript:
+
+- Archivos JS deben tener la extensión `.js` y TS `.ts`.
+- Usar camelCase para nombres de variables y funciones.
+- Usar `PascalCase` para nombres de clases y componentes: `MyComponent`, `UserProfile`.
+- Usar `const` y `let` en lugar de `var`.
+- Usar funciones flecha y nombres explícitos.
+- Los archivos deben tener una unica responsabilidad (Single Responsibility Principle).
 
 ### 5.1.4. Software Deployment Configuration
 
+En esta sección se describen las configuraciones y herramientas utilizadas para el despliegue del software desarrollado. El objetivo es asegurar que el proceso de despliegue sea eficiente, automatizado y confiable.
 
+#### Despliegue de la Landing Page:
 
----
+La **Landing Page** fue desarrollada utilizando tecnologías web estándar como HTML, CSS y JavaScript. Y fue desplegada utilizando **GitHub Pages**, un servicio de alojamiento web estático proporcionado por GitHub.
+
+**Repositorio de la Landing Page**: https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Landing-Page-PcPedia
+
+**Landing Page desplegada**: https://1asi0729-7401-2520-ecatleasing-pcpedia.github.io/Landing-Page-PcPedia/
+
 
 ## 5.2. Product Implementation & Deployment
-
-
 
 ---
 
 ### 5.2.1. Sprint Backlogs
 
-
-
----
+<table align="center"  border="1" width="90%" style="text-align:center;">
+    <tr align="left">
+        <td>
+            <b>Sprint #</b>
+        </td>
+        <td>
+            <b>Sprint 3</b>           
+        </td>
+    </tr>
+    <tr align="left">
+        <td colspan="2">
+            <b>Sprint Planning Background</b>
+        </td>
+    </tr>
+    <tr align="left">
+        <td>
+            <b>Date</b>
+        </td>
+        <td>
+            5/11/2025
+        </td>
+    </tr>
+       <tr align="left">
+        <td>
+            <b>Time</b>
+        </td>
+        <td>
+            10:00 PM
+        </td>
+    </tr>
+       <tr align="left">
+        <td>
+            <b>Location</b>
+        </td>
+        <td>
+            Modalidad virtual por Discord
+        </td>
+    </tr>
+     </tr>
+       <tr align="left">
+        <td>
+            <b>Prepared By</b>
+        </td>
+        <td>
+            Integrantes de EcatLeasing
+        </td>
+    </tr>
+    </tr>
+       <tr align="left">
+        <td>
+            <b>Attendees (to planning meeting)</b>
+        </td>
+        <td>
+            - Carranza Tesén, Joaquín Enrique <br/>
+            - Bendezu Navarro, Rúbens <br/>
+            - Hernandez Poma, Sebastian Eduardo <br/>
+            - Arroyo Gonzales, Emily Juliette <br/>    
+        </td>
+    </tr>
+      </tr>
+       <tr align="left">
+        <td>
+            <b>Sprint n - 3</b>
+            <b>Review Summary</b>
+        </td>
+        <td>
+            Se complementó el desarrollo el frontend, así también se desarrolló el backend.
+        </td>
+    </tr>
+    <tr align="left">
+        <td>
+            <b>Sprint n - 3</b>
+            <b>Retrospective Summary</b>
+        </td>
+        <td>
+            Se aseguró de que los estudiantes conozcan sus respectivas tareas a desarrollar.
+        </td>
+    </tr>
+     <tr align="left">
+        <td colspan="2">
+            <b>Sprint Goal & User Stories</b>
+        </td>
+    </tr>
+      <tr align="left">
+        <td>
+            <b>Sprint 3 Goal</b>
+        </td>
+        <td>
+            Nuestro objetivo en esta tercera entrega es la optimización del frontend anteriormente desarrollado y la creación del apartado backend. Durante este sprint, desplegaremos este último apartado aspirando a integrarlo con el frontend para así finalmente lograr una solución consistente. 
+        </td>
+      <tr align="left">
+        <td>
+            <b>Sprint 3 Velocity</b>
+        </td>
+        <td>
+            5
+        </td>
+    </tr>
+       <tr align="left">
+        <td>
+            <b>Sum of Story Points</b>
+        </td>
+        <td>
+            5
+        </td>
+    </tr>
+</table>
 
 ### 5.2.2. Implemented Landing Page Evidence
 
+<p>La Landing Page fue desplegada en GitHub Pages, y está accesible a través del siguiente enlace: <a href="https://1asi0729-7401-2520-ecatleasing-pcpedia.github.io/Landing-Page-PcPedia/">Enlace a la Landing Page</a></p>
 
----
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
+El frontend de PcPedia fue desplegado utilizando Netlify, una plataforma de despliegue optimizada para aplicaciones frontend.
 
----
+**URL desplegada:** [PcPedia Front-end](https://dreamy-sunshine-e3be2b.netlify.app/)
+
+![evidence_deployment_1.jpeg](./assets/chapter5/evidence_deployment_1.jpeg)
+![evidence_deployment_2.jpeg](./assets/chapter5/evidence_deployment_2.jpeg)
+![evidence_deployment_3.jpeg](./assets/chapter5/evidence_deployment_3.jpeg)
+![evidence_deployment_4.jpeg](./assets/chapter5/evidence_deployment_4.jpeg)
+
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
+**Última actualización: 03/05/2026**
+
+Este Acuerdo de Servicio regula los términos y condiciones bajo los cuales **ECAT Leasing** otorga el acceso al modelo de **Smart Leasing** y sus servicios asociados. Al suscribir una propuesta comercial o utilizar nuestros servicios, el Cliente acepta los términos aquí descritos.
 
 ---
-
-### 5.2.5. Implemented Native-Mobile Application Evidence
-
-
----
-
-### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
-
+**1. Definiciones**
+- **“Smart Leasing”**: Modelo de arrendamiento inteligente de activos tecnológicos (hardware) con servicios de gestión integrados.
+- **“Equipos”**: Hardware moderno (laptops, desktops, servidores, etc.) provisto por ECAT Leasing bajo la modalidad de arrendamiento.
+- **“Cliente”**: Empresa o institución educativa que contrata los servicios de ECAT Leasing.
+- **“Ecosistema de Servicios”**: Incluye soporte técnico, mantenimiento, gestión de garantías y consultoría de optimización de recursos.
 
 ---
-
-### 5.2.7. RESTful API documentation
-
-
----
-
-### 5.2.8. Team Collaboration Insights
-
+**2. Objeto**
+ECAT Leasing se compromete a proveer al Cliente el uso de equipos tecnológicos actualizados y la prestación de servicios de soporte, mantenimiento y gestión de TI, permitiendo al Cliente optimizar sus costos y evitar la obsolescencia tecnológica.
 
 ---
+**3. Arrendamiento y Planes Flexibles**
+- Los equipos se entregan en modalidad de arrendamiento operativo, manteniendo ECAT Leasing la propiedad de los activos.
+- El Cliente podrá elegir planes según sus objetivos, con la posibilidad de actualizar el hardware según los periodos de renovación pactados.
+- Está prohibido subarrendar los equipos a terceros sin autorización expresa de ECAT Leasing.
+
+---
+**4. Responsabilidades del Cliente**
+El Usuario se compromete a:
+1. Utilizar los equipos exclusivamente para los fines comerciales o educativos declarados.
+2. Designar un contacto técnico para coordinar las visitas de mantenimiento y soporte.
+3. Notificar de inmediato cualquier incidencia, daño, robo o pérdida de los activos.
+4. Cumplir puntualmente con los pagos correspondientes al plan de Smart Leasing contratado.
+
+---
+**5. Responsabilidades de ECAT Leasing**
+ECAT Leasing se compromete a:
+- Entregar equipos en óptimas condiciones de funcionamiento y actualizados tecnológicamente.
+- Brindar soporte técnico especializado y mantenimiento preventivo/correctivo según el nivel de servicio acordado.
+- Gestionar las garantías con fabricantes y realizar la sustitución de equipos en caso de fallas no reparables en sitio.
+- Realizar la evaluación de recursos para recomendar la configuración de hardware más eficiente para el Cliente.
+
+---
+**6. Pagos, Facturación y Renovación**
+- Las tarifas se basan en el plan seleccionado y el volumen de activos gestionados.
+- El incumplimiento en el pago facultará a ECAT Leasing a suspender el soporte técnico o retirar los activos previa notificación.
+- La renovación es automática según el contrato marco, salvo notificación previa por el Cliente.
+
+---
+**7. Propiedad Intelectual**
+- Todas las metodologías de gestión, software de monitoreo y la marca **ECAT Leasing** son propiedad exclusiva de la startup.
+- El Cliente no adquiere derechos de propiedad sobre el hardware, solo una licencia de uso durante la vigencia del arrendamiento.
+
+---
+**8. Limitación de Responsabilidad**
+ECAT Leasing no será responsable por:
+- Pérdida de información o datos contenidos en los discos duros de los equipos.
+- Lucro cesante derivado de fallas técnicas imprevistas, aunque se compromete a la sustitución ágil del hardware.
+- Daños causados por uso indebido o manipulación por personal no autorizado.
+
+---
+**9. Suspensión y Terminación**
+ECAT Leasing podrá suspender el servicio ante el incumplimiento de los pagos o por uso indebido de los activos, reservándose el derecho de retirar los equipos físicos de las instalaciones del Cliente.
+
+---
+**10. Modificaciones**
+ECAT Leasing se reserva el derecho de modificar estos Términos en cualquier momento. Las modificaciones se notificarán por canales oficiales y se considerarán aceptadas al continuar con el uso del servicio.
+
+---
+**11. Legislación y Jurisdicción**
+Este Acuerdo se rige por las leyes de la República del Perú. Cualquier controversia será sometida a los tribunales de Lima Metropolitana.
+
+### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
+
+<p>Evidencias del despliegue:</p>
+
+## Railway
+
+![Railway](./assets/chapter5/sprint3_deployevidence1.PNG)
+
+## Render
+
+![Render1](./assets/chapter5/sprint3_deployevidence2.PNG)
+![Render2](./assets/chapter5/sprint3_deployevidence3.PNG)
+
+<ul>    
+  <li><strong>Dockerfile implementado (multi-stage):</strong>
+    <ul>
+      <li>Stage builder basado en <code>eclipse-temurin:21-jdk</code></li>
+      <li>Compilación con <code>./mvnw -q -B package -DskipTests</code></li>
+      <li>Stage runtime con <code>eclipse-temurin:21-jre</code></li>
+    </ul>
+  </li>
+    
+  <ul>
+    <li>Aplicación corriendo en contenedor Docker.</li>
+    <li>Proovedor usado para deploy de BackEnd: Render</li>
+    <li>Proovedor usado para Data Base: Railway</li>
+    <li>URL pública: <strong>https://backendpcpedia.onrender.com</strong></li>
+    <li>Acceso validado a rutas REST y Swagger durante el Sprint Review.</li>
+  </ul>
+</ul>
+
+### 5.2.6. RESTful API documentation
+
+### Arranque funcional
+![Arranque funcional](./assets/chapter5/evidence_sprint3_1.PNG)
+
+### Swagger funcional
+![Swagger funcional](./assets/chapter5/evidence_sprint3_2.PNG)
+
+### Validación visual del API
+![Validación visual del API](./assets/chapter5/evidence_sprint3_3.PNG)
+![Validación visual del API](./assets/chapter5/evidence_sprint3_4.PNG)
+
+### 5.2.7. Team Collaboration Insights
+
+<p>Durante este sprint, se mantuvo una comunicación constante entre los miembros del equipo mediante reuniones semanales. Se utilizó <strong>GitHub</strong> para la gestión del código fuente y el seguimiento de tareas, y <strong>Trello</strong> para organizar el avance del sprint. Las tareas fueron gestionadas y completadas según las estimaciones, y la colaboración entre los miembros del equipo fue eficiente.</p>
+
 
 ## 5.3. Video About-the-Product.
 
+Como último artefacto del proyecto desarrollado, se ha desarrollado un video con orientación promocional e informativa, resumiendo el modelo de negocio, las características y beneficios del producto, incluyendo algunas escenas de interacción con el producto y al menos una opinión por cada segmento objetivo.  
+
+![pcpedia_about_the_product_thumbnail.png](./assets/chapter5/pcpedia_about_the_product_thumbnail.png)  
+
+**URL en OneDrive:** [OneDrive](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221a553_upc_edu_pe/IQDMIq-ktRmmRInkCK2IRzV1AXCy8kQNCCH14S3BM6ZQaAw)  
+**URL en YouTube:** [YouTube](https://youtu.be/2q87N3Umm0w)  
 
 
 ---
 
 ## Conclusiones
 
+<p>
+Durante el desarrollo del proyecto PcPedia, el equipo logró consolidar una solución web funcional que integra un frontend moderno y un backend robusto, implementados sobre una arquitectura modular basada en Domain-Driven Design (DDD). A lo largo de los sprints se definieron los contextos funcionales principales, se desarrollaron flujos críticos del negocio y se garantizó la comunicación efectiva entre los módulos de autenticación, catálogo, contratos, tickets, pagos, facturación e inventario.
+
+En este último sprint, el equipo alcanzó un hito fundamental: la integración completa del frontend con los servicios del backend, habilitando funcionalidades reales como login, gestión de sesión, visualización de activos, panel administrativo, consulta de contratos, manejo de incidencias y navegación fluida entre los distintos módulos. Asimismo, se realizó el despliegue exitoso tanto del frontend como del backend, lo que permite validar la operación del sistema en un entorno real.
+
+El trabajo colaborativo permitió reforzar las buenas prácticas de desarrollo: mensajes de commit consistentes, estructura clara de branches, revisión cruzada de código y un uso adecuado de herramientas ágiles para el seguimiento del progreso. La modularidad del sistema y la separación por contextos facilitaron la mantenibilidad del proyecto y permitieron que distintos miembros del equipo contribuyeran en paralelo sin afectar la estabilidad del código.
+
+</p>
 
 ## Recomendaciones
 
+<p>
+    Se recomienda, para etapas posteriores, ampliar la cobertura de pruebas automáticas, optimizar la experiencia de usuario mediante iteraciones basadas en feedback real, reforzar la seguridad de los módulos críticos y continuar con la documentación técnica y funcional del sistema. Los aprendizajes obtenidos en este proyecto fortalecen la capacidad del equipo para abordar nuevas funcionalidades y consolidan una base sólida para futuras mejoras y escalamiento de PcPedia como una plataforma integral de arrendamiento y gestión de equipos tecnológicos.
+</p>
 
-## Video App Validation
 
 
 ## Video About-The-Team
 
-
+**URL de video About-The-Team** [AboutTheTeam](https://youtu.be/qiV-ZW8_nnM)
 ---
 
 
 ##  Bibliografía
 
-
+<ul>
+  <li>Driessen, V. (2010). <em>A successful Git branching model</em>. Disponible en: <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">https://nvie.com/posts/a-successful-git-branching-model/</a></li>
+  <li>Cucumber. (s.f.). <em>Gherkin Reference</em>. Recuperado de: <a href="https://cucumber.io/docs/gherkin/" target="_blank">https://cucumber.io/docs/gherkin/</a></li>
+  <li>Figma. (s.f.). <em>Figma: Collaborative Interface Design Tool</em>. Recuperado de: <a href="https://www.figma.com/" target="_blank">https://www.figma.com/</a></li>
+  <li>Lucidchart. (s.f.). <em>Lucidchart: Diagramming & Visualization Software</em>. Recuperado de: <a href="https://www.lucidchart.com/" target="_blank">https://www.lucidchart.com/</a></li>
+  <li>Mozilla Developer Network. (s.f.). <em>HTML, CSS y JavaScript</em>. Recuperado de: <a href="https://developer.mozilla.org/es/docs/Web" target="_blank">https://developer.mozilla.org/es/docs/Web</a></li>
+  <li>GitHub. (s.f.). <em>GitHub: Where the world builds software</em>. Recuperado de: <a href="https://github.com/" target="_blank">https://github.com/</a></li>
+  <li>Microsoft. (s.f.). <em>Visual Studio Code</em>. Recuperado de: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></li>
+  <li>W3Schools. (s.f.). <em>HTML5 Syntax</em>. Recuperado de: <a href="https://www.w3schools.com/html/html5_syntax.asp" target="_blank">https://www.w3schools.com/html/html5_syntax.asp</a></li>
+</ul>
 
 ---
 
 ## Anexos
 
+<section id="anexos">
+  <h3>1. Organización y Repositorios en GitHub</h3>
+  <p>El proyecto PcPedia se encuentra alojado bajo la organización de GitHub del curso 1ASI0729-7401-2520-EcatLeasing-PcPedia. A continuación se detallan los repositorios principales utilizados:</p>
+  <ul>
+    <li><strong>Repositorio de la Organización:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio del Informe Final:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Report-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Report-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio de la Landing Page:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Landing-Page-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Landing-Page-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio de el Frontend:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Front-end-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Front-end-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio de el Backend:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Back-end-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Back-end-PcPedia
+      </a>
+    </li>
+  </ul>
 
-
+  <h3>2. Despliegue de la Landing Page</h3>
+  <p>La Landing Page fue desarrollada por Alessandro Ramiro Condori Lozano y desplegada utilizando GitHub Pages. Esta página sirve como presentación inicial del producto PcPedia.</p>
+  <ul>
+    <li><strong>Despliegue de la Landing Page en producción:</strong> 
+      <a href="https://1asi0729-7401-2520-ecatleasing-pcpedia.github.io/Landing-Page-PcPedia/" target="_blank">
+        https://1asi0729-7401-2520-ecatleasing-pcpedia.github.io/Landing-Page-PcPedia/
+      </a>
+    </li>
+    <li><strong>Link del Mock-up en Figma:</strong> 
+      <a href="https://www.figma.com/design/oiLz93LcaZJmdmEKi6h46I/FIGMA-PCPEDIA?node-id=1-15&t=wvrVBChCM91tnOsZ-1" target="_blank">
+        https://www.figma.com/design/oiLz93LcaZJmdmEKi6h46I/FIGMA-PCPEDIA
+      </a>
+    </li>
+  </ul>
+  <h3>3. Despliegue de el Frontend</h3>
+  <p>El Frontend fue desplegado utilizando Netlify. Esta página permite a los usuarios interactuar con la interfaz de manera satisfactoria.</p>
+  <ul>
+    <li><strong>Despliegue de el Frontend en producción:</strong> 
+      <a href="https://pcpedia.netlify.app" target="_blank">
+          https://pcpedia.netlify.app
+      </a>
+    </li>
+  </ul>
+  <h3>4. Despliegue de el Backend</h3>
+  <p>El backend fue desplegado utilizando Render. Esta página contiene la lógica de negocio, el manejo de la base de datos y control de APIs.</p>
+  <ul>
+    <li><strong>Despliegue de el Backend:</strong> 
+      <a href="https://pcpediaapi-egd4b8frh3bqcsde.canadacentral-01.azurewebsites.net/swagger-ui/index.html" target="_blank">
+          https://pcpediaapi-egd4b8frh3bqcsde.canadacentral-01.azurewebsites.net/swagger-ui/index.html
+      </a>
+    </li>
+  </ul>
+  <h3>5. Exposicion del proyecto TF</h3>
+  <p>https://youtu.be/jFJ_QsxzDIw</p>
+</section>
 
 ---
 
