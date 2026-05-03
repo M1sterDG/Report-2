@@ -792,11 +792,37 @@ Entrevista 3: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_e
 <p>Existe una necesidad común de <strong>centralizar y digitalizar</strong> los procesos de inventario, contratos y soporte. En el sector educativo, se prioriza reducir la burocracia y agilizar compras. En el sector empresarial, las microempresas requieren soluciones básicas y fáciles de implementar, mientras que las grandes buscan mejorar la integración y eficiencia de sus sistemas ya existentes.</p>
 </div>
 
-
 ---
 
 ## 2.3. Needfinding
 
+A partir de las entrevistas realizadas en los sectores educativo y empresarial, se identificaron las siguientes necesidades principales:
+
+Centralización de la información
+Tanto en instituciones educativas como en empresas, la gestión de inventarios, contratos y mantenimientos se encuentra fragmentada entre documentos físicos, hojas de cálculo y repositorios digitales. Existe la necesidad de una plataforma unificada que integre inventario, contratos y soporte en un solo lugar.
+
+Agilidad en los procesos de compras y renovaciones
+El sector educativo resalta la burocracia y las demoras en aprobaciones de compras. Se requiere un sistema que reduzca tiempos de cotización y validación, agilizando las decisiones de adquisición o leasing de equipos.
+
+Gestión más eficiente del mantenimiento
+En el sector empresarial, especialmente en microempresas, los procesos de soporte son lentos, desordenados y poco confiables. Se necesita un mecanismo ágil para registrar incidencias, coordinar técnicos y dar seguimiento con trazabilidad clara.
+
+Mejor comunicación con proveedores
+Si bien se usan correos y WhatsApp, los entrevistados expresan la necesidad de contar con canales más formales, integrados a los sistemas de gestión, para garantizar rapidez y respaldo en la comunicación.
+
+Optimización del presupuesto y control de gastos
+Varias organizaciones reconocen que los imprevistos y la falta de herramientas para planificación generan sobrecostos. Se necesita un módulo de control presupuestal y de facturación que permita prever gastos y registrar pagos de manera ordenada.
+
+Nivel de satisfacción y expectativas
+
+En el sector educativo: satisfacción intermedia; los procesos funcionan, pero se busca mayor agilidad.
+
+En microempresas: insatisfacción por la falta de control y eficiencia.
+
+En empresas grandes: satisfacción alta, aunque esperan mayor integración tecnológica.
+
+Conclusión del Needfinding:
+Existe una necesidad transversal de digitalización integral y centralización de procesos, acompañada de funcionalidades que reduzcan burocracia, optimicen la comunicación con proveedores y brinden control financiero. La solución ideal debe adaptarse tanto a microempresas (simplicidad y facilidad de adopción) como a instituciones educativas y empresas grandes (integración avanzada y escalabilidad).
 
 
 ---
