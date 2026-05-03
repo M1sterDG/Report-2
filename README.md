@@ -937,7 +937,13 @@ Existe una necesidad transversal de digitalización integral y centralización d
 
 ### 2.3.4. Empathy Mapping
 
+**Segmento objetivo 1:** Empresas (pequeñas, medianas y grandes)
 
+![empathy_mapping 1.png](docs/assets/img/chapter2/empathy_mapping_1.png)
+
+**Segmento objetivo 2:** Instituciones Educativas (universidades, colegios, escuelas, institutos)
+
+![empathy_mapping 2.png](docs/assets/img/chapter2/empathy_mapping_2.png)
 
 ---
 
