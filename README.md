@@ -921,12 +921,17 @@ Existe una necesidad transversal de digitalización integral y centralización d
   </tbody>
 </table>
 
-
 ---
 
 ### 2.3.3. User Journey Mapping
 
+**Segmento objetivo 1:** Empresas (pequeñas, medianas y grandes)
 
+![user journey_mapping_1.png](docs/assets/img/chapter2/user_journey_mapping_1.png)
+
+**Segmento objetivo 2:** Instituciones Educativas (universidades, colegios, escuelas, institutos)
+
+![user journey_mapping_2.png](docs/assets/img/chapter2/user_journey_mapping_2.png)
 
 ---
 
