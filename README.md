@@ -439,7 +439,7 @@ Debe transmitir confianza, modernidad y simplicidad, con una interfaz clara (si 
 
 #### 1.2.2.4. Lean UX Canvas
 
-
+![lean_ux_canvas.png](docs/assets/img/chapter1/lean_ux_canvas.png)
 
 ---
 
