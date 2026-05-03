@@ -634,11 +634,87 @@ Para competir de manera efectiva en el mercado de leasing tecnológico en el Per
 
 ## 2.2. Entrevistas
 
-
+---
 
 ### 2.2.1. Diseño de entrevistas
 
+**Segmento objetivo 1: Empresas**
 
+- **Gestión de contrato**
+
+1. ¿Cómo llevan el control de los contratos de los equipos tecnológicos?
+
+
+2. Actualmente ¿Qué herramientas usan para la gestión de los contratos?
+
+
+3. ¿Como acceden a dicha información de los contratos? (Excel, docx, papel)
+
+- **Verificación de procesos**
+
+4. ¿Cómo verifican el cumplimiento de los servicios contratados? (Software, mantenimiento, upgrades, etc.)
+
+
+5. ¿Con qué frecuencia revisa los términos del contrato? ¿Cuánta relevancia le da?
+
+
+6. ¿Cómo conservan el historial de mantenimiento?
+
+
+7. ¿Cuál es el proceso para pedir soporte técnico? ¿Cuánto demora?
+
+- **Comunicación y presupuesto**
+
+8. ¿Qué canales de comunicación usa para hacer los contratos y comunicarse con el contratista?
+
+
+9. ¿Como manejan los presupuestos de sus equipos y servicios de mantenimiento?
+
+- **Satisfacción**
+
+10. ¿Qué tan satisfecho se encuentra con las medidas que actualmente usa para la gestión de los contratos?
+
+**Segmento objetivo 2: Instituciones educativas**
+
+- **Gestión de equipos y contratos**
+
+1. ¿Cómo llevan registro del inventario de los equipos tecnológicos?
+
+
+2. ¿Qué herramientas usa para controlar los contratos y ver su estado de vigencia?
+
+
+3. ¿Qué dificultades enfrenta al momento de comprar un equipo?
+
+
+4. Actualmente ¿Qué problemas presenta al buscar información de los contratos?
+
+
+5. ¿Qué procesos tienen que pasar para la contratación, renovación o cancelación de los contratos?
+
+- **Soporte y mantenimiento**
+
+6. ¿Con qué frecuencia tienen problemas técnicos?
+
+
+7. Cuando se presentan dichos problemas ¿Qué procesos suceden para solucionar el problema?
+
+
+8. ¿Cómo se comunican con su proveedor de TI para coordinar reparaciones o mantenimientos de los equipos?
+
+- **Respecto al presupuesto**
+
+9. Actualmente ¿Qué medios usa para comunicarse y encontrar contratos?
+
+
+10. ¿Cómo obtiene información sobre los costos de los equipos y servicios TI?
+
+
+11. ¿Cómo controla las facturas y pagos al proveedor de los equipos de tecnología?
+
+- **Satisfacción**
+
+12. ¿Cuál es su nivel de satisfacción con los procesos actuales, respecto a la gestión de contratos y equipos TI?
 
 ---
 
