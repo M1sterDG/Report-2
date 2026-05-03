@@ -740,6 +740,57 @@ Entrevista 3: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_e
 
 ### 2.2.3. Análisis de entrevistas
 
+<h3>Hallazgos principales</h3>
+<ul>
+<li><strong>Gestión de contratos y documentación:</strong> uso de OneDrive/Drive; aún se manejan copias físicas. Empresas grandes usan integraciones con SharePoint.</li>
+<li><strong>Procesos y dificultades:</strong> microempresas con procesos lentos y desordenados; empresas grandes con procesos ágiles y claros.</li>
+<li><strong>Soporte y mantenimiento:</strong> microempresas con demoras y mala comunicación; grandes con soporte interno y escalamiento eficiente.</li>
+<li><strong>Comunicación con proveedores:</strong> correo, WhatsApp y llamadas; en microempresas predomina la informalidad.</li>
+<li><strong>Nivel de satisfacción:</strong> alto en empresas grandes, bajo en microempresas.</li>
+</ul>
+
+<h2>3. Comparativo Educativo vs Empresarial</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Sector Educativo</th>
+<th>Sector Empresarial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestión de contratos</td>
+<td>Dispersa (físico + digital). Uso de RPE, SharePoint, OneDrive.</td>
+<td>Drive/OneDrive en microempresas; SharePoint en grandes.</td>
+</tr>
+<tr>
+<td>Procesos</td>
+<td>Burocráticos, lentos en compras y renovaciones.</td>
+<td>Microempresas lentos/desordenados; grandes más ágiles.</td>
+</tr>
+<tr>
+<td>Mantenimiento</td>
+<td>Incidencias moderadas, gestionadas con tickets.</td>
+<td>Microempresas con problemas de soporte; grandes con control interno.</td>
+</tr>
+<tr>
+<td>Comunicación</td>
+<td>Principalmente formal (correo, tickets).</td>
+<td>Mixto: correo, WhatsApp, llamadas; informalidad en microempresas.</td>
+</tr>
+<tr>
+<td>Satisfacción</td>
+<td>Media: procesos funcionan pero con burocracia.</td>
+<td>Alta en grandes, baja en microempresas.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="conclusion">
+<h3>Conclusiones y Oportunidades</h3>
+<p>Existe una necesidad común de <strong>centralizar y digitalizar</strong> los procesos de inventario, contratos y soporte. En el sector educativo, se prioriza reducir la burocracia y agilizar compras. En el sector empresarial, las microempresas requieren soluciones básicas y fáciles de implementar, mientras que las grandes buscan mejorar la integración y eficiencia de sus sistemas ya existentes.</p>
+</div>
 
 
 ---
