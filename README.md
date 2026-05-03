@@ -840,6 +840,86 @@ Existe una necesidad transversal de digitalización integral y centralización d
 
 ### 2.3.2. User Task Matrix
 
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Actividades</th>
+      <th colspan="2">Rodrigo Zevallos (Empresas)</th>
+      <th colspan="2">Carmen Paredes (Instituciones educativas)</th>
+    </tr>
+    <tr>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Registrar cuenta en la plataforma</td>
+      <td>Una vez</td>
+      <td>Muy alta</td>
+      <td>Una vez</td>
+      <td>Muy alta</td>
+    </tr>
+    <tr>
+      <td>Conocer información de equipos</td>
+      <td>Rara vez</td>
+      <td>Muy alta</td>
+      <td>Usualmente</td>
+      <td>Muy alta</td>
+    </tr>
+    <tr>
+      <td>Visualizar la disponibilidad de los equipos</td>
+      <td>Rara vez</td>
+      <td>Alta</td>
+      <td>Rara vez</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>Aprender del uso de la plataforma</td>
+      <td>Rara vez</td>
+      <td>Media</td>
+      <td>Rara vez</td>
+      <td>Media</td>
+    </tr>
+    <tr>
+      <td>Escribir reseñas sobre el servicio</td>
+      <td>Rara vez</td>
+      <td>Baja</td>
+      <td>Rara vez</td>
+      <td>Baja</td>
+    </tr>
+    <tr>
+      <td>Reportar inconvenientes con el servicio</td>
+      <td>Rara vez</td>
+      <td>Alta</td>
+      <td>Usualmente</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>Acordar de auditorías</td>
+      <td>Una vez</td>
+      <td>Alta</td>
+      <td>Una vez</td>
+      <td>Muy alta</td>
+    </tr>
+    <tr>
+      <td>Solicitar servicio técnico</td>
+      <td>Rara vez</td>
+      <td>Alta</td>
+      <td>Usualmente</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>Realizar pago del servicio</td>
+      <td>Siempre</td>
+      <td>Muy alta</td>
+      <td>Siempre</td>
+      <td>Muy alta</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ---
