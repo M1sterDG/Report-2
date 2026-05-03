@@ -33,7 +33,7 @@
 
 `U20191B935` - `Carranza Tesén Joaquín Enrique`
 
-`U202311469` - `Arroyo Gonzales, Emily Juliette`
+`U202311469` - `Arroyo Gonzales Emily Juliette`
 
 ### **2026**
 
