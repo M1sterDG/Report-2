@@ -243,7 +243,7 @@ Para realizar los antecedentes y problemáticas, se realizó con anticipación l
 
 ### 1.2.2. Lean UX Process
 
-
+A continuacion se presentara la solucion al Lean UX que usaremos para poder desarrollar adecuadamente nuestro proyecto y ademas poder definir nuestro mercado objetivo.
 
 ---
 
