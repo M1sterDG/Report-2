@@ -390,7 +390,50 @@ Debe transmitir confianza, modernidad y simplicidad, con una interfaz clara (si 
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+<section style="display:flex; justify-content:center;">
 
+ <table style="width:100%; max-width:900px; border-collapse:collapse; font-family:Arial, Helvetica, sans-serif; font-size:14px;">
+    <thead>
+      <tr>
+        <th style="text-align:center; padding:10px; border:1px solid #e5e7eb;">Creemos que</th>
+        <th style="text-align:center; padding:10px; border:1px solid #e5e7eb;">Sabremos que</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="vertical-align:top; padding:10px; border:1px solid #e5e7eb;">
+          Las empresas y organizaciones que hoy compran equipos estarán dispuestas a migrar a un modelo de
+          arrendamiento tecnológico inteligente si les demostramos ahorros en costos, equipos siempre actualizados
+          y soporte especializado.
+        </td>
+        <td style="vertical-align:top; padding:10px; border:1px solid #e5e7eb;">
+          Esto es cierto cuando reduzcan compras directas de hardware y firmen contratos de Smart Leasing,
+          evidenciando crecimiento sostenido de la base de clientes.
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; padding:10px; border:1px solid #e5e7eb;">
+          Nuestros usuarios valoran más la simplicidad en la gestión de TI: un servicio único que incluya
+          arrendamiento, mantenimiento y gestión de garantías.
+        </td>
+        <td style="vertical-align:top; padding:10px; border:1px solid #e5e7eb;">
+          Esto es cierto cuando usen con frecuencia el panel de control, soliciten upgrades desde la plataforma
+          y reporten satisfacción por la reducción de tiempo y recursos en gestión de TI.
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; padding:10px; border:1px solid #e5e7eb;">
+          La principal barrera de entrada es la desconfianza hacia el leasing tecnológico, pero podremos superarla
+          con campañas educativas, casos de éxito y pruebas piloto.
+        </td>
+        <td style="vertical-align:top; padding:10px; border:1px solid #e5e7eb;">
+          Esto es cierto cuando los participantes de pilotos escalen a contratos permanentes, compartan testimonios
+          positivos y recomienden el servicio a otras empresas.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
 ---
 
