@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93bad976-d6e1-4627-95c0-a4deddf7a833" name="Changes" comment="doc: add images of evidence deployment">
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/evidence_sprint3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/evidence_sprint3_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/evidence_sprint3_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/evidence_sprint3_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/pcpedia_about_the_product_thumbnail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/sprint3_deployevidence1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/sprint3_deployevidence2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/chapter5/sprint3_deployevidence3.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DE8JU3m3BomvGgE7CAukkRSiTJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "feature/sprint1-joaquin",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/emi25/Downloads/Diseño/assets/chapter5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\emi25\Downloads\Diseño\assets\chapter5" />
+      <recent name="C:\Users\emi25\Downloads\Diseño\docs\assets\img\chapter 5" />
+      <recent name="C:\Users\emi25\Downloads\Diseño\docs\assets\img\chapter1" />
+      <recent name="C:\Users\emi25\Downloads\Diseño\docs\assets\img\chapter2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\emi25\Downloads\Diseño\assets\chapter5" />
+      <recent name="C:\Users\emi25\Downloads\Diseño\docs\assets\img\chapter 5" />
+      <recent name="C:\Users\emi25\Downloads\Diseño\docs\assets\img\chapter1" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-WS-261.22158.274" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93bad976-d6e1-4627-95c0-a4deddf7a833" name="Changes" comment="" />
+      <created>1777835797069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777835797069</updated>
+      <workItem from="1777835798086" duration="17757000" />
+      <workItem from="1777853632674" duration="538000" />
+    </task>
+    <task id="LOCAL-00001" summary="doc: update de README.md file to the correct format">
+      <option name="closed" value="true" />
+      <created>1777841889775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777841889775</updated>
+    </task>
+    <task id="LOCAL-00002" summary="doc: Update item 4.7 of the README.md file's table of contents">
+      <option name="closed" value="true" />
+      <created>1777842039095</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777842039095</updated>
+    </task>
+    <task id="LOCAL-00003" summary="doc: fix error on README.md">
+      <option name="closed" value="true" />
+      <created>1777842194942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777842194942</updated>
+    </task>
+    <task id="LOCAL-00004" summary="doc: add the startup description">
+      <option name="closed" value="true" />
+      <created>1777842760094</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777842760094</updated>
+    </task>
+    <task id="LOCAL-00005" summary="doc: add the 1.2.1 background and problems section of point 1.2 solution profile">
+      <option name="closed" value="true" />
+      <created>1777842917812</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777842917812</updated>
+    </task>
+    <task id="LOCAL-00006" summary="doc: add the 1.2.2 lean ux process">
+      <option name="closed" value="true" />
+      <created>1777842962351</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777842962351</updated>
+    </task>
+    <task id="LOCAL-00007" summary="doc: add the 1.2.2.1 lean ux problem statements">
+      <option name="closed" value="true" />
+      <created>1777843110392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777843110392</updated>
+    </task>
+    <task id="LOCAL-00008" summary="doc: add the 1.2.2.3 lean ux assumptions">
+      <option name="closed" value="true" />
+      <created>1777844096090</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777844096090</updated>
+    </task>
+    <task id="LOCAL-00009" summary="doc: add the 1.2.2.3 lean ux hypothesis statements">
+      <option name="closed" value="true" />
+      <created>1777844643578</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777844643578</updated>
+    </task>
+    <task id="LOCAL-00010" summary="doc: add the 1.2.2.4 lean ux canvas">
+      <option name="closed" value="true" />
+      <created>1777844782044</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777844782044</updated>
+    </task>
+    <task id="LOCAL-00011" summary="doc: add the 1.3 target segments">
+      <option name="closed" value="true" />
+      <created>1777844939010</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777844939010</updated>
+    </task>
+    <task id="LOCAL-00012" summary="doc: add the 2.1 competitors">
+      <option name="closed" value="true" />
+      <created>1777845122654</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845122654</updated>
+    </task>
+    <task id="LOCAL-00013" summary="doc: add the 2.1.1 competitive analysis">
+      <option name="closed" value="true" />
+      <created>1777845150983</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845150983</updated>
+    </task>
+    <task id="LOCAL-00014" summary="doc: add the 2.1.2 strategies and tactics against competitors">
+      <option name="closed" value="true" />
+      <created>1777845291024</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845291024</updated>
+    </task>
+    <task id="LOCAL-00015" summary="doc: add the 2.2.1 interview design">
+      <option name="closed" value="true" />
+      <created>1777845528943</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845528943</updated>
+    </task>
+    <task id="LOCAL-00016" summary="doc: add the 2.2.1 interview log">
+      <option name="closed" value="true" />
+      <created>1777845627811</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845627811</updated>
+    </task>
+    <task id="LOCAL-00017" summary="doc: add the 2.2.3 interview analysis">
+      <option name="closed" value="true" />
+      <created>1777845789691</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845789691</updated>
+    </task>
+    <task id="LOCAL-00018" summary="doc: add the 2.3 Needfinding">
+      <option name="closed" value="true" />
+      <created>1777845876442</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777845876442</updated>
+    </task>
+    <task id="LOCAL-00019" summary="doc: create a folder for chapter 2 and add the user personas">
+      <option name="closed" value="true" />
+      <created>1777846078735</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1777846078735</updated>
+    </task>
+    <task id="LOCAL-00020" summary="doc: add 2.3.2 user task matrix">
+      <option name="closed" value="true" />
+      <created>1777846141819</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1777846141819</updated>
+    </task>
+    <task id="LOCAL-00021" summary="doc: add 2.3.3 user journey mapping">
+      <option name="closed" value="true" />
+      <created>1777846320449</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1777846320449</updated>
+    </task>
+    <task id="LOCAL-00022" summary="doc: add 2.3.4 empathy mapping">
+      <option name="closed" value="true" />
+      <created>1777846507798</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1777846507798</updated>
+    </task>
+    <task id="LOCAL-00023" summary="doc: add the 2.4 ubiquitous language">
+      <option name="closed" value="true" />
+      <created>1777846626352</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1777846626352</updated>
+    </task>
+    <task id="LOCAL-00024" summary="doc: add the 2.3.5 As-is Scenario and correct form of 2.4">
+      <option name="closed" value="true" />
+      <created>1777847480505</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1777847480505</updated>
+    </task>
+    <task id="LOCAL-00025" summary="doc: add the team member profile (1.1.2)">
+      <option name="closed" value="true" />
+      <created>1777848527389</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1777848527389</updated>
+    </task>
+    <task id="LOCAL-00026" summary="doc: add the bibliography">
+      <option name="closed" value="true" />
+      <created>1777848608203</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1777848608203</updated>
+    </task>
+    <task id="LOCAL-00027" summary="doc: add the recommendations">
+      <option name="closed" value="true" />
+      <created>1777848885264</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1777848885264</updated>
+    </task>
+    <task id="LOCAL-00028" summary="doc: add the Appendices">
+      <option name="closed" value="true" />
+      <created>1777849386803</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1777849386803</updated>
+    </task>
+    <task id="LOCAL-00029" summary="doc: correct the members">
+      <option name="closed" value="true" />
+      <created>1777849854331</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1777849854331</updated>
+    </task>
+    <task id="LOCAL-00030" summary="doc: add images of evidence deployment">
+      <option name="closed" value="true" />
+      <created>1777853929187</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1777853929187</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="doc: add the 1.2.2 lean ux process" />
+    <MESSAGE value="doc: add the 1.2.2.1 lean ux problem statements" />
+    <MESSAGE value="doc: add the 1.2.2.3 lean ux assumptions" />
+    <MESSAGE value="doc: add the 1.2.2.3 lean ux hypothesis statements" />
+    <MESSAGE value="doc: add the 1.2.2.4 lean ux canvas" />
+    <MESSAGE value="doc: add the 1.3 target segments" />
+    <MESSAGE value="doc: add the 2.1 competitors" />
+    <MESSAGE value="doc: add the 2.1.1 competitive analysis" />
+    <MESSAGE value="doc: add the 2.1.2 strategies and tactics against competitors" />
+    <MESSAGE value="doc: add the 2.2.1 interview design" />
+    <MESSAGE value="doc: add the 2.2.1 interview log" />
+    <MESSAGE value="doc: add the 2.2.3 interview analysis" />
+    <MESSAGE value="doc: add the 2.3 Needfinding" />
+    <MESSAGE value="doc: create a folder for chapter 2 and add the user personas" />
+    <MESSAGE value="doc: add 2.3.2 user task matrix" />
+    <MESSAGE value="doc: add 2.3.3 user journey mapping" />
+    <MESSAGE value="doc: add 2.3.4 empathy mapping" />
+    <MESSAGE value="doc: add the 2.4 ubiquitous language" />
+    <MESSAGE value="doc: add the 2.3.5 As-is Scenario and correct form of 2.4" />
+    <MESSAGE value="doc: add the team member profile (1.1.2)" />
+    <MESSAGE value="doc: add the bibliography" />
+    <MESSAGE value="doc: add the recommendations" />
+    <MESSAGE value="doc: add the Appendices" />
+    <MESSAGE value="doc: correct the members" />
+    <MESSAGE value="doc: add images of evidence deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc: add images of evidence deployment" />
+  </component>
+</project>
