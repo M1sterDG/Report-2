@@ -2106,12 +2106,12 @@ Este Acuerdo se rige por las leyes de la República del Perú. Cualquier controv
 
 ## Railway
 
-![Railway](./assets/chapter5/sprint3_deployevidence1.PNG)
+![Railway](./assets/chapter5/sprint3_deployevidence1.png)
 
 ## Render
 
-![Render1](./assets/chapter5/sprint3_deployevidence2.PNG)
-![Render2](./assets/chapter5/sprint3_deployevidence3.PNG)
+![Render1](./assets/chapter5/sprint3_deployevidence2.png)
+![Render2](./assets/chapter5/sprint3_deployevidence3.png)
 
 <ul>    
   <li><strong>Dockerfile implementado (multi-stage):</strong>
@@ -2134,14 +2134,14 @@ Este Acuerdo se rige por las leyes de la República del Perú. Cualquier controv
 ### 5.2.6. RESTful API documentation
 
 ### Arranque funcional
-![Arranque funcional](./assets/chapter5/evidence_sprint3_1.PNG)
+![Arranque funcional](./assets/chapter5/evidence_sprint3_1.png)
 
 ### Swagger funcional
-![Swagger funcional](./assets/chapter5/evidence_sprint3_2.PNG)
+![Swagger funcional](./assets/chapter5/evidence_sprint3_2.png)
 
 ### Validación visual del API
-![Validación visual del API](./assets/chapter5/evidence_sprint3_3.PNG)
-![Validación visual del API](./assets/chapter5/evidence_sprint3_4.PNG)
+![Validación visual del API](./assets/chapter5/evidence_sprint3_3.png)
+![Validación visual del API](./assets/chapter5/evidence_sprint3_4.png)
 
 ### 5.2.7. Team Collaboration Insights
 
