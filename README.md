@@ -2791,7 +2791,21 @@ producción (Azure)
 
 ---
 
+### 7.2.2. Stages Deployment Pipeline Components
 
+- **Build Backend:** Compilación del proyecto Java con Maven mediante **mvn clean package**, generando el archivo JAR ejecutable.
+
+- **Upload Backend Artifact:** Subida del JAR generado como artefacto mediante `actions/upload-artifact`, asegurando que el mismo archivo compilado sea usado en el despliegue.
+
+- **Azure Login:** Autenticación segura en Azure mediante `azure/login@v2` usando OIDC / Workload Identity Federation.
+
+- **Deploy Backend:** Despliegue automático del JAR en Azure App Service utilizando `azure/webapps-deploy@v3`, apuntando al servicio `pcpediaapi` en el slot Production.
+
+- **Build Frontend:** Ejecución automática del build de Angular en Netlify mediante `npm install` y `npm run build`, generando el bundle en `dist/pcpedia/browser`.
+
+- **Deploy Frontend:** Publicación automática del frontend en la CDN global de Netlify, aplicando las reglas de redirección SPA definidas en `netlify.toml`.
+
+- **Production Validation:** Verificación de disponibilidad del backend en Azure y del frontend en Netlify después del despliegue exitoso.
 
 ## Conclusiones
 
