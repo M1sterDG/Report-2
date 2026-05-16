@@ -156,6 +156,13 @@
     - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
 - [5.3. Video About-the-Product](#53-video-about-the-product)
 
+#### [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices-1)
+- [7.1. Continuous Integration](#71-continuous-integration)
+    - [7.1.1. Tools and Practices](#711-tools-and-practices)
+    - [7.1.2. Build & Test Suite Pipeline Components](#712-build--test-suite-pipeline-components)
+- [7.2. Continuous Delivery](#72-continuous-delivery)
+    - [7.2.1. Tools and Practices](#721-tools-and-practices)
+
 #### [Conclusiones](#conclusiones-1)
 
 #### [Recomendaciones](#recomendaciones-1)
@@ -668,6 +675,212 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 ## 5.3. Video About-the-Product.
 
 
+
+---
+
+<div align="center">
+
+# Capítulo VII: DevOps Practices
+
+</div>
+
+---
+
+## 7.1. Continuous Integration
+
+El equipo de PCPedia adoptó Continuous Integration (CI) como práctica central del proceso de desarrollo, con el objetivo de detectar errores de integración de forma temprana y garantizar que cada cambio introducido en la rama principal produzca un artefacto compilable y desplegable. Dado que el sistema está compuesto por dos aplicaciones independientes —una API backend en Java y una SPA frontend en Angular—, el enfoque CI se implementó de forma diferenciada para cada capa, adaptando las herramientas al entorno tecnológico de cada una.
+
+El backend emplea **GitHub Actions** como motor de CI/CD, con un workflow definido en `.github/workflows/main_pcpediaapi.yml` que se dispara automáticamente ante cada push a la rama `main` o manualmente mediante `workflow_dispatch`. El frontend delega el proceso de integración y despliegue a **Netlify**, plataforma que detecta automáticamente los cambios en el repositorio y ejecuta el proceso de build sin necesidad de configuración adicional de pipeline.
+
+Ambas estrategias siguen el principio de integración continua basada en trunk, donde `main` es la rama de entrega y todo cambio fusionado en ella desencadena el proceso de verificación y despliegue.
+
+---
+
+### 7.1.1. Tools and Practices
+
+#### Backend — PCPedia API
+
+| Herramienta / Práctica | Rol en el pipeline |
+|---|---|
+| **GitHub Actions** | Motor de CI/CD. Orquesta los jobs de build y deploy. |
+| **Java 21** (distribución Microsoft) | Entorno de ejecución configurado en el runner `ubuntu-latest` mediante `actions/setup-java@v4`. |
+| **Apache Maven** | Herramienta de build. Ejecuta `mvn clean package` para compilar y empaquetar el proyecto como JAR ejecutable. |
+| **GitHub Artifacts** (`actions/upload-artifact`) | Mecanismo de traspaso del JAR generado en el job `build` hacia el job `deploy`, garantizando inmutabilidad del artefacto. |
+| **Trigger en `main`** | Todo push a la rama `main` activa el workflow, alineando CI con el flujo trunk-based. |
+
+**Prácticas aplicadas:**
+
+- **Build verification en cada integración:** el job `build` compila el proyecto completo con `mvn clean package`, asegurando que el código fusionado en `main` es siempre compilable.
+- **Separación de jobs:** los jobs `build` y `deploy` están desacoplados y encadenados mediante dependencia explícita (`needs: build`), lo que permite identificar con precisión en qué etapa falla el pipeline.
+- **Artefacto inmutable:** el JAR producido en build se sube como artifact y el job de deploy lo descarga, garantizando que lo que se compila es exactamente lo que se despliega.
+
+> **Punto de mejora identificado:** actualmente el pipeline ejecuta `mvn clean package -DskipTests`, omitiendo la ejecución de tests en el proceso de CI. Como acción de mejora para TB2, el equipo tiene previsto habilitar la ejecución de tests y ampliar la suite de pruebas unitarias e de integración.
+
+---
+
+#### Frontend — PCPedia Web Application
+
+| Herramienta / Práctica | Rol en el pipeline |
+|---|---|
+| **Netlify** | Plataforma CI/CD para el frontend. Detecta cambios en el repositorio y ejecuta el build automáticamente. |
+| **Angular CLI / `ng build`** | Compilador del proyecto Angular. Invocado mediante `npm run build`, genera el bundle optimizado de producción. |
+| **`netlify.toml`** | Archivo de configuración declarativa del pipeline: define el comando de build, el directorio de publicación y las reglas de redirección SPA. |
+| **Node.js / npm** | Gestor de dependencias y entorno de ejecución para Angular. |
+
+**Prácticas aplicadas:**
+
+- **Build declarativo:** la configuración en `netlify.toml` documenta explícitamente el comando de build (`npm run build`) y el directorio de salida (`dist/pcpedia/browser`), haciendo el proceso reproducible y auditable.
+- **SPA redirect:** la regla `/* → /index.html` garantiza que las rutas del router de Angular se resuelvan correctamente desde cualquier URL de acceso directo.
+- **Deploy automático desde el repositorio:** Netlify monitorea el repositorio y dispara el pipeline sin intervención manual ante cada push a la rama principal.
+
+---
+
+### 7.1.2. Build & Test Suite Pipeline Components
+
+#### Backend Pipeline — Diagrama de jobs
+Push a main / workflow_dispatch
+│
+▼
+┌─────────────────────────────────────────┐
+│              JOB: build                  │
+│  Runner: ubuntu-latest                   │
+│                                          │
+│  1. actions/checkout@v4                  │
+│  2. actions/setup-java@v4 (Java 21,      │
+│     distribución Microsoft)              │
+│  3. mvn clean package -DskipTests        │
+│     → Genera: target/*.jar               │
+│  4. actions/upload-artifact              │
+│     → Sube: .java-app/                  │
+└─────────────────┬───────────────────────┘
+│ needs: build
+▼
+┌─────────────────────────────────────────┐
+│              JOB: deploy                 │
+│  Runner: ubuntu-latest                   │
+│                                          │
+│  1. actions/download-artifact            │
+│     → Descarga: .java-app/              │
+│  2. azure/login@v2                       │
+│     (OIDC / Workload Identity            │
+│      Federation)                         │
+│  3. azure/webapps-deploy@v3             │
+│     → App: pcpediaapi                   │
+│     → Slot: Production                  │
+└─────────────────────────────────────────┘
+
+#### Backend — Test Suite (estado actual)
+
+| Componente | Estado |
+|---|---|
+| Framework de testing | Spring Boot Test (JUnit 5, integrado via `spring-boot-starter-test`) |
+| Archivo de test existente | `PcPediaApplicationTests.java` — verifica únicamente que el contexto de Spring carga correctamente (`contextLoads()`) |
+| Tests unitarios | No implementados aún |
+| Tests de integración | No implementados aún |
+| Ejecución en CI | Deshabilitada (`-DskipTests`) |
+
+#### Frontend Pipeline — Flujo Netlify
+Push al repositorio
+│
+▼
+┌─────────────────────────────────────────┐
+│           Netlify Build Runner           │
+│                                          │
+│  1. Detección de cambios en el repo      │
+│  2. Instalación de dependencias          │
+│     → npm install                        │
+│  3. Build de producción                  │
+│     → npm run build (ng build)           │
+│     → Output: dist/pcpedia/browser/      │
+│  4. Publicación en CDN de Netlify        │
+│  5. Aplicación de redirects SPA          │
+│     /* → /index.html (HTTP 200)          │
+└─────────────────────────────────────────┘
+
+#### Frontend — Test Suite (estado actual)
+
+| Componente | Estado |
+|---|---|
+| Framework de testing | Karma 6.4 + Jasmine 5.1 (configurado por Angular CLI) |
+| Archivos `.spec.ts` | No implementados aún — stack instalado pero sin casos de prueba escritos |
+| Ejecución en CI | No configurada |
+
+---
+
+## 7.2. Continuous Delivery
+
+PCPedia implementa Continuous Delivery como extensión natural del pipeline de CI, asegurando que todo artefacto que supera el proceso de build en la rama `main` sea desplegado automáticamente en el entorno de producción, sin intervención manual adicional. Esta práctica garantiza que la versión disponible para los usuarios finales refleja siempre el estado más reciente y verificado del código.
+
+El modelo de entrega continua del equipo opera sobre dos plataformas diferenciadas según la capa del sistema: **Azure App Service** para el backend y **Netlify** para el frontend, cada una integrada directamente con el repositorio de código fuente correspondiente.
+
+---
+
+### 7.2.1. Tools and Practices
+
+#### Backend — Continuous Delivery a Azure App Service
+
+| Herramienta / Práctica | Descripción |
+|---|---|
+| **Azure App Service** | Plataforma PaaS donde se ejecuta la API. La aplicación se denomina `pcpediaapi` y opera en el slot `Production`. |
+| **`azure/webapps-deploy@v3`** | GitHub Action oficial de Microsoft para el despliegue de aplicaciones web en Azure. Recibe el JAR como input y lo publica en el App Service. |
+| **OIDC / Workload Identity Federation** | Mecanismo de autenticación sin secretos de larga duración. El workflow se autentica en Azure mediante tres secrets (`AZUREAPPSERVICE_CLIENTID`, `AZUREAPPSERVICE_TENANTID`, `AZUREAPPSERVICE_SUBSCRIPTIONID`), siguiendo las mejores prácticas de seguridad en pipelines. |
+| **`azure/login@v2`** | Action que gestiona el login federado con Azure antes del deploy. |
+| **Despliegue de JAR directo** | El artefacto deployado es el JAR empaquetado por Maven. No se utiliza contenedorización; Azure App Service gestiona el entorno de ejecución Java nativo. |
+
+**Prácticas de CD aplicadas:**
+
+- **Despliegue automatizado sin intervención manual:** todo push a `main` que supere el job `build` desencadena automáticamente el job `deploy`, eliminando pasos manuales en el proceso de entrega.
+- **Autenticación federada (OIDC):** el uso de Workload Identity Federation evita el almacenamiento de credenciales de larga duración en el repositorio, alineando el pipeline con las recomendaciones de seguridad de la industria (DevSecOps).
+- **Artefacto único e inmutable:** el JAR producido en el job `build` es el mismo que se descarga y despliega en el job `deploy`, garantizando que el entorno de producción ejecuta exactamente lo que fue compilado y verificado.
+- **Slot de producción directo:** el deploy apunta al slot `Production` del App Service, haciendo que los cambios sean inmediatamente visibles para los usuarios finales tras cada integración exitosa.
+
+---
+
+#### Frontend — Continuous Delivery a Netlify
+
+| Herramienta / Práctica | Descripción |
+|---|---|
+| **Netlify** | Plataforma de hosting y CD para la SPA de Angular. Gestiona build, distribución en CDN global y configuración de dominios. |
+| **Deploy automático desde repositorio** | Netlify monitorea el repositorio y desencadena el pipeline completo (build + deploy) sin pasos adicionales de configuración. |
+| **CDN global** | El bundle de producción (`dist/pcpedia/browser`) se distribuye en la red de CDN de Netlify, garantizando baja latencia para usuarios en distintas ubicaciones geográficas. |
+| **Configuración declarativa (`netlify.toml`)** | El archivo de configuración define de forma explícita y versionada el comando de build, el directorio de publicación y las reglas de redirección. |
+
+**Prácticas de CD aplicadas:**
+
+- **GitOps implícito:** el repositorio es la fuente de verdad del estado del entorno de producción. Cualquier cambio fusionado en la rama principal se refleja automáticamente en producción.
+- **Configuración como código:** el `netlify.toml` versionado en el repositorio documenta el proceso de entrega de forma reproducible y auditable.
+- **SPA routing en producción:** la regla de redirección `/* → /index.html` garantiza que el router de Angular funcione correctamente en producción para cualquier ruta de navegación directa.
+
+---
+
+#### Resumen del flujo completo CI/CD — PCPedia
+Desarrollador hace push a main
+│
+├──────────────────────────────────────────────────────┐
+│                                                        │
+▼  (Backend)                                             ▼  (Frontend)
+GitHub Actions dispara                                  Netlify detecta
+workflow CI/CD                                          cambio en repo
+│                                                        │
+▼                                                        ▼
+JOB: build                                             npm install
+mvn clean package                                      npm run build
+→ JAR generado                                         → dist/pcpedia/browser/
+│                                                        │
+▼                                                        ▼
+JOB: deploy                                            Publicación en CDN
+azure/webapps-deploy                                   Netlify (global)
+→ Azure App Service                                             │
+pcpediaapi / Production                                       ▼
+│                                              Frontend disponible
+▼                                              en producción
+API disponible en
+producción (Azure)
+
+| Componente | Entorno | Plataforma | Trigger |
+|---|---|---|---|
+| PCPedia API (Backend) | Production | Azure App Service | Push a `main` (GitHub Actions) |
+| PCPedia Web App (Frontend) | Production | Netlify (CDN global) | Push a `main` (Netlify auto-deploy) |
 
 ---
 
