@@ -156,6 +156,18 @@
     - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
 - [5.3. Video About-the-Product](#53-video-about-the-product)
 
+#### [Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)
+- [6.1. Testing Suites & Validation](#61-testing-suites--validation)
+    - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
+    - [6.1.2. Core Integration Tests](#612-core-integration-tests)
+    - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
+    - [6.1.4. Core System Tests](#614-core-system-tests)
+- [6.2. Static testing & Verification](#62-static-testing--verification)
+    - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+        - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
+        - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
+    - [6.2.2. Reviews](#622-reviews)
+
 #### [Conclusiones](#conclusiones-1)
 
 #### [Recomendaciones](#recomendaciones-1)
@@ -181,8 +193,8 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 
 | Criterio específico | Acciones realizadas                                                                                                                                                                                                  | Conclusiones |
 |:---|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|
-| **Identifica y evalúa las implicancias éticas y profesionales en el desarrollo de soluciones de ingeniería.** | **Bendezu Navarro Rúbens** <br> **AV1:**  <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:**  <br><br> **Arroyo Gonzales, Emily** <br> **AV1:** <br> | **Av1:**     |
-| **Analiza el impacto de las soluciones de ingeniería en contextos sociales, económicos y ambientales para tomar decisiones informadas.** | **Bendezu Navarro Rúbens** <br> **AV1:** <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:**  <br><br> **Arroyo Gonzales, Emily** <br>**AV1:** <br>  |  **AV1:**            |
+| **Identifica y evalúa las implicancias éticas y profesionales en el desarrollo de soluciones de ingeniería.** | **Bendezu Navarro Rúbens** <br> **TB1:** Participó en la definición y documentación de la arquitectura y especificación del producto PcPedia, considerando buenas prácticas de organización modular, trazabilidad de requerimientos y responsabilidad profesional en el diseño de una solución orientada a empresas que gestionan activos tecnológicos. <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:**  <br><br> **Arroyo Gonzales, Emily** <br> **AV1:** <br> | **TB1:** El aporte de Rúbens evidencia responsabilidad ética y profesional al documentar una solución organizada, trazable y alineada con necesidades reales de gestión tecnológica empresarial, evitando decisiones improvisadas que puedan afectar la calidad o mantenibilidad del producto. |
+| **Analiza el impacto de las soluciones de ingeniería en contextos sociales, económicos y ambientales para tomar decisiones informadas.** | **Bendezu Navarro Rúbens** <br> **TB1:** Elaboró y sustentó artefactos de análisis y diseño relacionados con el impacto de Smart Leasing en la reducción de obsolescencia tecnológica, optimización de costos y mejora de la gestión de equipos para empresas e instituciones educativas, considerando implicancias económicas, sociales y ambientales. <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:**  <br><br> **Arroyo Gonzales, Emily** <br>**AV1:** <br>  | **TB1:** El trabajo de Rúbens contribuye a sustentar decisiones informadas sobre el valor de PcPedia, especialmente en la eficiencia económica del arrendamiento tecnológico, la continuidad operativa de las organizaciones y la reducción del impacto asociado a la renovación innecesaria de equipos. |
 
 ---
 
@@ -2157,6 +2169,203 @@ Como último artefacto del proyecto desarrollado, se ha desarrollado un video co
 **URL en OneDrive:** [OneDrive](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221a553_upc_edu_pe/IQDMIq-ktRmmRInkCK2IRzV1AXCy8kQNCCH14S3BM6ZQaAw)  
 **URL en YouTube:** [YouTube](https://youtu.be/2q87N3Umm0w)  
 
+
+---
+
+# Capítulo VI: Product Verification & Validation
+
+## 6.1. Testing Suites & Validation
+
+La verificación y validación de PcPedia se orientó a comprobar que los módulos principales del sistema respondan de forma consistente con las User Stories, los criterios de aceptación y la arquitectura propuesta. Para ello, se organizaron pruebas sobre el frontend desplegado en Netlify, el backend Java/Maven desplegado en Render, la base de datos alojada en Railway y la documentación REST expuesta mediante Swagger.
+
+Las suites se agruparon en pruebas unitarias, integración, escenarios BDD y pruebas de sistema. Cada grupo permite revisar el producto desde un nivel distinto: reglas internas del dominio, comunicación entre componentes, comportamiento esperado por el usuario y validación funcional extremo a extremo.
+
+### 6.1.1. Core Entities Unit Tests
+
+Las pruebas unitarias se definieron para validar de manera aislada las entidades y reglas de negocio principales de PcPedia. Estas pruebas verifican que los objetos del dominio mantengan datos coherentes antes de interactuar con servicios externos, interfaz web o persistencia.
+
+| ID | Entidad o módulo | Objetivo de validación | Resultado esperado |
+| --- | --- | --- | --- |
+| UT-01 | Usuario | Validar registro con nombre, correo, contraseña y rol requeridos. | El usuario se crea solo cuando los campos obligatorios son válidos. |
+| UT-02 | Sesión | Validar credenciales de acceso y cierre de sesión. | El sistema acepta credenciales correctas y finaliza la sesión sin conservar acceso activo. |
+| UT-03 | Equipo | Validar datos del equipo, categoría, especificaciones, estado y disponibilidad. | El equipo conserva información técnica completa y estados consistentes. |
+| UT-04 | Contrato | Validar fechas, monto, tipo de servicio y estado del contrato. | El contrato solo se considera válido cuando sus fechas y condiciones son coherentes. |
+| UT-05 | Incidente | Validar descripción, prioridad, estado y fecha de registro. | El incidente se registra con trazabilidad y puede pasar por estados controlados. |
+| UT-06 | OrdenCompra | Validar total, método de pago, estado y comprobante asociado. | La orden mantiene montos consistentes y no avanza sin datos de pago válidos. |
+| UT-07 | Inventario | Validar stock, ubicación y fecha de actualización. | La disponibilidad se actualiza sin generar valores negativos o inconsistentes. |
+
+Estas pruebas cubren las reglas base de los módulos de autenticación, catálogo, contratación, soporte, pagos e inventario. Su propósito es reducir defectos tempranos antes de validar flujos completos en la aplicación web.
+
+### 6.1.2. Core Integration Tests
+
+Las pruebas de integración validan la comunicación entre el frontend web, los servicios REST del backend, Swagger como referencia funcional de endpoints y la base de datos desplegada en Railway. El objetivo es comprobar que las operaciones críticas no solo funcionen de forma aislada, sino también dentro del flujo real del sistema.
+
+| ID | Flujo integrado | Componentes involucrados | Criterio de aceptación |
+| --- | --- | --- | --- |
+| IT-01 | Registro e inicio de sesión | Frontend, API de autenticación, base de datos | El usuario puede crear cuenta, iniciar sesión y visualizar su panel sin errores de sesión. |
+| IT-02 | Consulta de catálogo de equipos | Frontend, API de equipos, inventario | El catálogo muestra equipos con ficha técnica, categoría, estado y disponibilidad actualizada. |
+| IT-03 | Comparación de equipos | Frontend, API de equipos | El usuario selecciona equipos y visualiza diferencias técnicas relevantes para decidir. |
+| IT-04 | Contratación de plan | Frontend, API de contratos, API de órdenes | El cliente selecciona un plan, confirma condiciones y genera una solicitud de contratación. |
+| IT-05 | Gestión de contratos | Frontend, API de contratos, base de datos | El usuario consulta servicios activos, estados y documentos relacionados. |
+| IT-06 | Registro de incidencias | Frontend, API de soporte, base de datos | La incidencia queda registrada con prioridad, descripción y estado inicial. |
+| IT-07 | Pago o comprobante | Frontend, API de órdenes, almacenamiento de comprobantes | La orden registra método de pago, monto y comprobante asociado para revisión. |
+| IT-08 | Documentación REST | Swagger, backend desplegado en Render | Los endpoints documentados responden según los contratos mostrados en Swagger. |
+
+La integración se considera satisfactoria cuando el flujo conserva datos entre pantallas, servicios y persistencia, sin romper la navegación del usuario ni generar respuestas incompatibles con la interfaz.
+
+### 6.1.3. Core Behavior-Driven Development
+
+Los escenarios BDD se redactaron con la estructura Given-When-Then para expresar el comportamiento esperado desde la perspectiva del usuario final. Esto permite alinear pruebas, User Stories y validación funcional con un lenguaje comprensible para el equipo técnico y los stakeholders.
+
+**HU01 - Registro de cuenta**
+
+```gherkin
+Scenario: Registro exitoso de usuario
+  Given que el visitante no posee una cuenta en PcPedia
+  When completa el formulario de registro con datos válidos
+  Then el sistema crea la cuenta y permite acceder a las funciones de la plataforma
+```
+
+**HU02 - Inicio de sesión**
+
+```gherkin
+Scenario: Acceso con credenciales válidas
+  Given que el usuario posee una cuenta registrada
+  When ingresa correo y contraseña correctos
+  Then el sistema inicia sesión y muestra el panel correspondiente
+```
+
+**HU10 - Consulta de catálogo de equipos**
+
+```gherkin
+Scenario: Visualización de equipos disponibles
+  Given que el usuario ingresa al catálogo
+  When consulta el listado de equipos
+  Then visualiza fichas técnicas, estado y disponibilidad de cada equipo
+```
+
+**HU11 - Comparación de equipos**
+
+```gherkin
+Scenario: Comparación de alternativas tecnológicas
+  Given que el usuario evalúa más de un equipo
+  When selecciona equipos para comparar
+  Then el sistema muestra una tabla comparativa con características relevantes
+```
+
+**HU13 - Contratación de plan**
+
+```gherkin
+Scenario: Solicitud de contratación de servicio
+  Given que el usuario inició sesión y eligió un plan
+  When confirma la contratación del servicio
+  Then el sistema registra la solicitud y genera la información necesaria para seguimiento
+```
+
+**HU14 - Gestión de servicios contratados**
+
+```gherkin
+Scenario: Revisión de contratos activos
+  Given que el cliente cuenta con servicios contratados
+  When accede a la sección de gestión
+  Then visualiza contratos, estados y opciones disponibles para administrarlos
+```
+
+**HU09 - Reporte de incidencia**
+
+```gherkin
+Scenario: Registro de ticket de soporte
+  Given que el cliente presenta una incidencia técnica
+  When completa el formulario de soporte
+  Then el sistema registra el ticket con prioridad, descripción y estado inicial
+```
+
+**HU15 - Descarga de comprobantes**
+
+```gherkin
+Scenario: Consulta de comprobante de operación
+  Given que el cliente realizó una contratación o pago
+  When ingresa a la sección de comprobantes
+  Then puede visualizar o descargar el documento asociado a la operación
+```
+
+### 6.1.4. Core System Tests
+
+Las pruebas de sistema validan flujos completos sobre el producto integrado. Estas pruebas se plantean como recorridos manuales y funcionales que simulan el uso real de PcPedia por parte de clientes y personal administrativo.
+
+| ID | Caso de sistema | Pasos principales | Resultado esperado | Estado |
+| --- | --- | --- | --- | --- |
+| ST-01 | Registro e inicio de sesión | Ingresar a la plataforma, registrar usuario, iniciar sesión y cerrar sesión. | El usuario accede al panel y puede finalizar sesión correctamente. | Validado |
+| ST-02 | Consulta de catálogo | Abrir catálogo, revisar equipos, consultar ficha técnica y disponibilidad. | La información del equipo se muestra de forma clara y actualizada. | Validado |
+| ST-03 | Comparación o evaluación de equipos | Seleccionar equipos o revisar alternativas recomendadas. | El usuario puede tomar una decisión informada según especificaciones y disponibilidad. | Validado |
+| ST-04 | Contratación de plan | Seleccionar plan, confirmar condiciones y generar solicitud. | La contratación queda registrada para seguimiento del servicio. | Validado |
+| ST-05 | Gestión de contratos | Ingresar al panel, consultar contratos activos y revisar estados. | Los contratos muestran estado, periodo y datos asociados al cliente. | Validado |
+| ST-06 | Registro de ticket | Completar incidencia con descripción y prioridad. | El ticket se registra y queda disponible para atención. | Validado |
+| ST-07 | Pago o comprobante | Registrar operación, adjuntar o consultar comprobante. | El sistema mantiene trazabilidad de la operación y el documento asociado. | Validado |
+| ST-08 | Validación de API | Acceder a Swagger y revisar endpoints principales del backend. | La documentación REST permite validar rutas funcionales del servicio desplegado. | Validado |
+
+El resultado de estas pruebas confirma que la solución web de PcPedia permite ejecutar los flujos principales de Smart Leasing: autenticación, consulta de equipos, contratación, soporte, pagos, documentación de API y operación integrada entre frontend y backend.
+
+## 6.2. Static testing & Verification
+
+La verificación estática se enfocó en revisar la calidad del código, la consistencia de convenciones, la seguridad básica y la mantenibilidad del proyecto sin ejecutar necesariamente los flujos funcionales. Este análisis complementa las pruebas dinámicas al detectar problemas de formato, estructura, duplicidad, dependencias y exposición de información sensible.
+
+### 6.2.1. Static Code Analysis
+
+El análisis estático se organiza por los principales frentes técnicos documentados en el proyecto: landing page, frontend web, backend Java/Maven, despliegue Docker y documentación de API.
+
+| Frente | Elementos revisados | Criterio de verificación |
+| --- | --- | --- |
+| Landing Page | HTML, CSS, JavaScript, estructura semántica y enlaces. | El sitio mantiene navegación clara, estilos consistentes y enlaces funcionales. |
+| Frontend Web | Componentes, rutas, consumo de API y manejo de sesión. | La interfaz separa responsabilidades y evita lógica duplicada en vistas. |
+| Backend | Controladores, servicios, entidades, repositorios y DTOs. | La API mantiene capas diferenciadas y contratos consistentes con Swagger. |
+| Base de datos | Modelos, relaciones y persistencia de datos críticos. | Los datos de usuarios, equipos, contratos, incidencias y órdenes conservan integridad. |
+| Docker y despliegue | Dockerfile multi-stage, variables y servicios externos. | El despliegue no expone secretos y mantiene configuración reproducible. |
+| Documentación REST | Swagger y evidencias de endpoints. | La documentación describe rutas, parámetros y respuestas esperadas. |
+
+#### 6.2.1.1. Coding standard & Code conventions
+
+Para mantener coherencia entre los distintos repositorios del producto, el equipo aplicó convenciones de nombrado, estructura y commits alineadas con lo documentado en el Capítulo V.
+
+| Área | Convención aplicada |
+| --- | --- |
+| HTML | Uso de estructura semántica, etiquetas ordenadas y atributos descriptivos. |
+| CSS | Nombres de clases claros, separación de estilos por responsabilidad y reutilización de reglas visuales. |
+| JavaScript y TypeScript | Variables y funciones con nombres descriptivos, control de errores y separación entre vista y lógica. |
+| Java/Maven | Organización por capas, nombres de clases representativos y responsabilidades acotadas. |
+| Git | Uso de Conventional Commits para describir cambios de documentación, features, fixes y mejoras. |
+| Documentación | Secciones numeradas, tablas consistentes y enlaces a evidencias desplegadas. |
+
+Estas convenciones facilitan la revisión entre integrantes, reducen ambigüedades al integrar ramas y ayudan a que el proyecto mantenga una estructura entendible para futuras iteraciones.
+
+#### 6.2.1.2. Code Quality & Code Security
+
+La revisión de calidad y seguridad se centró en riesgos frecuentes de aplicaciones web con backend REST: validación de entradas, manejo de credenciales, consistencia de estados, exposición de datos y configuración de despliegue.
+
+| Categoría | Riesgo revisado | Acción de verificación |
+| --- | --- | --- |
+| Validación de entradas | Datos incompletos o inválidos en registro, contratos, tickets y pagos. | Confirmar que formularios y API rechacen campos obligatorios vacíos o inconsistentes. |
+| Autenticación | Acceso a vistas privadas sin sesión activa. | Validar protección de rutas y cierre de sesión correcto. |
+| Manejo de datos sensibles | Exposición de contraseñas, tokens o credenciales de despliegue. | Revisar que no se documenten ni publiquen secretos en repositorios o capturas. |
+| Estados de negocio | Contratos, órdenes o tickets en estados inválidos. | Verificar transiciones permitidas y trazabilidad de cambios. |
+| API REST | Respuestas incompatibles con el frontend o Swagger. | Comparar contratos documentados con flujos reales de consumo. |
+| Despliegue | Variables de entorno y configuración de servicios. | Confirmar separación entre configuración pública y privada. |
+
+Como criterio de aceptación, ningún flujo crítico debe depender de datos hardcodeados sensibles, las rutas privadas deben requerir sesión y la documentación pública no debe exponer credenciales ni información interna del despliegue.
+
+### 6.2.2. Reviews
+
+Las revisiones del proyecto se realizaron mediante control de versiones en GitHub, integración de ramas de trabajo y validación cruzada del informe y los artefactos técnicos. Para evitar regresiones, cada revisión debe comprobar que los cambios agreguen valor sin eliminar evidencias, imágenes, enlaces ni secciones previas.
+
+| Tipo de review | Objetivo | Criterios revisados |
+| --- | --- | --- |
+| Revisión de contenido | Asegurar que el informe represente correctamente el avance del producto. | Coherencia con PCPedia, numeración, redacción académica y uso correcto de evidencias. |
+| Revisión técnica | Verificar consistencia entre arquitectura, implementación y despliegue. | Relación entre frontend, backend, base de datos, Swagger y proveedores usados. |
+| Revisión de ramas | Integrar avances sin perder trabajo de otros integrantes. | Merge desde `develop`, resolución conservadora de conflictos y revisión del diff final. |
+| Revisión de seguridad | Detectar exposición accidental de secretos o datos sensibles. | Ausencia de credenciales, tokens, datos privados o endpoints inseguros en documentación pública. |
+| Revisión de trazabilidad | Relacionar User Stories, pruebas y módulos implementados. | Cada flujo crítico cuenta con caso de prueba o escenario BDD asociado. |
+
+Con estas actividades, el equipo mantiene un proceso de validación incremental: se revisan documentos, artefactos, despliegues y flujos funcionales antes de consolidar cambios en el informe del proyecto.
 
 ---
 
