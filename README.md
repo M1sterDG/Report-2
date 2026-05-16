@@ -824,6 +824,8 @@ Ambas estrategias siguen el principio de integración continua basada en trunk, 
 ### 7.1.2. Build & Test Suite Pipeline Components
 
 #### Backend Pipeline — Diagrama de jobs
+
+```
 Push a main / workflow_dispatch
 │
 ▼
@@ -839,8 +841,8 @@ Push a main / workflow_dispatch
 │  4. actions/upload-artifact              │
 │     → Sube: .java-app/                  │
 └─────────────────┬───────────────────────┘
-│ needs: build
-▼
+                  │ needs: build
+                  ▼
 ┌─────────────────────────────────────────┐
 │              JOB: deploy                 │
 │  Runner: ubuntu-latest                   │
@@ -854,6 +856,7 @@ Push a main / workflow_dispatch
 │     → App: pcpediaapi                   │
 │     → Slot: Production                  │
 └─────────────────────────────────────────┘
+```
 
 #### Backend — Test Suite (estado actual)
 
@@ -866,6 +869,8 @@ Push a main / workflow_dispatch
 | Ejecución en CI | Deshabilitada (`-DskipTests`) |
 
 #### Frontend Pipeline — Flujo Netlify
+
+```
 Push al repositorio
 │
 ▼
@@ -882,6 +887,7 @@ Push al repositorio
 │  5. Aplicación de redirects SPA          │
 │     /* → /index.html (HTTP 200)          │
 └─────────────────────────────────────────┘
+```
 
 #### Frontend — Test Suite (estado actual)
 
@@ -940,6 +946,8 @@ El modelo de entrega continua del equipo opera sobre dos plataformas diferenciad
 ---
 
 #### Resumen del flujo completo CI/CD — PCPedia
+
+```
 Desarrollador hace push a main
 │
 ├──────────────────────────────────────────────────────┐
@@ -962,6 +970,7 @@ pcpediaapi / Production                                       ▼
 ▼                                              en producción
 API disponible en
 producción (Azure)
+```
 
 | Componente | Entorno | Plataforma | Trigger |
 |---|---|---|---|
