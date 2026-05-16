@@ -935,26 +935,7 @@ Como último artefacto del proyecto desarrollado, se ha desarrollado un video co
 **URL en OneDrive:** [OneDrive](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221a553_upc_edu_pe/IQDMIq-ktRmmRInkCK2IRzV1AXCy8kQNCCH14S3BM6ZQaAw)  
 **URL en YouTube:** [YouTube](https://youtu.be/2q87N3Umm0w)  
 
-# Capítulo VI: Product Verification & Validation
-## 6.1. Testing Suites & Validation
 
-### 6.1.1. Core Entities Unit Tests.
-
-### 6.1.2. Core Integration Tests.
-
-### 6.1.3. Core Behavior-Driven Development
-
-### 6.1.4. Core System Tests.
-
-## 6.2. Static testing & Verification
-
-### 6.2.1. Static Code Analysis
-
-#### 6.2.1.1. Coding standard & Code conventions.
-
-#### 6.2.1.2. Code Quality & Code Security.
-
-### 6.2.2. Reviews
 
 ## 6.3. Validation Interviews.
 
@@ -1151,15 +1132,6 @@ Esta sección analiza los hallazgos de las entrevistas aplicando los principios 
 
 **Recomendación:** Aumentar la visibilidad de las notificaciones de confirmación mediante el uso de *toasts* o banners más notorios (uso de íconos de éxito/error, tipografía ligeramente más grande y contraste adecuado). Para acciones críticas (como eliminar tareas o grupos), incluir además un cuadro de diálogo de confirmación claro, reduciendo así el riesgo de errores y mejorando la percepción de control sobre la plataforma.
 
-## 6.4. Auditoría de Experiencias de Usuario
-
-### 6.4.1. Auditoría realizada.
-
-#### 6.4.1.1. Información del grupo auditado.
-
-#### 6.4.1.2. Cronograma de auditoría realizada.
-
-#### 6.4.1.3. Contenido de auditoría realizada.
 
 
 ---
