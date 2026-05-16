@@ -9,7 +9,7 @@
 
 <br>
 
-# Informe de Proyecto - Avance 1
+# Informe de Proyecto - TB1
 
 ## Startup: EcatLeasing
 
@@ -155,7 +155,6 @@
     - [5.2.7. RESTful API documentation](#527-restfulapi-documentation)
     - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
 - [5.3. Video About-the-Product](#53-video-about-the-product)
-
 #### [Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)
 - [6.1. Testing Suites & Validation](#61-testing-suites--validation)
     - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
@@ -167,6 +166,16 @@
         - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
         - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
     - [6.2.2. Reviews](#622-reviews)
+#### [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
+- [7.1. Continuous Integration](#71-continuous-integration)
+  - [7.1.1. Tools and Practices.](#711-tools-and-practices)
+  - [7.1.2. Build & Test Suite Pipeline Components.](#712-build--test-suite-pipeline-components)
+- [7.2. Continuous Delivery](#72-continuous-delivery)
+  - [7.2.1. Tools and Practices.](#721-tools-and-practices)
+  - [7.2.2. Stages Deployment Pipeline Components.](#722-stages-deployment-pipeline-components)
+- [7.3. Continuous Deployment](#73-continuous-deployment)
+  - [7.3.1. Tools and Practices.](#731-tools-and-practices)
+  - [7.3.2. Production Deployment Pipeline Components.](#732-production-deployment-pipeline-components)
 
 #### [Conclusiones](#conclusiones-1)
 
