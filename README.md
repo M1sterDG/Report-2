@@ -935,6 +935,141 @@ Como último artefacto del proyecto desarrollado, se ha desarrollado un video co
 **URL en OneDrive:** [OneDrive](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221a553_upc_edu_pe/IQDMIq-ktRmmRInkCK2IRzV1AXCy8kQNCCH14S3BM6ZQaAw)  
 **URL en YouTube:** [YouTube](https://youtu.be/2q87N3Umm0w)  
 
+# Capítulo VI: Product Verification & Validation
+## 6.1. Testing Suites & Validation
+
+### 6.1.1. Core Entities Unit Tests.
+
+### 6.1.2. Core Integration Tests.
+
+### 6.1.3. Core Behavior-Driven Development
+
+### 6.1.4. Core System Tests.
+
+## 6.2. Static testing & Verification
+
+### 6.2.1. Static Code Analysis
+
+#### 6.2.1.1. Coding standard & Code conventions.
+
+#### 6.2.1.2. Code Quality & Code Security.
+
+### 6.2.2. Reviews
+
+## 6.3. Validation Interviews.
+
+Este apartado se centra en examinar la experiencia del usuario a través de su interacción directa con la landing page y las aplicaciones del proyecto. El propósito principal es detectar fortalezas, así como áreas de mejora en términos de diseño, usabilidad y funcionalidad, recolectando el 'feedback' de un grupo representativo de nuestro público objetivo.
+
+### 6.3.1. Diseño de Entrevistas.
+
+Para que las pruebas reflejen con fidelidad cómo se comportará el usuario en el mundo real, esta sección describe la planificación detallada de las entrevistas. Aquí se definen los objetivos de la investigación, el perfil de los usuarios seleccionados y los flujos o temas clave que pondremos a prueba.
+
+1. ¿La aplicación te permite identificar fácilmente el estado de tus contratos de leasing, los equipos asignados a tu organización y tus responsabilidades de pago o gestión?
+
+2. ¿Te resulta claro cómo solicitar nuevos equipos, programar un mantenimiento preventivo/correctivo o reportar una incidencia técnica?
+
+3. ¿El diseño visual (colores, íconos) te ayuda a entender rápidamente el estado de tus solicitudes (ej. Incidencia en atención, Mantenimiento programado, Evaluación de recursos completada)?
+
+4. ¿Has tenido dificultades para navegar entre las secciones clave de la plataforma (Catálogo de hardware/Planes, Miembros/Sedes de la empresa, Reportes de costos/Rentabilidad, Notificaciones de mantenimiento)?
+
+5. ¿Las palabras y etiquetas empleadas en la interfaz (ej. arrendamiento, obsolescencia, incidencia, mantenimiento preventivo, rentabilidad) son comprensibles y coherentes para tu perfil administrativo o de TI?
+
+6. ¿Sientes que el flujo de acciones principales (crear una solicitud de soporte, cotizar un plan flexible, dar de baja un equipo o validar una renovación) es intuitivo?
+
+7.¿Te resulta fácil identificar las respuestas del equipo de soporte especializado, el estado de las garantías o los comentarios dentro de un ticket de incidencia?
+
+8. ¿La aplicación responde de manera clara mediante notificaciones o confirmaciones cuando realizas una acción crítica (ej. confirmar un plan de arrendamiento, reportar una falla de hardware o actualizar datos de facturación)?
+
+9. ¿El diseño visual del panel de control y la gestión de incidencias se mantiene consistente si accedes desde la versión web o desde un dispositivo móvil?
+
+10. ¿Qué mejorarías en la interfaz de gestión de Smart Leasing para que la toma de decisiones y el control de tus activos tecnológicos sea más claro o eficiente?
+
+11. ¿Has encontrado algún elemento confuso o poco útil al momento de revisar la recomendación de equipos eficientes y rentables que el sistema sugiere para tu presupuesto?
+
+12. ¿Consideras que el tiempo de respuesta de la plataforma es adecuado al interactuar con el catálogo de equipos, la carga de reportes de TI o la actualización de contratos?
+
+13. ¿Te sientes cómodo utilizando la app desde tu dispositivo móvil para reportar incidencias en tiempo real o revisar alertas de mantenimiento técnico desde cualquier lugar de la empresa?
+
+14. ¿La aplicación te proporciona la información y métricas financieras o técnicas que necesitas para verificar que estás optimizando los costos y evitando la obsolescencia tecnológica?
+
+15. ¿Qué sensación general te deja el uso de la plataforma de ECAT Leasing en cuanto a la claridad para simplificar la gestión de tu TI, la organización de tus equipos y la facilidad de uso general?
+
+### 6.3.2. Registro de Entrevistas.
+
+
+| **Entrevista 1: Lider de Grupo** |      <img width="872" height="295" alt="image" src="https://github.com/user-attachments/assets/8c4f8186-2f91-45e5-bac1-1326d9d841c5" />                                                                                                                       |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Enlace de entrevista                 |     [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20191b935_upc_edu_pe/IQChHuiT1-8JSaoTC9wlJLdSAXJKJrRyMkud2BNbDADQBjM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=pxN6XL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20191b935_upc_edu_pe/IQChHuiT1-8JSaoTC9wlJLdSAXJKJrRyMkud2BNbDADQBjM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=pxN6XL)                                                                                                                                                                                                                                                                 |
+| Nombre de Entrevistado           | Emmanuel Ñahuiña                                                                                                                                                                                                                                                         |
+| Edad                             | 23                                                                                                                                                                                                                                                                       |
+| Profesión                        | Desarrollador frontend independiente                                                                                                                                                                                                                           |
+| Distrito                         | Villa el salvador                                                                                                                                                                                                                                                                    |
+| Duración de la Entrevista        | 00:00                                                                                                                                                                                                                                                                    |
+| Minuto de inicio                 | 00:00                                                                                                                                                                                                                                                                    |
+| **Análisis de la Entrevista**    |                                                                                                                                                                                                                                                                          |
+|  Gestión de Equipos y Contratos             | Comenta que la visualización del catálogo de hardware y el estado de los planes de arrendamiento (Smart Leasing) es muy clara y limpia visualmente.                                                          |
+| Soporte e Incidencias                | Considera sencillo reportar fallas de hardware y programar mantenimientos, pero sugiere agregar una leyenda o tooltip para identificar qué significa exactamente cada color en el estado del ticket (ej. si está "En atención" o "Pendiente de repuesto"). |
+| Reportes y Optimización          | Argumenta que la sección de reportes de costos y rentabilidad es la más útil para él, ya que al trabajar independiente necesita justificar rápido que está optimizando el presupuesto y evitar la obsolescencia tecnológica.                |
+| Solicitudes de Validación       | Menciona que la confirmación de contratos y renovación de planes está bien distribuida, pero añadiría un color de fondo sutil a las alertas críticas (como vencimientos de garantía) para que resalten más a primera vista.   |
+| Navegación General               | Como desarrollador frontend, destaca que la interfaz es responsiva y se adapta bien al móvil para reportar incidencias en ruta. Siente que hay muchas opciones administrativas al inicio, pero la curva de aprendizaje es bastante corta e intuitiva.        |
+
+
+
+
+<table> 
+  <tbody> 
+    <tr> 
+      <td>Entrevista 2</td> 
+      <td><img width="869" height="269" alt="image" src="https://github.com/user-attachments/assets/f10becdc-e9a4-4460-9186-e9f73ae1f457" />
+</td>
+    </tr> 
+    <tr> 
+      <td>Enlace a la entrevista</td> 
+      <td> https://upcedupe-my.sharepoint.com/:v:/g/personal/u20191b935_upc_edu_pe/IQAFzHw2-eABQo0QQDoV1qO8AcrHQSFP35Mry2ZAaXNGOXc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=f1QRnz </td>
+    </tr> 
+    <tr> 
+      <td>Nombre Entrevistado</td> 
+      <td>Oscar Román</td> 
+    </tr> 
+    <tr> 
+      <td>Edad</td> 
+      <td>24</td> 
+    </tr> 
+    <tr> 
+      <td>Distrito</td> 
+      <td>Chorrillos</td>
+    </tr> 
+    <tr> 
+      <td>Ocupación</td> 
+      <td>Estudiante de Ingeniería de Ciberseguridad</td> 
+    </tr> 
+    <tr> 
+      <td>Duración Entrevista</td> 
+      <td>06:12 minutos</td> 
+    </tr> 
+    <tr> 
+      <td>Minuto de Inicio</td> 
+      <td>0:00</td> 
+    </tr> 
+    <tr> 
+      <td>Análisis</td> 
+      <td>El entrevistado considera que la aplicación es <strong>segura, ordenada y de rápida respuesta</strong> para la gestión de activos tecnológicos. Destaca que la <strong>organización de contratos y control de hardware</strong> es altamente transparente, permitiendo mapear responsabilidades de TI sin complicaciones. Resalta que el <strong>diseño visual</strong> mediante colores e íconos facilita el reconocimiento inmediato de estados críticos en incidencias o mantenimientos preventivos. La <strong>navegación general</strong> entre el catálogo, los reportes financieros y las alertas le pareció fluida, valorando positivamente que los módulos de administración de sedes cuenten con una estructura limpia. Respecto a la consistencia, afirma que las confirmaciones ante acciones críticas (como la renovación de un plan) son claras y que la experiencia en la versión <strong>móvil es sólida</strong>, ideal para reportar incidencias de hardware en tiempo real. Como oportunidad de mejora desde su perspectiva técnica, propone <strong>fortalecer el feedback visual en las alertas críticas</strong> de garantías o vulnerabilidades de obsolescencia, utilizando notificaciones emergentes (pop-ups) más llamativas o colores de fondo de alta prioridad que obliguen a una atención inmediata del administrador. En conclusión, percibe la plataforma como un entorno <strong>confiable, robusto y muy amigable</strong> para mitigar riesgos logísticos y simplificar la gestión operativa de TI.</td> 
+    </tr> 
+  </tbody> 
+</table>
+
+### 6.3.3. Evaluaciones según heurísticas.
+
+## 6.4. Auditoría de Experiencias de Usuario
+
+### 6.4.1. Auditoría realizada.
+
+#### 6.4.1.1. Información del grupo auditado.
+
+#### 6.4.1.2. Cronograma de auditoría realizada.
+
+#### 6.4.1.3. Contenido de auditoría realizada.
+
 
 ---
 
