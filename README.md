@@ -2823,6 +2823,24 @@ El despliegue continuo de PCPedia hacia producción se encuentra automatizado me
 
 - **Continuous Monitoring:** Después de cada despliegue, el equipo valida el acceso a los endpoints REST mediante Swagger y verifica el correcto funcionamiento del frontend desplegado en producción.
 
+#### 7.3.2 Production Deployment Pipeline Components.
+
+- **Activator:** El pipeline de producción se activa cuando se realiza un push o merge hacia la rama `main`.
+
+- **Backend Build:** GitHub Actions compila el backend Java con Maven usando `mvn clean package`, generando el archivo JAR ejecutable.
+
+- **Backend Artifact:** El JAR generado se guarda como artefacto del pipeline para asegurar que el mismo archivo compilado sea utilizado en el despliegue.
+
+- **Backend Deployment:** El artefacto del backend se despliega automáticamente en Azure App Service mediante `azure/webapps-deploy@v3`, actualizando la API `pcpediaapi` en producción.
+
+- **Frontend Build:** Netlify detecta los cambios en el repositorio del frontend, instala dependencias con `npm install` y genera el build de producción con `npm run build`.
+
+- **Frontend Deployment:** El bundle generado en `dist/pcpedia/browser` se publica automáticamente en la CDN global de Netlify.
+
+- **Production Validation:** Luego del despliegue, se valida que el backend responda correctamente desde Swagger y que el frontend esté disponible en su URL de producción.
+
+---
+
 ## Conclusiones
 
 <p>
