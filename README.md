@@ -33,7 +33,7 @@
 
 `U20191B935` - `Carranza Tesén Joaquín Enrique`
 
-`U202311469` - `Arroyo Gonzales Emily Juliette`
+`U202311469` - `Arroyo Gonzales, Emily Juliette`
 
 ### **2026**
 
@@ -193,8 +193,8 @@ grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Stude
 
 | Criterio específico | Acciones realizadas                                                                                                                                                                                                  | Conclusiones |
 |:---|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|
-| **Identifica y evalúa las implicancias éticas y profesionales en el desarrollo de soluciones de ingeniería.** | **Bendezu Navarro Rúbens** <br> **TB1:** Participó en la definición y documentación de la arquitectura y especificación del producto PcPedia, considerando buenas prácticas de organización modular, trazabilidad de requerimientos y responsabilidad profesional en el diseño de una solución orientada a empresas que gestionan activos tecnológicos. <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:**  <br><br> **Arroyo Gonzales, Emily** <br> **AV1:** <br> | **TB1:** El aporte de Rúbens evidencia responsabilidad ética y profesional al documentar una solución organizada, trazable y alineada con necesidades reales de gestión tecnológica empresarial, evitando decisiones improvisadas que puedan afectar la calidad o mantenibilidad del producto. |
-| **Analiza el impacto de las soluciones de ingeniería en contextos sociales, económicos y ambientales para tomar decisiones informadas.** | **Bendezu Navarro Rúbens** <br> **TB1:** Elaboró y sustentó artefactos de análisis y diseño relacionados con el impacto de Smart Leasing en la reducción de obsolescencia tecnológica, optimización de costos y mejora de la gestión de equipos para empresas e instituciones educativas, considerando implicancias económicas, sociales y ambientales. <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:**  <br><br> **Arroyo Gonzales, Emily** <br>**AV1:** <br>  | **TB1:** El trabajo de Rúbens contribuye a sustentar decisiones informadas sobre el valor de PcPedia, especialmente en la eficiencia económica del arrendamiento tecnológico, la continuidad operativa de las organizaciones y la reducción del impacto asociado a la renovación innecesaria de equipos. |
+| **Identifica y evalúa las implicancias éticas y profesionales en el desarrollo de soluciones de ingeniería.** | **Bendezu Navarro Rúbens** <br> **AV1:**  <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:** Identifique que el desarrollo tecnológico conlleva una profunda responsabilidad ética y profesional vinculada directamente a la implementación, gestión de código y configuración del despliegue realizados. Al realizar la evaluación en el plano ético, determiné que el despliegue de las aplicaciones (Web, Móvil y API) bajo el Acuerdo de Servicio (SaaS) exige proteger la privacidad del usuario desde el backend y asegurar la transparencia de las funciones entregadas. Asimismo, al realizar el análisis en el ámbito profesional, se evidencia el compromiso de cumplir estrictamente con las guías de estilo, control de versiones y el flujo de los Sprint Backlogs, demostrando que la rigurosidad técnica y la colaboración del equipo son estándares críticos para mitigar errores en producción, garantizando un software mantenible, seguro y de alta calidad.  <br><br> **TP:** Identifique que el desarrollo de soluciones de ingeniería tecnológica conlleva una profunda responsabilidad ética y profesional que se vincula directamente con los procesos de diseño, validación y análisis heurístico realizados. Al realizar la evaluación en el plano ético, determiné que es imperativo garantizar la transparencia algorítmica en las herramientas de recomendación automatizadas (asegurando que respondan a la optimización real de costos del usuario y no a sesgos comerciales) y proteger con estricta confidencialidad los datos de infraestructura y presupuestos recopilados. Asimismo, al realizar el análisis en el ámbito profesional, se evidencia el compromiso de asegurar la continuidad operativa de los usuarios a través de flujos de despliegue y monitoreo robustos, entendiendo que corregir las fallas de usabilidad detectadas en las entrevistas y optimizar las interfaces (tanto web como móvil) no es un asunto estético, sino un estándar técnico crítico para mitigar riesgos, prevenir errores operativos y garantizar una gestión de recursos eficiente y segura. <br><br> **Arroyo Gonzales, Emily** <br> **AV1:** <br> | **Av1:**     |
+| **Analiza el impacto de las soluciones de ingeniería en contextos sociales, económicos y ambientales para tomar decisiones informadas.** | **Bendezu Navarro Rúbens** <br> **AV1:** <br><br> **Hernandez Poma Sebastian Eduardo** <br> **AV1:**  <br><br> **Carranza Tesén Joaquín Enrique** <br> **AV1:** Analice que el despliegue del producto —evidenciado en la Landing Page, las aplicaciones Web/Móvil y la API RESTful— genera un impacto multidimensional clave para la toma de decisiones informadas. Al realizar la evaluación en el contexto social, determiné que el uso de interfaces consistentes y guías de estilo estandarizadas reduce la brecha digital y democratiza el acceso técnico, mejorando la experiencia del usuario final en su entorno. En el plano económico, el análisis demuestra que una arquitectura modular y una correcta configuración de despliegue bajo el modelo SaaS reducen los costos de mantenimiento, optimizan el consumo de infraestructura en la nube y minimizan pérdidas financieras por fallas del sistema. Finalmente, al evaluar el impacto ambiental, se evidencia que la optimización del código fuente disminuye la carga de procesamiento en los servidores, reduciendo el consumo energético y la huella de carbono digital para lograr una solución sostenible. <br><br> **TP:** Analice que el desarrollo de soluciones de ingeniería tecnológica genera un impacto multidimensional que debe ser evaluado rigurosamente a partir del análisis heurístico y las validaciones con usuarios reales que hemos realizado. Al realizar la evaluación en el contexto social, determiné que optimizar la interfaz y corregir las fallas de usabilidad mitiga la frustración del usuario, reduce la brecha digital y democratiza el acceso eficiente a herramientas técnicas, promoviendo entornos laborales y educativos más productivos e inclusivos. En el plano económico, el análisis de los flujos operativos demuestra que una solución intuitiva minimiza los costos por errores de usuario, reduce los tiempos muertos de soporte técnico y optimiza la asignación de presupuestos mediante recomendaciones automatizadas y transparentes, garantizando un retorno de inversión sostenible. Finalmente, al evaluar el impacto ambiental, se evidencia que el monitoreo continuo de recursos y el correcto control del ciclo de vida de la infraestructura tecnológica contribuyen directamente a la reducción de la huella de carbono y previenen la obsolescencia acelerada, permitiendo tomar decisiones de ingeniería informadas que equilibran la eficiencia técnica con la responsabilidad social y la sostenibilidad del entorno.  <br><br> **Arroyo Gonzales, Emily** <br>**AV1:** <br>  |  **AV1:**            |
 
 ---
 
@@ -1904,6 +1904,7 @@ En esta sección se describen las configuraciones y herramientas utilizadas para
 
 #### Despliegue de la Landing Page:
 
+La **Landing Page** fue desarrollada utilizando tecnologías web estándar como HTML, CSS y JavaScript. Y fue desplegada utilizando **GitHub Pages**, un servicio de alojamiento web estático proporcionado por GitHub.
 
 **Repositorio de la Landing Page**: https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Landing-Page-PcPedia
 
@@ -1911,8 +1912,6 @@ En esta sección se describen las configuraciones y herramientas utilizadas para
 
 
 ## 5.2. Product Implementation & Deployment
-
-
 
 ---
 
@@ -2113,6 +2112,7 @@ ECAT Leasing se reserva el derecho de modificar estos Términos en cualquier mom
 **11. Legislación y Jurisdicción**
 Este Acuerdo se rige por las leyes de la República del Perú. Cualquier controversia será sometida a los tribunales de Lima Metropolitana.
 
+### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
 <p>Evidencias del despliegue:</p>
 
@@ -2170,7 +2170,6 @@ Como último artefacto del proyecto desarrollado, se ha desarrollado un video co
 **URL en YouTube:** [YouTube](https://youtu.be/2q87N3Umm0w)  
 
 
----
 
 # Capítulo VI: Product Verification & Validation
 
@@ -2369,6 +2368,207 @@ Con estas actividades, el equipo mantiene un proceso de validación incremental:
 
 ---
 
+## 6.3. Validation Interviews.
+
+Este apartado se centra en examinar la experiencia del usuario a través de su interacción directa con la landing page y las aplicaciones del proyecto. El propósito principal es detectar fortalezas, así como áreas de mejora en términos de diseño, usabilidad y funcionalidad, recolectando el 'feedback' de un grupo representativo de nuestro público objetivo.
+
+### 6.3.1. Diseño de Entrevistas.
+
+Para que las pruebas reflejen con fidelidad cómo se comportará el usuario en el mundo real, esta sección describe la planificación detallada de las entrevistas. Aquí se definen los objetivos de la investigación, el perfil de los usuarios seleccionados y los flujos o temas clave que pondremos a prueba.
+
+1. ¿La aplicación te permite identificar fácilmente el estado de tus contratos de leasing, los equipos asignados a tu organización y tus responsabilidades de pago o gestión?
+
+2. ¿Te resulta claro cómo solicitar nuevos equipos, programar un mantenimiento preventivo/correctivo o reportar una incidencia técnica?
+
+3. ¿El diseño visual (colores, íconos) te ayuda a entender rápidamente el estado de tus solicitudes (ej. Incidencia en atención, Mantenimiento programado, Evaluación de recursos completada)?
+
+4. ¿Has tenido dificultades para navegar entre las secciones clave de la plataforma (Catálogo de hardware/Planes, Miembros/Sedes de la empresa, Reportes de costos/Rentabilidad, Notificaciones de mantenimiento)?
+
+5. ¿Las palabras y etiquetas empleadas en la interfaz (ej. arrendamiento, obsolescencia, incidencia, mantenimiento preventivo, rentabilidad) son comprensibles y coherentes para tu perfil administrativo o de TI?
+
+6. ¿Sientes que el flujo de acciones principales (crear una solicitud de soporte, cotizar un plan flexible, dar de baja un equipo o validar una renovación) es intuitivo?
+
+7.¿Te resulta fácil identificar las respuestas del equipo de soporte especializado, el estado de las garantías o los comentarios dentro de un ticket de incidencia?
+
+8. ¿La aplicación responde de manera clara mediante notificaciones o confirmaciones cuando realizas una acción crítica (ej. confirmar un plan de arrendamiento, reportar una falla de hardware o actualizar datos de facturación)?
+
+9. ¿El diseño visual del panel de control y la gestión de incidencias se mantiene consistente si accedes desde la versión web o desde un dispositivo móvil?
+
+10. ¿Qué mejorarías en la interfaz de gestión de Smart Leasing para que la toma de decisiones y el control de tus activos tecnológicos sea más claro o eficiente?
+
+11. ¿Has encontrado algún elemento confuso o poco útil al momento de revisar la recomendación de equipos eficientes y rentables que el sistema sugiere para tu presupuesto?
+
+12. ¿Consideras que el tiempo de respuesta de la plataforma es adecuado al interactuar con el catálogo de equipos, la carga de reportes de TI o la actualización de contratos?
+
+13. ¿Te sientes cómodo utilizando la app desde tu dispositivo móvil para reportar incidencias en tiempo real o revisar alertas de mantenimiento técnico desde cualquier lugar de la empresa?
+
+14. ¿La aplicación te proporciona la información y métricas financieras o técnicas que necesitas para verificar que estás optimizando los costos y evitando la obsolescencia tecnológica?
+
+15. ¿Qué sensación general te deja el uso de la plataforma de ECAT Leasing en cuanto a la claridad para simplificar la gestión de tu TI, la organización de tus equipos y la facilidad de uso general?
+
+### 6.3.2. Registro de Entrevistas.
+
+
+| **Entrevista 1: Lider de Grupo** |      <img width="872" height="295" alt="image" src="https://github.com/user-attachments/assets/8c4f8186-2f91-45e5-bac1-1326d9d841c5" />                                                                                                                       |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Enlace de entrevista                 |     [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20191b935_upc_edu_pe/IQChHuiT1-8JSaoTC9wlJLdSAXJKJrRyMkud2BNbDADQBjM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=pxN6XL](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20191b935_upc_edu_pe/IQChHuiT1-8JSaoTC9wlJLdSAXJKJrRyMkud2BNbDADQBjM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=pxN6XL)                                                                                                                                                                                                                                                                 |
+| Nombre de Entrevistado           | Emmanuel Ñahuiña                                                                                                                                                                                                                                                         |
+| Edad                             | 23                                                                                                                                                                                                                                                                       |
+| Profesión                        | Desarrollador frontend independiente                                                                                                                                                                                                                           |
+| Distrito                         | Villa el salvador                                                                                                                                                                                                                                                                    |
+| Duración de la Entrevista        | 00:00                                                                                                                                                                                                                                                                    |
+| Minuto de inicio                 | 00:00                                                                                                                                                                                                                                                                    |
+| **Análisis de la Entrevista**    |                                                                                                                                                                                                                                                                          |
+|  Gestión de Equipos y Contratos             | Comenta que la visualización del catálogo de hardware y el estado de los planes de arrendamiento (Smart Leasing) es muy clara y limpia visualmente.                                                          |
+| Soporte e Incidencias                | Considera sencillo reportar fallas de hardware y programar mantenimientos, pero sugiere agregar una leyenda o tooltip para identificar qué significa exactamente cada color en el estado del ticket (ej. si está "En atención" o "Pendiente de repuesto"). |
+| Reportes y Optimización          | Argumenta que la sección de reportes de costos y rentabilidad es la más útil para él, ya que al trabajar independiente necesita justificar rápido que está optimizando el presupuesto y evitar la obsolescencia tecnológica.                |
+| Solicitudes de Validación       | Menciona que la confirmación de contratos y renovación de planes está bien distribuida, pero añadiría un color de fondo sutil a las alertas críticas (como vencimientos de garantía) para que resalten más a primera vista.   |
+| Navegación General               | Como desarrollador frontend, destaca que la interfaz es responsiva y se adapta bien al móvil para reportar incidencias en ruta. Siente que hay muchas opciones administrativas al inicio, pero la curva de aprendizaje es bastante corta e intuitiva.        |
+
+
+
+
+<table> 
+  <tbody> 
+    <tr> 
+      <td>Entrevista 2</td> 
+      <td><img width="869" height="269" alt="image" src="https://github.com/user-attachments/assets/f10becdc-e9a4-4460-9186-e9f73ae1f457" />
+</td>
+    </tr> 
+    <tr> 
+      <td>Enlace a la entrevista</td> 
+      <td> https://upcedupe-my.sharepoint.com/:v:/g/personal/u20191b935_upc_edu_pe/IQAFzHw2-eABQo0QQDoV1qO8AcrHQSFP35Mry2ZAaXNGOXc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=f1QRnz </td>
+    </tr> 
+    <tr> 
+      <td>Nombre Entrevistado</td> 
+      <td>Oscar Román</td> 
+    </tr> 
+    <tr> 
+      <td>Edad</td> 
+      <td>24</td> 
+    </tr> 
+    <tr> 
+      <td>Distrito</td> 
+      <td>Chorrillos</td>
+    </tr> 
+    <tr> 
+      <td>Ocupación</td> 
+      <td>Estudiante de Ingeniería de Ciberseguridad</td> 
+    </tr> 
+    <tr> 
+      <td>Duración Entrevista</td> 
+      <td>06:12 minutos</td> 
+    </tr> 
+    <tr> 
+      <td>Minuto de Inicio</td> 
+      <td>0:00</td> 
+    </tr> 
+    <tr> 
+      <td>Análisis</td> 
+      <td>El entrevistado considera que la aplicación es <strong>segura, ordenada y de rápida respuesta</strong> para la gestión de activos tecnológicos. Destaca que la <strong>organización de contratos y control de hardware</strong> es altamente transparente, permitiendo mapear responsabilidades de TI sin complicaciones. Resalta que el <strong>diseño visual</strong> mediante colores e íconos facilita el reconocimiento inmediato de estados críticos en incidencias o mantenimientos preventivos. La <strong>navegación general</strong> entre el catálogo, los reportes financieros y las alertas le pareció fluida, valorando positivamente que los módulos de administración de sedes cuenten con una estructura limpia. Respecto a la consistencia, afirma que las confirmaciones ante acciones críticas (como la renovación de un plan) son claras y que la experiencia en la versión <strong>móvil es sólida</strong>, ideal para reportar incidencias de hardware en tiempo real. Como oportunidad de mejora desde su perspectiva técnica, propone <strong>fortalecer el feedback visual en las alertas críticas</strong> de garantías o vulnerabilidades de obsolescencia, utilizando notificaciones emergentes (pop-ups) más llamativas o colores de fondo de alta prioridad que obliguen a una atención inmediata del administrador. En conclusión, percibe la plataforma como un entorno <strong>confiable, robusto y muy amigable</strong> para mitigar riesgos logísticos y simplificar la gestión operativa de TI.</td> 
+    </tr> 
+  </tbody> 
+</table>
+
+### 6.3.3. Evaluaciones según heurísticas.
+
+Esta sección analiza los hallazgos de las entrevistas aplicando los principios heurísticos de usabilidad. Permite identificar problemas y oportunidades de mejora en la experiencia del usuario.
+
+**Aplicación para evaluar:** ECAT Leasing
+
+**Tareas que evaluar:**
+- Interpretar los colores y estados de los tickets de incidencia y mantenimiento técnico.
+- Diferenciar entre el catálogo de "Hardware disponible" y las "Solicitudes de leasing activas".
+- Configurar y cotizar un plan flexible según el presupuesto asignado.
+- Navegar por la aplicación para acceder a contratos, sedes de la empresa, reportes y alertas.
+- Comprender las métricas financieras de optimización de costos y obsolescencia tecnológica.
+- Filtrar incidencias de hardware según estados específicos, incluyendo "Pendientes de repuesto" o "Garantías por vencer".
+- Identificar claramente los mensajes de confirmación en acciones críticas (como dar de baja un equipo o renovar un contrato).
+- Evaluar el contraste visual, legibilidad de etiquetas técnicas y visibilidad de alertas críticas de TI.
+- Verificar la correcta adaptación del diseño responsivo en pantallas móviles para el reporte de incidencias in situ.
+- Determinar la eficiencia del flujo de navegación y la reducción de pasos redundantes en la gestión operativa.
+
+**Escala de severidad**
+
+| Valor | Descripción   |
+|-------|---------------|
+| 1     | No tan grave  |
+| 2     | Leve          |
+| 3     | Moderado      |
+| 4     | Grave         |
+| 5     | Muy grave     |
+
+**Tabla de resumen**
+
+| #Orden | Problema                                                                                              | Escala de Severidad | Heurística / Principio violado(a)                                     |
+|--------|-------------------------------------------------------------------------------------------------------|---------------------|-----------------------------------------------------------------------|
+| 1      | Falta de leyenda explícita sobre el significado de los colores en el estado de incidencias y soporte. | 3                   | Visibilidad del estado del sistema                                    |
+| 2      | Diferencia visual difusa entre la navegación de "Catálogo de Hardware" y "Solicitudes de Leasing".    | 4                   | Consistencia y estándares                                             |
+| 3      | Desglose comercial poco técnico en las recomendaciones del cotizador inteligente de presupuesto.     | 2                   | Correspondencia entre el sistema y el mundo real                      |
+| 4      | Interfaz inicial densa en opciones administrativas y ausencia de un onboarding o accesos rápidos.     | 3                   | Flexibilidad y eficiencia de uso / Ayuda y documentación              |
+| 5      | Alertas críticas de soporte y vencimiento de garantías poco resaltadas en el dashboard.                | 4                   | Visibilidad del estado del sistema / Prevención de errores            |
+| 6      | Falta de un filtro específico para equipos "Pendientes de validación de baja" o reemplazo.            | 3                   | Flexibilidad y eficiencia de uso / Visibilidad del estado del sistema |
+| 7      | Formato visual del hilo de conversación con el soporte técnico poco diferenciado.                     | 2                   | Estética y diseño minimalista / Visibilidad del sistema               |
+| 8      | Ausencia de un modal de confirmación con doble factor para la cancelación o baja definitiva de activos.| 3                   | Prevención de errores                                                 |
+| 9      | Gráficos complejos de depreciación financiera con reducción extrema de legibilidad en móviles.        | 2                   | Diseño responsivo / Consistencia y estándares                         |
+| 10     | Flujo de navegación extenso para registrar una incidencia urgente (demasiados clics previos).        | 3                   | Flexibilidad y eficiencia de uso                                      |
+
+---
+
+#### Problema #1: Falta de leyenda explícita sobre el significado de los colores en el estado de incidencias y soporte
+
+**Heurística violada:** Visibilidad del estado del sistema.  
+
+**Descripción del problema:** Varios entrevistados mencionan que los colores ayudan a interpretar estados y prioridades, pero no existe una leyenda explícita que explique qué significa cada color o umbral (por ejemplo, estados de tareas o niveles de desempeño). Esto obliga al usuario a “deducir” el significado y genera una pequeña curva de aprendizaje innecesaria.
+
+**Recomendación:** Incorporar una leyenda fija (por ejemplo, en la parte superior derecha de la vista de tareas y de reportes) donde se explique el significado de cada color y estado. Además, añadir *tooltips* o ayudas contextuales que, al pasar el cursor o tocar un ícono de ayuda, muestren brevemente qué representa cada color y umbral de desempeño. Esto reduce la ambigüedad y mejora la comprensión inmediata del estado del sistema.
+
+---
+
+#### Problema #2: Diferencia visual difusa entre la navegación de "Catálogo de Hardware" y "Solicitudes de Leasing"
+
+**Heurística violada:** Consistencia y estándares.  
+
+**Descripción del problema:** Al menos un entrevistado reportó confusión inicial entre las secciones de “tareas” y “solicitudes”. Aunque ambas pantallas están ordenadas, la nomenclatura y el diseño visual no hacen suficientemente evidente que se trata de conceptos distintos (trabajo asignado vs. solicitudes de cambio, validaciones u otros tipos de requerimientos). Esto puede provocar errores de interpretación y uso.
+
+**Recomendación:** Reforzar la diferenciación visual y textual entre “tareas” y “solicitudes”. Por ejemplo, usar íconos distintos, colores de fondo diferenciados y subtítulos breves en cada pantalla (p. ej. “Tareas: actividades pendientes que debes completar” y “Solicitudes: pedidos o validaciones que requieren tu respuesta”). También se recomienda incluir un mensaje introductorio corto la primera vez que el usuario ingresa a cada sección.
+
+---
+
+#### Problema #3: Desglose comercial poco técnico en las recomendaciones del cotizador inteligente de presupuesto
+
+**Heurística violada:** Correspondencia entre el sistema y el mundo real.  
+
+**Descripción del problema:** Un entrevistado indicó confusión respecto al código del grupo al visualizar los detalles; no era evidente que ese valor correspondía al código que se comparte para unirse al grupo. La falta de una etiqueta clara o subtítulo obliga al usuario a adivinar su propósito.
+
+**Recomendación:** Añadir una etiqueta explícita como “Código del grupo (compártelo para que otros se unan)” junto al valor, y un pequeño ícono de copiar para facilitar su uso. Esto alinea mejor el lenguaje de la interfaz con el modelo mental del usuario y hace más clara la función de este elemento.
+
+---
+
+#### Problema #4: Interfaz inicial densa en opciones administrativas y ausencia de un onboarding o accesos rápidos
+
+**Heurísticas violadas:** Flexibilidad y eficiencia de uso / Ayuda y documentación.  
+
+**Descripción del problema:** Aunque los usuarios con algo de experiencia perciben la navegación como clara y concisa, se menciona que, para un usuario nuevo, la cantidad de pantallas y opciones puede sentirse un poco extensa al inicio. Actualmente no existe un onboarding breve ni ayudas contextuales que expliquen las secciones clave (grupos, tareas, solicitudes, desempeño, atajos). Esto genera una pequeña barrera de entrada antes de aprovechar plenamente las funcionalidades.
+
+**Recomendación:** Implementar un recorrido guiado (*tour*) la primera vez que el usuario inicie sesión, destacando las secciones principales y su propósito. Complementar esto con breves textos “¿Qué puedes hacer aquí?” en las pantallas más importantes y con ayudas contextuales (íconos de “i” o “?”) que puedan consultarse en cualquier momento. De esta manera, se reduce la carga cognitiva inicial y se acelera la curva de aprendizaje.
+
+---
+
+#### Problema #5: Alertas críticas de soporte y vencimiento de garantías poco resaltadas en el dashboard
+
+**Heurísticas violadas:** Visibilidad del estado del sistema / Prevención de errores.  
+
+**Descripción del problema:** Los entrevistados reconocen que existen mensajes de confirmación cuando se crean, editan o eliminan elementos; sin embargo, señalan que podrían estar mejor resaltados para que el usuario los perceba con mayor claridad. Si la retroalimentación visual es sutil, es posible que algunos usuarios duden sobre si la acción se ejecutó correctamente.
+
+**Recomendación:** Aumentar la visibilidad de las notificaciones de confirmación mediante el uso de *toasts* o banners más notorios (uso de íconos de éxito/error, tipografía ligeramente más grande y contraste adecuado). Para acciones críticas (como eliminar tareas o grupos), incluir además un cuadro de diálogo de confirmación claro, reduciendo así el riesgo de errores y mejorando la percepción de control sobre la plataforma.
+
+
+
+---
+
+
+
 ## Conclusiones
 
 <p>
@@ -2386,12 +2586,11 @@ El trabajo colaborativo permitió reforzar las buenas prácticas de desarrollo: 
     Se recomienda, para etapas posteriores, ampliar la cobertura de pruebas automáticas, optimizar la experiencia de usuario mediante iteraciones basadas en feedback real, reforzar la seguridad de los módulos críticos y continuar con la documentación técnica y funcional del sistema. Los aprendizajes obtenidos en este proyecto fortalecen la capacidad del equipo para abordar nuevas funcionalidades y consolidan una base sólida para futuras mejoras y escalamiento de PcPedia como una plataforma integral de arrendamiento y gestión de equipos tecnológicos.
 </p>
 
-## Video App Validation
 
 
 ## Video About-The-Team
 
-
+**URL de video About-The-Team** [AboutTheTeam](https://youtu.be/qiV-ZW8_nnM)
 ---
 
 
@@ -2413,21 +2612,70 @@ El trabajo colaborativo permitió reforzar las buenas prácticas de desarrollo: 
 ## Anexos
 
 <section id="anexos">
-  <h3> Organización y Repositorios en GitHub</h3>
-  <p>El proyecto PcPedia se encuentra alojado bajo la organización de GitHub PCPedia2026 A continuación se detallan los repositorios principales utilizados:</p>
+  <h3>1. Organización y Repositorios en GitHub</h3>
+  <p>El proyecto PcPedia se encuentra alojado bajo la organización de GitHub del curso 1ASI0729-7401-2520-EcatLeasing-PcPedia. A continuación se detallan los repositorios principales utilizados:</p>
   <ul>
     <li><strong>Repositorio de la Organización:</strong> 
-      <a href="https://github.com/PCPedia2026" target="_blank">
-        https://github.com/PCPedia2026
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia
       </a>
     </li>
-    <li><strong>Repositorio del Informe:</strong> 
-      <a href="https://github.com/PCPedia2026/Report" target="_blank">
-        https://github.com/PCPedia2026/Report
+    <li><strong>Repositorio del Informe Final:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Report-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Report-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio de la Landing Page:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Landing-Page-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Landing-Page-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio de el Frontend:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Front-end-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Front-end-PcPedia
+      </a>
+    </li>
+    <li><strong>Repositorio de el Backend:</strong> 
+      <a href="https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Back-end-PcPedia" target="_blank">
+        https://github.com/1ASI0729-7401-2520-EcatLeasing-PcPedia/Back-end-PcPedia
       </a>
     </li>
   </ul>
 
+  <h3>2. Despliegue de la Landing Page</h3>
+  <p>La Landing Page fue desarrollada por Alessandro Ramiro Condori Lozano y desplegada utilizando GitHub Pages. Esta página sirve como presentación inicial del producto PcPedia.</p>
+  <ul>
+    <li><strong>Despliegue de la Landing Page en producción:</strong> 
+      <a href="https://1asi0729-7401-2520-ecatleasing-pcpedia.github.io/Landing-Page-PcPedia/" target="_blank">
+        https://1asi0729-7401-2520-ecatleasing-pcpedia.github.io/Landing-Page-PcPedia/
+      </a>
+    </li>
+    <li><strong>Link del Mock-up en Figma:</strong> 
+      <a href="https://www.figma.com/design/oiLz93LcaZJmdmEKi6h46I/FIGMA-PCPEDIA?node-id=1-15&t=wvrVBChCM91tnOsZ-1" target="_blank">
+        https://www.figma.com/design/oiLz93LcaZJmdmEKi6h46I/FIGMA-PCPEDIA
+      </a>
+    </li>
+  </ul>
+  <h3>3. Despliegue de el Frontend</h3>
+  <p>El Frontend fue desplegado utilizando Netlify. Esta página permite a los usuarios interactuar con la interfaz de manera satisfactoria.</p>
+  <ul>
+    <li><strong>Despliegue de el Frontend en producción:</strong> 
+      <a href="https://pcpedia.netlify.app" target="_blank">
+          https://pcpedia.netlify.app
+      </a>
+    </li>
+  </ul>
+  <h3>4. Despliegue de el Backend</h3>
+  <p>El backend fue desplegado utilizando Render. Esta página contiene la lógica de negocio, el manejo de la base de datos y control de APIs.</p>
+  <ul>
+    <li><strong>Despliegue de el Backend:</strong> 
+      <a href="https://pcpediaapi-egd4b8frh3bqcsde.canadacentral-01.azurewebsites.net/swagger-ui/index.html" target="_blank">
+          https://pcpediaapi-egd4b8frh3bqcsde.canadacentral-01.azurewebsites.net/swagger-ui/index.html
+      </a>
+    </li>
+  </ul>
+  <h3>5. Exposicion del proyecto TF</h3>
+  <p>https://youtu.be/jFJ_QsxzDIw</p>
 </section>
 
 ---
