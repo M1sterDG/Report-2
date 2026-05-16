@@ -1060,6 +1060,97 @@ Para que las pruebas reflejen con fidelidad cómo se comportará el usuario en e
 
 ### 6.3.3. Evaluaciones según heurísticas.
 
+Esta sección analiza los hallazgos de las entrevistas aplicando los principios heurísticos de usabilidad. Permite identificar problemas y oportunidades de mejora en la experiencia del usuario.
+
+**Aplicación para evaluar:** ECAT Leasing
+
+**Tareas que evaluar:**
+- Interpretar los colores y estados de los tickets de incidencia y mantenimiento técnico.
+- Diferenciar entre el catálogo de "Hardware disponible" y las "Solicitudes de leasing activas".
+- Configurar y cotizar un plan flexible según el presupuesto asignado.
+- Navegar por la aplicación para acceder a contratos, sedes de la empresa, reportes y alertas.
+- Comprender las métricas financieras de optimización de costos y obsolescencia tecnológica.
+- Filtrar incidencias de hardware según estados específicos, incluyendo "Pendientes de repuesto" o "Garantías por vencer".
+- Identificar claramente los mensajes de confirmación en acciones críticas (como dar de baja un equipo o renovar un contrato).
+- Evaluar el contraste visual, legibilidad de etiquetas técnicas y visibilidad de alertas críticas de TI.
+- Verificar la correcta adaptación del diseño responsivo en pantallas móviles para el reporte de incidencias in situ.
+- Determinar la eficiencia del flujo de navegación y la reducción de pasos redundantes en la gestión operativa.
+
+**Escala de severidad**
+
+| Valor | Descripción   |
+|-------|---------------|
+| 1     | No tan grave  |
+| 2     | Leve          |
+| 3     | Moderado      |
+| 4     | Grave         |
+| 5     | Muy grave     |
+
+**Tabla de resumen**
+
+| #Orden | Problema                                                                                              | Escala de Severidad | Heurística / Principio violado(a)                                     |
+|--------|-------------------------------------------------------------------------------------------------------|---------------------|-----------------------------------------------------------------------|
+| 1      | Falta de leyenda explícita sobre el significado de los colores en el estado de incidencias y soporte. | 3                   | Visibilidad del estado del sistema                                    |
+| 2      | Diferencia visual difusa entre la navegación de "Catálogo de Hardware" y "Solicitudes de Leasing".    | 4                   | Consistencia y estándares                                             |
+| 3      | Desglose comercial poco técnico en las recomendaciones del cotizador inteligente de presupuesto.     | 2                   | Correspondencia entre el sistema y el mundo real                      |
+| 4      | Interfaz inicial densa en opciones administrativas y ausencia de un onboarding o accesos rápidos.     | 3                   | Flexibilidad y eficiencia de uso / Ayuda y documentación              |
+| 5      | Alertas críticas de soporte y vencimiento de garantías poco resaltadas en el dashboard.                | 4                   | Visibilidad del estado del sistema / Prevención de errores            |
+| 6      | Falta de un filtro específico para equipos "Pendientes de validación de baja" o reemplazo.            | 3                   | Flexibilidad y eficiencia de uso / Visibilidad del estado del sistema |
+| 7      | Formato visual del hilo de conversación con el soporte técnico poco diferenciado.                     | 2                   | Estética y diseño minimalista / Visibilidad del sistema               |
+| 8      | Ausencia de un modal de confirmación con doble factor para la cancelación o baja definitiva de activos.| 3                   | Prevención de errores                                                 |
+| 9      | Gráficos complejos de depreciación financiera con reducción extrema de legibilidad en móviles.        | 2                   | Diseño responsivo / Consistencia y estándares                         |
+| 10     | Flujo de navegación extenso para registrar una incidencia urgente (demasiados clics previos).        | 3                   | Flexibilidad y eficiencia de uso                                      |
+
+---
+
+#### Problema #1: Falta de leyenda explícita sobre el significado de los colores en el estado de incidencias y soporte
+
+**Heurística violada:** Visibilidad del estado del sistema.  
+
+**Descripción del problema:** Varios entrevistados mencionan que los colores ayudan a interpretar estados y prioridades, pero no existe una leyenda explícita que explique qué significa cada color o umbral (por ejemplo, estados de tareas o niveles de desempeño). Esto obliga al usuario a “deducir” el significado y genera una pequeña curva de aprendizaje innecesaria.
+
+**Recomendación:** Incorporar una leyenda fija (por ejemplo, en la parte superior derecha de la vista de tareas y de reportes) donde se explique el significado de cada color y estado. Además, añadir *tooltips* o ayudas contextuales que, al pasar el cursor o tocar un ícono de ayuda, muestren brevemente qué representa cada color y umbral de desempeño. Esto reduce la ambigüedad y mejora la comprensión inmediata del estado del sistema.
+
+---
+
+#### Problema #2: Diferencia visual difusa entre la navegación de "Catálogo de Hardware" y "Solicitudes de Leasing"
+
+**Heurística violada:** Consistencia y estándares.  
+
+**Descripción del problema:** Al menos un entrevistado reportó confusión inicial entre las secciones de “tareas” y “solicitudes”. Aunque ambas pantallas están ordenadas, la nomenclatura y el diseño visual no hacen suficientemente evidente que se trata de conceptos distintos (trabajo asignado vs. solicitudes de cambio, validaciones u otros tipos de requerimientos). Esto puede provocar errores de interpretación y uso.
+
+**Recomendación:** Reforzar la diferenciación visual y textual entre “tareas” y “solicitudes”. Por ejemplo, usar íconos distintos, colores de fondo diferenciados y subtítulos breves en cada pantalla (p. ej. “Tareas: actividades pendientes que debes completar” y “Solicitudes: pedidos o validaciones que requieren tu respuesta”). También se recomienda incluir un mensaje introductorio corto la primera vez que el usuario ingresa a cada sección.
+
+---
+
+#### Problema #3: Desglose comercial poco técnico en las recomendaciones del cotizador inteligente de presupuesto
+
+**Heurística violada:** Correspondencia entre el sistema y el mundo real.  
+
+**Descripción del problema:** Un entrevistado indicó confusión respecto al código del grupo al visualizar los detalles; no era evidente que ese valor correspondía al código que se comparte para unirse al grupo. La falta de una etiqueta clara o subtítulo obliga al usuario a adivinar su propósito.
+
+**Recomendación:** Añadir una etiqueta explícita como “Código del grupo (compártelo para que otros se unan)” junto al valor, y un pequeño ícono de copiar para facilitar su uso. Esto alinea mejor el lenguaje de la interfaz con el modelo mental del usuario y hace más clara la función de este elemento.
+
+---
+
+#### Problema #4: Interfaz inicial densa en opciones administrativas y ausencia de un onboarding o accesos rápidos
+
+**Heurísticas violadas:** Flexibilidad y eficiencia de uso / Ayuda y documentación.  
+
+**Descripción del problema:** Aunque los usuarios con algo de experiencia perciben la navegación como clara y concisa, se menciona que, para un usuario nuevo, la cantidad de pantallas y opciones puede sentirse un poco extensa al inicio. Actualmente no existe un onboarding breve ni ayudas contextuales que expliquen las secciones clave (grupos, tareas, solicitudes, desempeño, atajos). Esto genera una pequeña barrera de entrada antes de aprovechar plenamente las funcionalidades.
+
+**Recomendación:** Implementar un recorrido guiado (*tour*) la primera vez que el usuario inicie sesión, destacando las secciones principales y su propósito. Complementar esto con breves textos “¿Qué puedes hacer aquí?” en las pantallas más importantes y con ayudas contextuales (íconos de “i” o “?”) que puedan consultarse en cualquier momento. De esta manera, se reduce la carga cognitiva inicial y se acelera la curva de aprendizaje.
+
+---
+
+#### Problema #5: Alertas críticas de soporte y vencimiento de garantías poco resaltadas en el dashboard
+
+**Heurísticas violadas:** Visibilidad del estado del sistema / Prevención de errores.  
+
+**Descripción del problema:** Los entrevistados reconocen que existen mensajes de confirmación cuando se crean, editan o eliminan elementos; sin embargo, señalan que podrían estar mejor resaltados para que el usuario los perceba con mayor claridad. Si la retroalimentación visual es sutil, es posible que algunos usuarios duden sobre si la acción se ejecutó correctamente.
+
+**Recomendación:** Aumentar la visibilidad de las notificaciones de confirmación mediante el uso de *toasts* o banners más notorios (uso de íconos de éxito/error, tipografía ligeramente más grande y contraste adecuado). Para acciones críticas (como eliminar tareas o grupos), incluir además un cuadro de diálogo de confirmación claro, reduciendo así el riesgo de errores y mejorando la percepción de control sobre la plataforma.
+
 ## 6.4. Auditoría de Experiencias de Usuario
 
 ### 6.4.1. Auditoría realizada.
