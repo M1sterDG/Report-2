@@ -2807,6 +2807,22 @@ producción (Azure)
 
 - **Production Validation:** Verificación de disponibilidad del backend en Azure y del frontend en Netlify después del despliegue exitoso.
 
+### 7.3 Continuous deployment
+
+#### 7.3.1 Tools and Practices
+
+El despliegue continuo de PCPedia hacia producción se encuentra automatizado mediante plataformas cloud integradas con el repositorio principal, permitiendo publicar cambios de manera rápida, controlada y segura.
+
+- **Backend:** Al realizar un merge hacia la rama `main`, GitHub Actions ejecuta automáticamente el pipeline de build y despliegue. El artefacto JAR generado es publicado directamente en Azure App Service (`pcpediaapi`) mediante `azure/webapps-deploy@v3`, dejando disponible la API en producción sin intervención manual.
+
+- **Frontend:** Netlify monitorea continuamente el repositorio del frontend y, ante cada push a `main`, ejecuta automáticamente `npm install` y `npm run build`. Posteriormente, publica el bundle optimizado en su CDN global, actualizando la aplicación web en producción.
+
+- **Production Environment:** Azure App Service gestiona el entorno de ejecución Java del backend, mientras que Netlify administra el hosting y distribución global del frontend Angular, garantizando disponibilidad y baja latencia.
+
+- **Rollback:** En el backend, Azure App Service permite revertir rápidamente a una versión anterior del despliegue en caso de fallo crítico. En el frontend, Netlify mantiene un historial de deploys, permitiendo restaurar versiones previas de la aplicación de forma inmediata.
+
+- **Continuous Monitoring:** Después de cada despliegue, el equipo valida el acceso a los endpoints REST mediante Swagger y verifica el correcto funcionamiento del frontend desplegado en producción.
+
 ## Conclusiones
 
 <p>
