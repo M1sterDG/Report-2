@@ -800,7 +800,7 @@ Ambas estrategias siguen el principio de integración continua basada en trunk, 
 - **Separación de jobs:** los jobs `build` y `deploy` están desacoplados y encadenados mediante dependencia explícita (`needs: build`), lo que permite identificar con precisión en qué etapa falla el pipeline.
 - **Artefacto inmutable:** el JAR producido en build se sube como artifact y el job de deploy lo descarga, garantizando que lo que se compila es exactamente lo que se despliega.
 
-> **Punto de mejora identificado:** actualmente el pipeline ejecuta `mvn clean package -DskipTests`, omitiendo la ejecución de tests en el proceso de CI. Como acción de mejora para TB2, el equipo tiene previsto habilitar la ejecución de tests y ampliar la suite de pruebas unitarias e de integración.
+> **Mejora aplicada (TB2):** el pipeline tenía `mvn clean package -DskipTests` porque `PcPediaApplicationTests` dependía de una conexión MySQL real, inexistente en el runner de GitHub Actions. Se creó un perfil de test con H2 en memoria (`application-test.properties`, modo `MySQL`) y se anotó `PcPediaApplicationTests` con `@ActiveProfiles("test")`. El workflow ahora ejecuta `mvn clean package -Dspring.profiles.active=test` en lugar de `-DskipTests`: los 49 tests corren en cada push a `main` sin tocar la configuración de producción. Adicionalmente se identificaron perfiles Maven ya configurados para tests de integración y Selenium (`mvn test -P integration` / `-P selenium`), excluidos del run por defecto de Surefire — pendientes de incorporar como jobs separados del pipeline.
 
 ---
 
@@ -836,7 +836,8 @@ Push a main / workflow_dispatch
 │  1. actions/checkout@v4                  │
 │  2. actions/setup-java@v4 (Java 21,      │
 │     distribución Microsoft)              │
-│  3. mvn clean package -DskipTests        │
+│  3. mvn clean package                    │
+│     -Dspring.profiles.active=test        │
 │     → Genera: target/*.jar               │
 │  4. actions/upload-artifact              │
 │     → Sube: .java-app/                  │
@@ -862,11 +863,12 @@ Push a main / workflow_dispatch
 
 | Componente | Estado |
 |---|---|
-| Framework de testing | Spring Boot Test (JUnit 5, integrado via `spring-boot-starter-test`) |
-| Archivo de test existente | `PcPediaApplicationTests.java` — verifica únicamente que el contexto de Spring carga correctamente (`contextLoads()`) |
-| Tests unitarios | No implementados aún |
-| Tests de integración | No implementados aún |
-| Ejecución en CI | Deshabilitada (`-DskipTests`) |
+| Framework de testing | Spring Boot Test (JUnit 5, integrado via `spring-boot-starter-test`) + Mockito + MockMvc |
+| Archivos de test existentes | `AuthServiceTest` (5), `InvoiceServiceTest` (10), `AuthControllerTest` (5 — el grep inicial detectó 6 por un falso positivo de `@TestConfiguration`, confirmado: son 5 métodos `@Test` reales, los 5 corren), `ContractServiceTest` (14), `TicketServiceTest` (14), `PcPediaApplicationTests` (1, `contextLoads()` con perfil `test`/H2) |
+| Tests unitarios | ✅ 48 tests implementados (capa de servicio y controlador: IAM, Billing, Contract, Support) |
+| Tests de integración | ✅ `PcPediaApplicationTests.contextLoads()` levanta el contexto completo de Spring contra H2 (perfil `test`) |
+| Resultado última corrida local (`mvn test`) | **49/49 tests pasan, 0 fallos, 0 errores** — `BUILD SUCCESS` |
+| Ejecución en CI | ✅ Habilitada — `mvn clean package -Dspring.profiles.active=test`, 49/49 tests corren en cada push a `main` |
 
 #### Frontend Pipeline — Flujo Netlify
 
@@ -976,6 +978,220 @@ producción (Azure)
 |---|---|---|---|
 | PCPedia API (Backend) | Production | Azure App Service | Push a `main` (GitHub Actions) |
 | PCPedia Web App (Frontend) | Production | Netlify (CDN global) | Push a `main` (Netlify auto-deploy) |
+
+---
+
+<div align="center">
+
+# Capítulo VIII: Experimentación
+
+</div>
+
+---
+
+PCPedia ha validado hasta el momento su propuesta de valor mediante el Lean UX Canvas inicial (Capítulo I), bajo la hipótesis general de que **las empresas migrarán de la compra de equipos a un modelo de arrendamiento si perciben un ahorro real**, medible en pilotos de 8 a 12 semanas. El presente capítulo formaliza esa intuición inicial en un diseño de experimentos completo (XDPD — Experiment-Driven Product Development), descomponiendo la hipótesis general en hipótesis específicas y verificables, ligadas a las 5 épicas del producto (EP01–EP05) y al estado actual de implementación (10 de 14 historias de usuario completadas, según el Product Backlog del Capítulo III).
+
+---
+
+## 8.2. Experiment Design
+
+### 8.2.1. Hypotheses
+
+Cada hipótesis sigue el formato *Hypothesis Statement* (Croll & Yoskovitz, 2024): **"Creemos que [cambio] para [segmento] logrará [resultado]. Sabremos que es verdad cuando observemos [señal medible]."** Las hipótesis se derivan de las 5 épicas del backlog actual y, en particular, de las 4 historias de usuario aún no implementadas (HU03, HU05, HU06, HU07), que se replantean aquí como apuestas a validar y no como simples pendientes.
+
+| ID | Hipótesis | Épica relacionada | Señal de éxito |
+|:---:|---|:---:|---|
+| **H1** | Creemos que incorporar contenido de respaldo institucional (perfil de empresa, casos de éxito, ubicación y contacto verificable — HU03, HU05, HU06) para empresas medianas y grandes que evalúan migrar a leasing, incrementará la tasa de conversión de visitante a solicitud de cotización. | EP02 — Información del servicio | Conversión visita → cotización aumenta ≥15% vs. línea base, en piloto de 8 semanas. |
+| **H2** | Creemos que mostrar disponibilidad en tiempo real del catálogo de equipos (HU10, HU11) a instituciones educativas reducirá el tiempo entre la primera consulta y la solicitud de auditoría. | EP04 — Catálogo y auditoría de equipos | Tiempo "consulta → solicitud de auditoría" se reduce ≥20%, en ventana de 8-12 semanas. |
+| **H3** | Creemos que un sistema de tickets con SLA visible (HU08, HU09) para clientes con contrato activo incrementará la satisfacción y reducirá la cancelación de contratos. | EP03 — Atención y comunicación | CSAT promedio post-ticket ≥ 4/5 y churn trimestral < 5%. |
+| **H4** | Creemos que digitalizar el flujo auditoría → cotización → contrato (HU12) reducirá el ciclo de venta frente al proceso manual previo de EcatLeasing. | EP05 — Contratación y gestión del servicio | Ciclo promedio de venta ≤10 días hábiles, sobre una muestra de al menos 20 contratos. |
+| **H5** | Creemos que permitir pagos y facturación dentro de la misma plataforma (HU13, HU14) reducirá los días promedio de cobro (DSO) frente al cobro manual por canales externos. | EP02 / EP05 — Pagos | DSO se reduce ≥25% durante el primer trimestre de uso productivo. |
+| **H6** | Creemos que un asistente conversacional de primer nivel (HU07) para prospectos reducirá el abandono en la etapa de consulta inicial, al resolver dudas frecuentes sin esperar a un agente humano. | EP03 — Atención y comunicación | Abandono en etapa de consulta se reduce ≥10% respecto a la línea base sin chatbot. |
+
+---
+
+### 8.2.2. Domain Business Metrics
+
+Métricas propias del dominio de negocio de arrendamiento tecnológico B2B/B2B2C, distintas de métricas genéricas de tráfico web:
+
+| Métrica de dominio | Definición de negocio |
+|---|---|
+| Tasa de Conversión Lead → Contrato | Porcentaje de prospectos que firman contrato sobre el total de cotizaciones solicitadas. |
+| Costo de Adquisición de Cliente (CAC) | Inversión comercial/marketing necesaria para cerrar un nuevo contrato. |
+| Valor de Vida del Cliente (LTV) | Ingreso neto esperado de un cliente durante la duración promedio de sus contratos. |
+| Ciclo de Venta Promedio (Lead-to-Contract Time) | Días entre la primera solicitud de auditoría y la firma del contrato. |
+| Tasa de Renovación de Contratos | Porcentaje de contratos que se renuevan al finalizar su vigencia. |
+| Ticket Promedio de Arrendamiento (ARPA) | Ingreso mensual promedio por cliente activo. |
+| CSAT / NPS de Soporte | Satisfacción percibida en la atención post-venta (tickets). |
+| Tasa de Abandono de Catálogo | Sesiones que visualizan el catálogo sin generar una solicitud de auditoría. |
+| Días de Venta Pendientes (DSO) | Días promedio que tarda EcatLeasing en cobrar una factura emitida. |
+| Cumplimiento de SLA de Tickets | Porcentaje de tickets resueltos dentro del tiempo de respuesta comprometido. |
+
+---
+
+### 8.2.3. Measures
+
+Operacionalización de cada métrica: fórmula, unidad y fuente de datos dentro del backend DDD de PCPedia.
+
+| Métrica | Fórmula / Cálculo | Unidad | Fuente de datos (entidad/servicio) |
+|---|---|:---:|---|
+| Conversión Lead → Contrato | (N° contratos firmados / N° cotizaciones solicitadas) × 100 | % | `Quote`, `Contract` |
+| CAC | Gasto comercial del periodo / N° clientes nuevos adquiridos | S/ por cliente | Registro financiero EcatLeasing + `User` (alta) |
+| LTV | ARPA × duración promedio de contrato (meses) × margen | S/ | `Contract`, `Invoice` |
+| Ciclo de venta | Fecha de firma de `Contract` − Fecha de creación de `Quote`/solicitud de auditoría | días | `Contract`, `Quote` |
+| Tasa de renovación | (N° contratos renovados / N° contratos vencidos en el periodo) × 100 | % | `Contract` |
+| ARPA | Suma de `Invoice` facturadas del mes / N° clientes activos | S/ | `Invoice` |
+| CSAT | Promedio del campo `satisfaction_score` en `Ticket` cerrados ✅ *implementado:* `PATCH /api/tickets/{id}/rate` | escala 1-5 | `Ticket` |
+| Abandono de catálogo | 1 − (N° solicitudes de auditoría / N° sesiones con vista de catálogo) | % | Evento `catalog_view` (frontend) + `AuditRequest` |
+| DSO | (Cuentas por cobrar promedio / Ingresos por arrendamiento del periodo) × N° días del periodo | días | `Invoice`, `Payment` |
+| SLA de tickets | (N° tickets resueltos dentro del SLA / N° tickets totales) × 100 | % | `Ticket` (timestamps de creación/resolución) |
+
+---
+
+### 8.2.4. Conditions
+
+Condiciones experimentales por hipótesis: población, entorno, duración y criterios de exclusión.
+
+| Hipótesis | Población objetivo | Entorno | Duración | Grupo de control | Exclusiones |
+|:---:|---|---|:---:|---|---|
+| H1 | Empresas medianas/grandes, prospectos nuevos | Producción (landing + perfil institucional) | 8 semanas | Visitantes sin acceso al contenido institucional nuevo | Tráfico interno del equipo y QA |
+| H2 | Instituciones educativas registradas | Producción, módulo catálogo | 8-12 semanas | Usuarios con la vista de catálogo sin disponibilidad en tiempo real | Administradores internos del catálogo |
+| H3 | Clientes con contrato vigente | Producción | 1 trimestre (12 semanas) | Clientes sin visibilidad de SLA en su panel | Tickets de prueba/staging |
+| H4 | Prospectos en fase de auditoría de equipos | Producción | Continuo, evaluado cada 20 contratos cerrados | Línea base histórica del proceso manual previo | Contratos corporativos negociados fuera de plataforma |
+| H5 | Clientes con facturación activa | Producción | 1 trimestre fiscal | Clientes que aún pagan por canal externo (transferencia manual) | Clientes en disputa de cobro |
+| H6 | Prospectos en etapa de consulta inicial | Producción (landing/chat) | 6-8 semanas | Sesiones sin acceso al asistente conversacional | Tráfico de bots/crawlers |
+
+---
+
+### 8.2.5. Scale Calculations and Decisions
+
+Dado el volumen de tráfico B2B/B2B2C de PCPedia (ciclo de venta largo, bajo volumen comparado con e-commerce masivo), se prioriza la significancia práctica sobre la significancia estadística estricta, siguiendo el enfoque de Lean Analytics para etapas tempranas con tráfico limitado. Se fija un **nivel de confianza del 90%** y un **efecto mínimo detectable (MDE) del 15-20%** según la hipótesis, valores conservadores acordes al tamaño de muestra disponible.
+
+| Hipótesis | Muestra mínima estimada | Umbral de éxito | Umbral de descarte | Decisión intermedia |
+|:---:|:---:|---|---|---|
+| H1 | ≥80 visitas a perfil institucional | Conversión ≥15% | Conversión <5% | 5-15%: extender piloto 4 semanas |
+| H2 | ≥30 instituciones con sesión en catálogo | Reducción de tiempo ≥20% | Reducción <5% | 5-20%: revisar UX del catálogo antes de descartar |
+| H3 | ≥30 tickets cerrados | CSAT ≥4/5 | CSAT <3/5 | 3-4: ajustar SLA comprometido y volver a medir |
+| H4 | ≥20 contratos firmados | Ciclo ≤10 días | Ciclo >20 días | 10-20 días: identificar cuello de botella por etapa |
+| H5 | ≥1 trimestre de facturación con ≥15 clientes activos | DSO reducido ≥25% | DSO reducido <5% | 5-25%: reforzar recordatorios automáticos de pago |
+| H6 | ≥100 sesiones con chatbot activo | Abandono reducido ≥10% | Sin reducción o aumento | 0-10%: revisar guion conversacional |
+
+Las líneas base exactas (conversión actual, ciclo de venta actual, DSO actual) son **asunciones de planeamiento** del equipo a validar con datos reales de EcatLeasing una vez el piloto inicie; se documentarán formalmente en el Acta de revisión QA del diseño experimental.
+
+---
+
+### 8.2.6. Methods Selection
+
+| Hipótesis | Método experimental | Justificación |
+|:---:|---|---|
+| H1 | A/B Testing (landing con vs. sin contenido institucional) | Tráfico suficiente para split testing simple; cambio de contenido es fácilmente aislable. |
+| H2 | Análisis Pre/Post (cohortes antes y después del release) | Funcionalidad es un release binario por cliente institucional, no apta para split en vivo. |
+| H3 | Encuesta CSAT + análisis longitudinal de cohortes | Mide percepción subjetiva sostenida en el tiempo, no un evento puntual. |
+| H4 | Benchmarking de proceso (serie temporal pre/post digitalización) | Compara el proceso manual histórico de EcatLeasing contra el flujo digital nuevo. |
+| H5 | Análisis Pre/Post + tendencia de DSO | El cambio de canal de pago afecta a toda la base de clientes facturados, no es segmentable en A/B. |
+| H6 | Fake door / Smoke test seguido de A/B una vez validado interés | Permite validar demanda del chatbot antes de invertir en desarrollo completo. |
+
+---
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+Se aplica el enfoque **Goal–Question–Metric (GQM)** para conectar los objetivos de negocio con las métricas de dominio (8.2.2):
+
+| Goal | Question | Metric (KPI) |
+|---|---|---|
+| Aumentar la conversión de prospecto a cliente | ¿Qué contenido genera más solicitudes de cotización? | Conversión visita → cotización; CTR de contenido institucional |
+| Reducir la fricción operativa en autoservicio | ¿En qué paso del flujo catálogo → auditoría abandonan los usuarios? | Funnel drop-off por etapa; Tasa de abandono de catálogo |
+| Maximizar retención y satisfacción | ¿La resolución de tickets dentro de SLA mejora el CSAT y reduce el churn? | Cumplimiento de SLA; CSAT; Tasa de renovación |
+| Acelerar el ciclo de venta | ¿Qué etapa del flujo de contratación toma más tiempo? | Ciclo de venta por etapa (cotización, auditoría, firma) |
+| Mejorar el flujo de caja | ¿Los pagos in-app reducen la mora frente al cobro manual? | DSO; % de pagos realizados a tiempo |
+
+---
+
+### 8.2.8. Web and Mobile Tracking Plan
+
+PCPedia es actualmente una SPA Angular 20 responsive (sin aplicación móvil nativa), por lo que el tracking "mobile" corresponde a la experiencia web accedida desde navegador móvil, no a un SDK nativo.
+
+| Evento | Disparador | Propiedades clave | Componente / Pantalla | Estado |
+|---|---|---|---|:---:|
+| `login_success` / `login_failure` | Eventos de autenticación | `user_type`, `device_category` | `login.component.ts` (líneas 238, 248) | ✅ |
+| `catalog_view` | Usuario visita el catálogo de equipos | `equipment_category`, `segment_type`, `device_category` | `catalog-list.component.ts` (línea 366) | ✅ |
+| `catalog_filter_used` | Usuario aplica un filtro | `filter_type`, `filter_value` | `catalog-list.component.ts` (líneas 377, 380) | ✅ |
+| `audit_request_submitted` | Envío de solicitud de auditoría de equipos | `company_size`, `industry`, `equipment_ids[]` | `request-form.component.ts` (línea 417) | ✅ (props parciales, ver nota) |
+| `quote_requested` | Generación de cotización | `equipment_ids[]`, `segment_type` | `quote-form.component.ts` (línea 546) | ✅ |
+| `contract_signed` | Firma digital del contrato | `contract_value`, `duration_months` | `contract-form.component.ts` (línea 367) | ✅ |
+| `ticket_created` | Cliente crea un ticket de soporte | `category`, `priority` | `ticket-form.component.ts` (línea 194) | ✅ |
+| `ticket_resolved` | Ticket marcado como resuelto | `resolution_time_hours`, `satisfaction_score` | `ticket-detail.component.ts` (línea 478) | ⚠️ implementado, `satisfaction_score` aún en placeholder (ver nota) |
+| `payment_completed` | Pago realizado dentro de la plataforma | `amount`, `payment_method`, `days_since_invoice` | `payment-form.component.ts` (línea 388) | ✅ |
+| `contact_page_view` *(nuevo, soporta H1/HU16)* | Visita a la página de contacto | — | `contact.component.ts` (`ngOnInit`) | ✅ |
+| `chatbot_interaction` *(a futuro, H6)* | Interacción con asistente conversacional | `query_type`, `resolved_without_agent` | Widget de chat (pendiente HU21) | ⬜ pendiente |
+
+**Estado de implementación:** `AnalyticsService` (`analytics.service.ts`) creado con `trackEvent()` genérico + 10 métodos tipados, inicializado vía `gtag.js` en `index.html` y `environment.ts` / `environment.prod.ts` (`gaMeasurementId`). Pendientes antes de iniciar el piloto:
+
+- Reemplazar el placeholder `G-XXXXXXX` por el Measurement ID real de GA4.
+- `audit_request_submitted` envía `company_size: 'unknown'` e `industry: 'technology'` como placeholder, porque el formulario no captura aún el perfil de empresa del prospecto; enriquecer leyendo `AuthService.currentUser().companySize` cuando ese campo exista.
+- `ticket_resolved` envía `satisfaction_score: 0` como placeholder. El backend ya expone `PATCH /api/tickets/{id}/rate` (ver 8.2.3), pero el frontend aún no tiene el modal post-resolución que capture la calificación real y dispare el evento con el score verdadero — queda como siguiente tarea antes de poder medir H3 con datos reales.
+
+**Herramientas:** Google Analytics 4 para eventos de navegación e interacción en frontend, complementado con registro de eventos de negocio en backend (tabla de auditoría/logs estructurados) para los eventos ligados a entidades como `Contract`, `Invoice` y `Ticket`, que GA4 no puede capturar por sí solo.
+
+---
+
+## 8.3. Experimentation
+
+### 8.3.1. To-Be User Stories
+
+Historias de usuario nuevas, derivadas directamente de las hipótesis H1-H6, que extienden el Product Backlog actual (Capítulo III):
+
+| HU | Historia de usuario | Épica | Hipótesis | Story Points |
+|:---:|---|:---:|:---:|:---:|
+| HU15 | Como prospecto empresarial, quiero ver el perfil institucional de EcatLeasing y casos de éxito de otros clientes, para evaluar la confiabilidad del servicio antes de cotizar. | EP02 | H1 | 5 |
+| HU16 | Como prospecto, quiero encontrar fácilmente la ubicación y los canales de contacto de EcatLeasing, para resolver dudas antes de comprometerme. | EP02 | H1 | 3 |
+| HU17 | Como responsable de TI de una institución educativa, quiero ver la disponibilidad en tiempo real de los equipos del catálogo, para planificar mi solicitud de auditoría sin retrasos. | EP04 | H2 | 8 |
+| HU18 | Como cliente con contrato activo, quiero ver el SLA y el estado de mis tickets en tiempo real, para confiar en los tiempos de atención. | EP03 | H3 | 5 |
+| HU19 | Como cliente, quiero firmar el contrato digitalmente dentro de la plataforma, para evitar el envío de documentos por correo y acelerar el cierre. | EP05 | H4 | 13 |
+| HU20 | Como cliente, quiero recibir recordatorios automáticos de vencimiento de pago dentro de la plataforma, para evitar moras y gestionar mi flujo de caja. | EP05 | H5 | 5 |
+| HU21 | Como prospecto, quiero resolver dudas básicas mediante un asistente conversacional, para obtener respuesta inmediata sin esperar a un agente humano. | EP03 | H6 | 8 |
+
+---
+
+### 8.3.2. To-Be Product Backlog
+
+Backlog priorizado de las historias to-be, en escala de Fibonacci (consistente con el Product Backlog del Capítulo III), listo para asignación a sprint:
+
+| HU | Título | Épica | Prioridad | Story Points | Sprint propuesto | Estado |
+|:---:|---|:---:|:---:|:---:|:---:|:---:|
+| HU16 | Ubicación y contacto verificable | EP02 | Alta | 3 | Sprint 5 | ✅ Hecho |
+| HU15 | Perfil institucional y casos de éxito | EP02 | Alta | 5 | Sprint 5 | Por hacer |
+| HU18 | SLA y estado de tickets en tiempo real | EP03 | Alta | 5 | Sprint 5 | Por hacer |
+| HU20 | Recordatorios automáticos de pago | EP05 | Alta | 5 | Sprint 6 | Por hacer |
+| HU17 | Disponibilidad de catálogo en tiempo real | EP04 | Media | 8 | Sprint 6 | Por hacer |
+| HU21 | Asistente conversacional (chatbot) | EP03 | Media | 8 | Sprint 7 | Por hacer |
+| HU19 | Firma digital de contrato | EP05 | Media | 13 | Sprint 7 | Por hacer |
+
+**Criterio de priorización:** se priorizaron primero las historias de menor esfuerzo y mayor impacto directo sobre H1 y H3 (confianza y retención), por ser las hipótesis más rápidas de instrumentar sin depender de integraciones externas (firma digital, chatbot), las cuales se dejaron para sprints posteriores dado su mayor costo de implementación (13 y 8 puntos respectivamente).
+
+---
+
+### Evidencia de Implementación (Sprint 5, avance real)
+
+Como evidencia de que el diseño de experimentos no quedó solo en documentación, se implementó en código lo siguiente sobre los repositorios reales de PCPedia:
+
+**Frontend (`PCPedia-Web`)**
+
+| Implementado | Detalle |
+|---|---|
+| `AnalyticsService` (GA4) | `trackEvent()` genérico + 10 métodos tipados, conectados a `gtag.js` vía `index.html` y `environment(.prod).ts` |
+| 9 de 10 eventos del Tracking Plan (8.2.8) | Disparados desde sus componentes reales (login, catálogo, auditoría, cotización, contrato, ticket, pago) — ver tabla de 8.2.8 con línea exacta por evento |
+| HU16 — Contacto EcatLeasing | `ContactComponent` standalone en `/contacto`, con dirección, teléfono, correo, horario y mapa embebido; enlazado desde `login.component.ts`; dispara `contact_page_view` |
+
+**Backend (`PCPedia-API`)**
+
+| Implementado | Detalle |
+|---|---|
+| Campo `satisfactionScore` en `Ticket` | Entidad de dominio con método `rate(Integer score)`, solo válido en estados `RESOLVED`/`CLOSED` |
+| Endpoint `PATCH /api/tickets/{id}/rate` | Restringido a rol `CLIENT`, valida propiedad del ticket (403 si no es el dueño) y rango 1-5 (`@Min`/`@Max`) |
+| Columna `satisfaction_score` | Generada automáticamente por Hibernate (`ddl-auto=update`) |
+
+**Pendiente para que H3 (CSAT) sea medible con datos reales:** conectar el endpoint `rate` a un modal en el frontend que aparezca al cerrar un ticket, capture el score real del cliente y lo envíe tanto al backend como al evento `ticket_resolved` (que hoy va con `satisfaction_score: 0` de placeholder). Sin ese modal, el backend ya puede recibir calificaciones, pero nada en la UI las dispara todavía.
 
 ---
 
