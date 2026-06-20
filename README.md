@@ -2863,6 +2863,25 @@ El despliegue continuo de PCPedia hacia producción se encuentra automatizado me
 - **Frontend Deployment:** El bundle generado en `dist/pcpedia/browser` se publica automáticamente en la CDN global de Netlify.
 
 - **Production Validation:** Luego del despliegue, se valida que el backend responda correctamente desde Swagger y que el frontend esté disponible en su URL de producción.
+---
+
+### 7.4 Continuous Monitoring
+
+#### 7.4.1. Tools and Practices
+
+
+
+#### 7.4.2. Monitoring Pipeline Components
+
+
+
+#### 7.4.3. Alerting Pipeline Components
+
+
+
+#### 7.4.4. Notification Pipeline Components. 
+
+
 
 ---
 
