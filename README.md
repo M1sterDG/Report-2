@@ -2873,6 +2873,25 @@ El despliegue continuo de PCPedia hacia producción se encuentra automatizado me
 
 #### 7.4.2. Monitoring Pipeline Components
 
+Un pipeline de monitoreo constante integra diversas etapas que ayudan a mantener la calidad y el
+rendimiento de PcPedia en producción. Estas etapas incluyen la recopilación de datos, el
+almacenamiento, el análisis y la visualización. Herramientas como Google Lighthouse y Azure
+Monitor juegan un papel fundamental en este proceso, ofreciendo evaluaciones complementarias
+que permiten entender y mejorar la experiencia del usuario.
+Google Lighthouse es ideal para realizar auditorías de calidad en el frontend de PcPedia
+desplegado en Netlify, proporcionando análisis detallados de accesibilidad, buenas prácticas, SEO
+y rendimiento de la SPA Angular. Esta herramienta permite al equipo identificar problemas que
+impactan la experiencia del usuario, tales como tiempos de carga elevados, tamaño excesivo del
+bundle de producción y cambios de diseño inesperados entre despliegues. Su integración en el
+flujo post-deploy asegura que cada versión publicada cumpla con los estándares de calidad
+definidos por el equipo.
+Azure Monitor se especializa en el monitoreo del backend desplegado en Azure App Service,
+ofreciendo datos en tiempo real sobre la latencia de respuesta del servidor, el uso de CPU y
+memoria del contenedor Java, la tasa de errores HTTP y el rendimiento de las conexiones con la
+base de datos MySQL en Railway. Su enfoque en la supervisión continua de la infraestructura
+permite al equipo detectar y resolver problemas antes de que afecten al usuario final.
+Complementado con los logs del servicio pcpediaapi, Azure Monitor proporciona trazabilidad
+completa del comportamiento del sistema ante picos de carga o fallos en el pipeline de entrega.
 
 
 #### 7.4.3. Alerting Pipeline Components
