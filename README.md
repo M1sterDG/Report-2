@@ -2905,9 +2905,19 @@ El sistema de alertas de PcPedia está diseñado para notificar al equipo de for
 
 #### 7.4.4. Notification Pipeline Components. 
 
+El pipeline de notificaciones de PcPedia centraliza la comunicación automática sobre el estado de los despliegues, la disponibilidad del sistema y el resultado de las validaciones post-deploy, asegurando que todo el equipo esté informado ante cualquier evento relevante.
 
+ - **GitHub Actions — Notificaciones de pipeline:** GitHub Actions notifica automáticamente al equipo cuando un workflow falla en cualquiera de sus etapas (build o deploy). Los miembros del repositorio reciben notificaciones por correo electrónico ante fallos en la rama main, lo que permite una respuesta inmediata para diagnosticar el error y aplicar una corrección. 
+ 
+ - **Azure App Service — Notificaciones de despliegue:** El portal de Azure registra un historial detallado de cada despliegue del backend, incluyendo el estado (éxito o fallo), el tiempo de ejecución y los logs del contenedor. En caso de fallo, Azure puede configurarse para enviar notificaciones al equipo vía correo electrónico o webhooks hacia canales de mensajería como Microsoft Teams. 
+ 
+ -  **Netlify — Build Notifications:** Netlify genera notificaciones automáticas al finalizar cada proceso de build del frontend, informando sobre el éxito o fallo de la compilación Angular. Estas notificaciones incluyen el tiempo de build y el enlace al deploy generado, facilitando la validación inmediata de la versión publicada.
+ 
+ - **Protocolo interno de notificación:** El equipo mantiene un canal de comunicación en Discord donde se comparten los resultados de cada ciclo de despliegue, incluyendo capturas de la validación de Swagger, confirmación del acceso al frontend y cualquier incidencia detectada durante las pruebas manuales post-deploy. Este protocolo asegura trazabilidad y coordinación entre los integrantes durante el ciclo de entrega continua.
 
 ---
+
+
 
 ## Conclusiones
 
