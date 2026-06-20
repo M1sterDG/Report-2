@@ -2918,6 +2918,40 @@ El pipeline de notificaciones de PcPedia centraliza la comunicación automática
 ---
 
 
+<div align="center">
+
+# Capítulo VIII: Experiment-Driven Development
+
+</div>
+
+---
+
+### 8.1  Experiment Planning
+
+#### 8.1.1. As-Is Summary
+
+Nuestra plataforma, está diseñada para gestionar servicios de arrendamiento tecnológico dirigidos a empresas e instituciones educativas. Actualmente, cuenta con funcionalidades como autenticación de usuarios, catálogo de equipos, administración de contratos, registro de incidencias, gestión de pagos y control de activos tecnológicos. Su interfaz frontend fue desarrollada en Angular y se encuentra alojada en Netlify, mientras que el backend utiliza Java con Spring Boot desplegado en Azure App Service, apoyándose en una base de datos MySQL alojada en Railway.
+
+### Situación actual de la plataforma
+
+La solución permite a los clientes consultar el catálogo de equipos disponibles, administrar sus contratos vigentes, reportar problemas técnicos y monitorear el estado de sus pagos. No obstante, se han identificado algunos aspectos susceptibles de mejora:
+
+* **Desempeño:** Algunas secciones, especialmente aquellas relacionadas con reportes y visualización gráfica de activos, presentan tiempos de carga superiores a tres segundos en conexiones de baja velocidad, lo que impacta negativamente la experiencia del usuario.
+* **Experiencia de usuario:** La plataforma carece de un proceso de introducción o guía interactiva para usuarios nuevos, dificultando la familiarización con módulos como Contratos, Informes y Perfil.
+* **Atención de incidencias:** El proceso para registrar problemas técnicos implica varios pasos previos antes de acceder al formulario principal, lo que puede resultar poco práctico en situaciones que requieren atención inmediata.
+* **Escasa personalización:** Actualmente no existen mecanismos de notificación automática que informen a los usuarios sobre vencimientos de contratos, renovaciones próximas o mantenimientos programados.
+* **Análisis financiero limitado:** Los reportes muestran información básica sobre los activos, pero no incluyen indicadores comparativos que permitan evaluar los beneficios económicos del arrendamiento frente a la adquisición directa de equipos.
+
+### Oportunidades de mejora
+
+Con el fin de optimizar la plataforma y mejorar la satisfacción de los usuarios, se plantean los siguientes objetivos:
+
+* Disminuir los tiempos de carga del módulo de reportes a menos de dos segundos mediante la optimización de consultas y la implementación de técnicas como lazy loading.
+* Incorporar un sistema de notificaciones inteligentes que informe oportunamente sobre vencimientos contractuales y mantenimientos programados.
+* Agilizar el proceso de reporte de incidencias reduciendo la cantidad de pasos requeridos para registrar solicitudes urgentes.
+* Implementar un panel de control con indicadores comparativos que permitan visualizar el ahorro acumulado obtenido mediante el modelo de arrendamiento.
+* Desarrollar un sistema de onboarding interactivo que facilite la adaptación y aprendizaje de los nuevos usuarios dentro de la plataforma.
+---
 
 ## Conclusiones
 
