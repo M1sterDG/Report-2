@@ -2893,7 +2893,15 @@ Un pipeline de monitoreo constante integra diversas etapas que ayudan a mantener
 
 #### 7.4.3. Alerting Pipeline Components
 
+El sistema de alertas de PcPedia está diseñado para notificar al equipo de forma inmediata ante eventos críticos que puedan afectar la disponibilidad o el rendimiento del servicio Smart Leasing.
 
+- **Azure Alerts:** Azure App Service permite configurar alertas basadas en umbrales de métricas clave, como tiempo de respuesta superior a 3 segundos, tasa de errores HTTP 5xx mayor al 5%, o uso de CPU por encima del 80%. Estas alertas pueden enrutarse hacia correo electrónico o canales de mensajería del equipo, garantizando una respuesta oportuna ante incidentes.
+
+ - **Railway Notifications:** Railway puede configurarse para notificar al equipo cuando el uso de la base de datos supera los límites del plan o cuando se detectan fallas en la conexión. Esto es crítico dado que la persistencia de usuarios, equipos, contratos e incidencias depende directamente de la disponibilidad de MySQL. • Netlify Deploy Notifications: Netlify genera notificaciones automáticas ante fallos en el proceso de build del frontend. El equipo recibe alertas cuando un push a main produce un error de compilación Angular, evitando que una versión rota llegue a producción sin detección inmediata. 
+ 
+ -  **UptimeRobot / Pingdom:** Configurados para verificar periódicamente (cada 5 minutos) la disponibilidad del frontend en Netlify y del endpoint base del backend en Azure. Ante una caída, el sistema envía alertas inmediatas al equipo, permitiendo iniciar el proceso de diagnóstico y rollback sin demora. 
+ 
+ La integración de estas herramientas asegura que el equipo pueda detectar y responder proactivamente a incidentes, minimizando el tiempo de inactividad del servicio y preservando la experiencia del cliente.
 
 #### 7.4.4. Notification Pipeline Components. 
 
