@@ -2869,29 +2869,26 @@ El despliegue continuo de PCPedia hacia producción se encuentra automatizado me
 
 #### 7.4.1. Tools and Practices
 
+Las herramientas y prácticas adoptadas para llevar a cabo un monitoreo continuo y eficaz en
+PcPedia son las siguientes:
+- **Monitoreo de disponibilidad y endpoints REST:** Swagger UI, accesible en la URL de producción de Azure, permite al equipo verificar en tiempo real que los endpoints del backend están respondiendo correctamente. Tras cada despliegue, se valida manualmente el acceso a las rutas principales del API.
+
+- **Monitoreo de la experiencia del usuario:** Google Analytics puede integrarse en el frontend Angular para recopilar datos sobre la navegación, tiempos de carga y tasas de retención. Esto permite identificar secciones de la plataforma que generan fricción en el flujo de los usuarios (clientes y administradores de EcatLeasing).
+
+- **Supervisión de infraestructura en la nube:** Azure App Service proporciona métricas nativas de uso de CPU, memoria, tiempo de respuesta y tasas de error del backend. Railway ofrece un panel de métricas básicas para la base de datos MySQL. Ambas plataformas permiten configurar alertas ante comportamientos anómalos.
+
+- **Pruebas de disponibilidad y latencia:** Herramientas como Pingdom o UptimeRobot pueden utilizarse para monitorear la disponibilidad del frontend en Netlify y del backend en Azure,enviando notificaciones ante caídas o tiempos de respuesta superiores a umbrales definidos.
+
+- **Auditorías de calidad web:** Google Lighthouse se emplea para auditar el frontend desplegado en Netlify, analizando rendimiento, accesibilidad, buenas prácticas y SEO. Esto asegura que la plataforma mantenga estándares de calidad consistentes entre despliegues.
 
 
 #### 7.4.2. Monitoring Pipeline Components
 
-Un pipeline de monitoreo constante integra diversas etapas que ayudan a mantener la calidad y el
-rendimiento de PcPedia en producción. Estas etapas incluyen la recopilación de datos, el
-almacenamiento, el análisis y la visualización. Herramientas como Google Lighthouse y Azure
-Monitor juegan un papel fundamental en este proceso, ofreciendo evaluaciones complementarias
-que permiten entender y mejorar la experiencia del usuario.
-Google Lighthouse es ideal para realizar auditorías de calidad en el frontend de PcPedia
-desplegado en Netlify, proporcionando análisis detallados de accesibilidad, buenas prácticas, SEO
-y rendimiento de la SPA Angular. Esta herramienta permite al equipo identificar problemas que
-impactan la experiencia del usuario, tales como tiempos de carga elevados, tamaño excesivo del
-bundle de producción y cambios de diseño inesperados entre despliegues. Su integración en el
-flujo post-deploy asegura que cada versión publicada cumpla con los estándares de calidad
-definidos por el equipo.
-Azure Monitor se especializa en el monitoreo del backend desplegado en Azure App Service,
-ofreciendo datos en tiempo real sobre la latencia de respuesta del servidor, el uso de CPU y
-memoria del contenedor Java, la tasa de errores HTTP y el rendimiento de las conexiones con la
-base de datos MySQL en Railway. Su enfoque en la supervisión continua de la infraestructura
-permite al equipo detectar y resolver problemas antes de que afecten al usuario final.
-Complementado con los logs del servicio pcpediaapi, Azure Monitor proporciona trazabilidad
-completa del comportamiento del sistema ante picos de carga o fallos en el pipeline de entrega.
+Un pipeline de monitoreo constante integra diversas etapas que ayudan a mantener la calidad y el rendimiento de PcPedia en producción. Estas etapas incluyen la recopilación de datos, el almacenamiento, el análisis y la visualización. Herramientas como Google Lighthouse y Azure Monitor juegan un papel fundamental en este proceso, ofreciendo evaluaciones complementarias que permiten entender y mejorar la experiencia del usuario.
+
+ Google Lighthouse es ideal para realizar auditorías de calidad en el frontend de PcPedia desplegado en Netlify, proporcionando análisis detallados de accesibilidad, buenas prácticas, SEO y rendimiento de la SPA Angular. Esta herramienta permite al equipo identificar problemas que impactan la experiencia del usuario, tales como tiempos de carga elevados, tamaño excesivo del bundle de producción y cambios de diseño inesperados entre despliegues. Su integración en el flujo post-deploy asegura que cada versión publicada cumpla con los estándares de calidad definidos por el equipo.
+ 
+  Azure Monitor se especializa en el monitoreo del backend desplegado en Azure App Service, ofreciendo datos en tiempo real sobre la latencia de respuesta del servidor, el uso de CPU y memoria del contenedor Java, la tasa de errores HTTP y el rendimiento de las conexiones con la base de datos MySQL en Railway. Su enfoque en la supervisión continua de la infraestructura permite al equipo detectar y resolver problemas antes de que afecten al usuario final. Complementado con los logs del servicio pcpediaapi, Azure Monitor proporciona trazabilidad completa del comportamiento del sistema ante picos de carga o fallos en el pipeline de entrega.
 
 
 #### 7.4.3. Alerting Pipeline Components
